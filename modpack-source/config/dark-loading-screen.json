@@ -1,0 +1,10 @@
+{
+  "background": "111111",
+  "bar": "e53935",
+  "barBackground": "14181c",
+  "border": "303336",
+  "logo": "e0e1e0",
+  "fadeIn": 1.0,
+  "fadeOut": 2.0,
+  "__COMMENT__": "This is a Performium config file. This document is protected by Performium and it's creators."
+}

@@ -4,29 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naizo Launcher</title>
+    <title>NightBeam Launcher</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+    <!-- Floating Particles -->
+    <div class="particles" id="particles"></div>
+
     <div class="launcher-container">
         <!-- Header -->
         <div class="header">
-            <h1 class="title">Naizo Launcher</h1>
-            <div class="version-badge">Minecraft 1.21.1</div>
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                    </svg>
+                </div>
+                <h1 class="title">NightBeam</h1>
+            </div>
+            <div class="version-badge">Fabric 1.21.1</div>
         </div>
 
         <!-- Main Content -->
         <div class="main-content">
             <!-- Username Input -->
             <div class="input-group">
-                <label for="username">Username</label>
+                <label for="username">Player Name</label>
                 <input type="text" id="username" placeholder="Enter your username" maxlength="16" autocomplete="off"
                     autofocus />
             </div>
+
             <!-- Status Display -->
             <div class="status-container">
-                <div class="status-text" id="status-text">Ready to Play</div>
+                <div class="status-text" id="status-text">Ready to Launch</div>
                 <div class="progress-container" id="progress-container" style="display: none;">
                     <div class="progress-bar">
                         <div class="progress-fill" id="progress-fill"></div>
@@ -37,17 +48,25 @@
 
             <!-- Play Button -->
             <button class="play-button" id="play-button">
-                <span class="button-text">PLAY</span>
+                <span class="button-text">LAUNCH</span>
             </button>
+        </div>
 
-            <!-- Settings Toggle -->
-            <button class="settings-toggle" id="settings-toggle">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <circle cx="12" cy="12" r="3"></circle>
-                    <path d="M12 1v6m0 6v6m0-18a11 11 0 1 0 0 22 11 11 0 0 0 0-22"></path>
-                    <path d="M20.2 7.8l-4.2 4.2m-4 0L7.8 16.2M3.8 7.8l4.2 4.2m4 0l4.2 4.2"></path>
-                </svg>
-            </button>
+        <!-- Settings Toggle -->
+        <button class="settings-toggle" id="settings-toggle">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path d="M12 1v6m0 6v6m0-18a11 11 0 1 0 0 22 11 11 0 0 0 0-22"></path>
+            </svg>
+        </button>
+
+        <!-- Premium Badge -->
+        <div class="premium-badge">
+            <svg viewBox="0 0 24 24">
+                <path
+                    d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+            </svg>
+            <span>PREMIUM EDITION</span>
         </div>
 
         <!-- Settings Panel -->
@@ -94,7 +113,7 @@
 
                 <!-- JVM Arguments -->
                 <div class="setting-item">
-                    <label for="jvm-args">JVM Arguments (Advanced)</label>
+                    <label for="jvm-args">JVM Arguments</label>
                     <textarea id="jvm-args" rows="3" placeholder="-XX:+UseG1GC..."></textarea>
                 </div>
 
@@ -105,6 +124,18 @@
     </div>
 
     <script src="renderer.js"></script>
+    <script>
+        // Create floating particles
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 30; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 15 + 's';
+            particle.style.animationDuration = (15 + Math.random() * 10) + 's';
+            particlesContainer.appendChild(particle);
+        }
+    </script>
 </body>
 
 </html>

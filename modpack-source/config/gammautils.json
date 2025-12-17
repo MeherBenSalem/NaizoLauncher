@@ -1,6 +1,5 @@
 {
   "gamma": {
-    "value": 15.0,
     "defaultGamma": 100,
     "toggledGamma": 1500,
     "updateToggle": false,
@@ -9,19 +8,17 @@
     "resetOnClose": false,
     "transition": {
       "smoothTransition": true,
-      "transitionSpeed": 1500
+      "transitionSpeed": 2000
     },
     "dynamic": {
-      "enabled": false,
-      "paused": false,
+      "enableDynamicGamma": false,
       "minGamma": 100,
       "maxGamma": 1000,
       "transitionSpeed": 200,
-      "averagingLightRange": 8,
-      "skyBrightnessOverride": 0
+      "averagingLightRange": 8
     },
     "dimensionPreference": {
-      "enabled": false,
+      "enableDimensionPreference": false,
       "overworldPreference": 1500,
       "netherPreference": 1500,
       "endPreference": 1500
@@ -39,28 +36,26 @@
     }
   },
   "nightVision": {
-    "enabled": false,
-    "value": 100.0,
+    "nightVisionEnabled": false,
+    "nightVisionStrength": 100.0,
     "toggledNightVision": 100,
     "updateToggle": false,
     "nightVisionStep": 2,
     "showStatusEffect": false,
     "resetOnClose": false,
     "transition": {
-      "smoothTransition": true,
-      "transitionSpeed": 1000
+      "smoothTransition": false,
+      "transitionSpeed": 200
     },
     "dynamic": {
-      "enabled": false,
-      "paused": false,
+      "enableDynamicNightVision": false,
       "minNightVision": 0,
       "maxNightVision": 100,
       "transitionSpeed": 15,
-      "averagingLightRange": 8,
-      "skyBrightnessOverride": 0
+      "averagingLightRange": 8
     },
     "dimensionPreference": {
-      "enabled": false,
+      "enableDimensionPreference": false,
       "overworldPreference": 100,
       "netherPreference": 100,
       "endPreference": 100
@@ -78,8 +73,5 @@
       "enabledColor": 43520,
       "disabledColor": 11141120
     }
-  },
-  "other": {
-    "namespacedCommands": false
   }
 }

@@ -92,12 +92,18 @@ class ModpackManager {
                 // Determine file progress (optional granular)
             });
 
-            // Verify download
+            // Verify download - only strictly verify JAR files
+            // Config files may have different hashes due to Git line ending conversion
             const localSha1 = await this.getFileSha1(file.path);
+            const isJarFile = file.path.endsWith('.jar');
+
             if (localSha1 !== file.sha1) {
-                console.error(`Verification failed for ${file.path}`);
-                // Simple retry logic or error? For now, throw.
-                throw new Error(`Verification failed for ${file.path}`);
+                if (isJarFile) {
+                    console.error(`Verification failed for ${file.path}`);
+                    throw new Error(`Verification failed for ${file.path}`);
+                } else {
+                    console.warn(`Hash mismatch for config file (ignoring): ${path.basename(file.path)}`);
+                }
             }
 
             completed++;
@@ -107,6 +113,49 @@ class ModpackManager {
                     total: filesToDownload.length,
                     file: path.basename(file.path)
                 });
+            }
+        }
+    }
+
+    /**
+     * Delete files that exist locally but not in the manifest
+     */
+    async cleanupExtraFiles(manifest) {
+        const manifestPaths = new Set(manifest.files.map(f => f.path));
+        const foldersToClean = ['mods', 'config'];
+        let deletedCount = 0;
+
+        for (const folder of foldersToClean) {
+            const folderPath = path.join(this.gameDir, folder);
+
+            try {
+                await this.scanAndDelete(folderPath, folder, manifestPaths);
+            } catch (error) {
+                if (error.code !== 'ENOENT') {
+                    console.warn(`Could not clean ${folder}:`, error.message);
+                }
+            }
+        }
+    }
+
+    /**
+     * Recursively scan and delete extra files
+     */
+    async scanAndDelete(dirPath, relativePath, manifestPaths) {
+        const entries = await fs.readdir(dirPath, { withFileTypes: true });
+
+        for (const entry of entries) {
+            const fullPath = path.join(dirPath, entry.name);
+            const relPath = path.join(relativePath, entry.name).replace(/\\/g, '/');
+
+            if (entry.isDirectory()) {
+                await this.scanAndDelete(fullPath, relPath, manifestPaths);
+            } else {
+                // If file is not in manifest, delete it
+                if (!manifestPaths.has(relPath)) {
+                    console.log(`Removing extra file: ${relPath}`);
+                    await fs.unlink(fullPath);
+                }
             }
         }
     }
@@ -124,6 +173,11 @@ class ModpackManager {
             const manifest = await this.fetchRemoteManifest();
             const updates = await this.validateLocalFiles(manifest);
             await this.downloadUpdates(updates, onProgress);
+
+            // Clean up files not in manifest
+            console.log('Cleaning up extra files...');
+            await this.cleanupExtraFiles(manifest);
+
             console.log('Modpack sync completed successfully.');
             return manifest;
         } catch (error) {

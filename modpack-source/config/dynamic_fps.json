@@ -1,14 +1,14 @@
 {
-  "uncap_menu_frame_rate": true,
-  "idle": {
-    "timeout": 180
-  },
-  "volume_transition_speed": {
-    "up": 0.6
+  "battery_tracker": {
+    "enabled": true,
+    "switch_states": true
   },
   "states": {
     "hovered": {
-      "frame_rate_target": 44
+      "frame_rate_target": 44,
+      "volume_multipliers": {
+        "master": 0.85
+      }
     },
     "unfocused": {
       "volume_multipliers": {
@@ -26,9 +26,9 @@
     },
     "abandoned": {
       "frame_rate_target": 15,
-      "volume_multipliers": {
-        "master": 0.8
-      }
+      "graphics_state": "reduced",
+      "run_garbage_collector": true
     }
-  }
+  },
+  "__COMMENT__": "This is a Performium config file. This document is protected by Performium and it's creators."
 }
