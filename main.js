@@ -1,4 +1,4 @@
-const { app, BrowserWindow, ipcMain, dialog } = require('electron');
+const { app, BrowserWindow, ipcMain, dialog, Menu } = require('electron');
 const path = require('path');
 const fs = require('fs');
 
@@ -32,7 +32,12 @@ function createWindow() {
   });
 }
 
+let gameRunning = false;
+
 app.whenReady().then(() => {
+  // Remove menu bar for premium look
+  Menu.setApplicationMenu(null);
+
   createWindow();
 
   app.on('activate', () => {
@@ -75,12 +80,35 @@ ipcMain.handle('download-minecraft', async (event) => {
 
 // Launch Minecraft
 ipcMain.handle('launch-game', async (event, username, settings) => {
+  if (gameRunning) {
+    return { success: false, error: 'Game is already running' };
+  }
+
   try {
-    await launchMinecraft(username, settings);
+    gameRunning = true;
+    mainWindow.webContents.send('game-state', { running: true });
+
+    const result = await launchMinecraft(username, settings);
+
+    // Watch for game exit
+    if (result.process) {
+      result.process.on('exit', () => {
+        gameRunning = false;
+        mainWindow.webContents.send('game-state', { running: false });
+      });
+    }
+
     return { success: true };
   } catch (error) {
+    gameRunning = false;
+    mainWindow.webContents.send('game-state', { running: false });
     return { success: false, error: error.message };
   }
+});
+
+// Check if game is running
+ipcMain.handle('is-game-running', () => {
+  return { running: gameRunning };
 });
 
 // Load configuration

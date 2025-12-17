@@ -185,15 +185,34 @@ ipcRenderer.on('download-progress', (event, progress) => {
     console.log('Download progress:', progress);
 
     if (progress.stage === 'client') {
-        setStatus(`Downloading client... ${progress.percentage}%`);
-        updateProgress(progress.percentage);
+        const sizeMB = progress.totalSize ? (progress.totalSize / 1024 / 1024).toFixed(1) : '?';
+        setStatus(`⬇️ Downloading Client`);
+        updateProgress(progress.percentage, `${progress.percentage}% • ${sizeMB} MB`);
     } else if (progress.stage === 'libraries') {
-        setStatus(`Downloading libraries... ${progress.current}/${progress.total}`);
+        const currentLib = progress.currentFile || 'Library';
+        setStatus(`📦 ${currentLib}`);
         const percentage = Math.floor((progress.current / progress.total) * 100);
-        updateProgress(percentage);
+        updateProgress(percentage, `${progress.current} / ${progress.total} Libraries`);
     } else if (progress.stage === 'assets') {
-        setStatus(`Downloading assets... ${progress.percentage}%`);
-        updateProgress(progress.percentage);
+        setStatus(`🎨 Downloading Assets`);
+        updateProgress(progress.percentage, `${progress.percentage}%`);
+    } else if (progress.stage === 'modpack') {
+        const currentMod = progress.file || 'Syncing';
+        setStatus(`🔧 ${currentMod}`);
+        updateProgress(Math.floor((progress.current / progress.total) * 100), `${progress.current} / ${progress.total} Files`);
+    }
+});
+
+// Game state listener
+ipcRenderer.on('game-state', (event, state) => {
+    if (state.running) {
+        playButton.disabled = true;
+        playButton.querySelector('.button-text').textContent = 'PLAYING';
+        setStatus('🎮 Minecraft is running...');
+    } else {
+        playButton.disabled = false;
+        playButton.querySelector('.button-text').textContent = 'LAUNCH';
+        setStatus('✨ Ready to Launch');
     }
 });
 
