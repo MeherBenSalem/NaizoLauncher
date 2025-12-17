@@ -5,427 +5,427 @@
       "path": "config/.info/file.txt",
       "sha1": "62d565e3b287039e4d0d93b613eef3c083982921",
       "size": 663,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/.info/file.txt"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/.info/file.txt"
     },
     {
       "path": "config/.puzzle_cache/mojangstudios.png",
       "sha1": "dba50ab92eb72e3b1e6721ca702fb4c4c5479bdf",
       "size": 9581,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/.puzzle_cache/mojangstudios.png"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/.puzzle_cache/mojangstudios.png"
     },
     {
       "path": "config/c2me.toml",
       "sha1": "cf6bbf5d5473532b656d40b511a5f17369bcf949",
       "size": 9556,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/c2me.toml"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/c2me.toml"
     },
     {
       "path": "config/capes.json5",
       "sha1": "6f054d1a760b7e06d5cc4f9e400cda5a179df624",
       "size": 214,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/capes.json5"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/capes.json5"
     },
     {
       "path": "config/dynamic_fps.json",
       "sha1": "f43800f7a1b285785b0b4f54d08a2a5efe4b5919",
       "size": 628,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/dynamic_fps.json"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/dynamic_fps.json"
     },
     {
       "path": "config/fabric/indigo-renderer.properties",
       "sha1": "000b49dbae1d32568ba4bb2e7dfde5016de4f482",
       "size": 260,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/fabric/indigo-renderer.properties"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/fabric/indigo-renderer.properties"
     },
     {
       "path": "config/ferritecore.mixin.properties",
       "sha1": "89ac06ad641ce4483683630db0fe2d0eec8e1e25",
       "size": 1523,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/ferritecore.mixin.properties"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/ferritecore.mixin.properties"
     },
     {
       "path": "config/gammautils.json",
       "sha1": "b7b78abc0dabb93f812eb60ea0c162cc9f38fed2",
       "size": 1931,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/gammautils.json"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/gammautils.json"
     },
     {
       "path": "config/immediatelyfast.json",
       "sha1": "c5468948e515ff4d8f96774b01a1f7fa5ce92bd5",
       "size": 1058,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/immediatelyfast.json"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/immediatelyfast.json"
     },
     {
       "path": "config/iris-excluded.json",
       "sha1": "20bd3420b5c911402ac289c154b56ac1dd8f84ba",
       "size": 31,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/iris-excluded.json"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/iris-excluded.json"
     },
     {
       "path": "config/iris.properties",
       "sha1": "52813331dc9368beeda6470a032533c73c3d582c",
       "size": 315,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/iris.properties"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/iris.properties"
     },
     {
       "path": "config/languagereload.json",
       "sha1": "f1b1110ee4bdc2ab29133cb835aedd277f4eeced",
       "size": 186,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/languagereload.json"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/languagereload.json"
     },
     {
       "path": "config/lithium.properties",
       "sha1": "45750ed1d01a0e81dd659944c14180aa6141f25a",
       "size": 1097,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/lithium.properties"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/lithium.properties"
     },
     {
       "path": "config/midnightlib.json",
       "sha1": "ef717d24a45baf1406cd1c5600b176cb8b3cb2db",
       "size": 37,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/midnightlib.json"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/midnightlib.json"
     },
     {
       "path": "config/modmenu.json",
       "sha1": "c49d5631def743ecfb8326773d7007230f282ed5",
       "size": 839,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/modmenu.json"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/modmenu.json"
     },
     {
       "path": "config/moreculling.toml",
       "sha1": "161c18b98427e0256737d491ec1a808a07617c47",
       "size": 535,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/moreculling.toml"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/moreculling.toml"
     },
     {
       "path": "config/packetfixer.properties",
       "sha1": "73a19c7686be6156e3468e5237bc59d7798e8904",
       "size": 3413,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/packetfixer.properties"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/packetfixer.properties"
     },
     {
       "path": "config/puzzle.json",
       "sha1": "fb17b271a4e7c91357d00a59a0b87eb5e3b6d139",
       "size": 405,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/puzzle.json"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/puzzle.json"
     },
     {
       "path": "config/replaymod-screenshotsettings.json",
       "sha1": "dfe0da2376fceafc3fe0eaca3bab6c7ddaec8d19",
       "size": 555,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/replaymod-screenshotsettings.json"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/replaymod-screenshotsettings.json"
     },
     {
       "path": "config/replaymod.json",
       "sha1": "2167361f6b613b66ef3c00fb65e66d807f4d83e4",
       "size": 1812,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/replaymod.json"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/replaymod.json"
     },
     {
       "path": "config/resourcify.json",
       "sha1": "41f4723fc4da669e8f73ac1d9525b532497fadcd",
       "size": 251,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/resourcify.json"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/resourcify.json"
     },
     {
       "path": "config/sodium-extra-options.json",
       "sha1": "53621a53d498082f8eeba73aa916a8df11533d26",
       "size": 7211,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/sodium-extra-options.json"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/sodium-extra-options.json"
     },
     {
       "path": "config/sodium-extra.properties",
       "sha1": "e90b2514226a0624cf42112b42477f9872598b89",
       "size": 360,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/sodium-extra.properties"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/sodium-extra.properties"
     },
     {
       "path": "config/sodium-fingerprint.json",
       "sha1": "b49d2d55acba64a60e3db742794217906b9fb18e",
       "size": 427,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/sodium-fingerprint.json"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/sodium-fingerprint.json"
     },
     {
       "path": "config/sodium-mixins.properties",
       "sha1": "5455463ee999b945c1cff8ae90f2b705e19fb86c",
       "size": 258,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/sodium-mixins.properties"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/sodium-mixins.properties"
     },
     {
       "path": "config/sodium-options.json",
       "sha1": "669945815c96b0726a82b3470af1a3fdff1ae052",
       "size": 719,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/sodium-options.json"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/sodium-options.json"
     },
     {
       "path": "config/spark/activity.json",
       "sha1": "e3cf0cdd53ddce5eb140ed23a662318e1b9e30f4",
       "size": 280,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/spark/activity.json"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/spark/activity.json"
     },
     {
       "path": "config/spark/config.json",
       "sha1": "33b6644f61573b11848cde9419529737418e0207",
       "size": 117,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/spark/config.json"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/spark/config.json"
     },
     {
       "path": "config/spark/tmp/about.txt",
       "sha1": "a63da50166561c948dc39484f0d88990cdbe29a0",
       "size": 585,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/spark/tmp/about.txt"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/spark/tmp/about.txt"
     },
     {
       "path": "config/spark/tmp-client/about.txt",
       "sha1": "a63da50166561c948dc39484f0d88990cdbe29a0",
       "size": 585,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/spark/tmp-client/about.txt"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/spark/tmp-client/about.txt"
     },
     {
       "path": "config/vmp.properties",
       "sha1": "40a8a5d387eb29263638d527f93d653249a3d04a",
       "size": 402,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/vmp.properties"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/vmp.properties"
     },
     {
       "path": "config/voicechat/category-volumes.properties",
       "sha1": "c9f8fd05a81e609071657f5c4c27d5cd377c5b12",
       "size": 46,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/voicechat/category-volumes.properties"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/voicechat/category-volumes.properties"
     },
     {
       "path": "config/voicechat/player-volumes.properties",
       "sha1": "c77eeb6fb16c2844e9bbcf19667d30c9401212d5",
       "size": 44,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/voicechat/player-volumes.properties"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/voicechat/player-volumes.properties"
     },
     {
       "path": "config/voicechat/translations.properties",
       "sha1": "383e00e7dd0d5f00daa2ffcfd24c939d255dc7e3",
       "size": 1182,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/voicechat/translations.properties"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/voicechat/translations.properties"
     },
     {
       "path": "config/voicechat/username-cache.json",
       "sha1": "bf21a9e8fbc5a3846fb05b4fa0859e0917b2202f",
       "size": 2,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/voicechat/username-cache.json"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/voicechat/username-cache.json"
     },
     {
       "path": "config/voicechat/voicechat-client.properties",
       "sha1": "bd1017f8615e3d687227e28534007cec53b65121",
       "size": 4896,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/voicechat/voicechat-client.properties"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/voicechat/voicechat-client.properties"
     },
     {
       "path": "config/voicechat/voicechat-server.properties",
       "sha1": "eaaff8f2ad67d2d9021178fd127f1218dc3d171a",
       "size": 2441,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/voicechat/voicechat-server.properties"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/voicechat/voicechat-server.properties"
     },
     {
       "path": "config/yacl.json5",
       "sha1": "622920f29084efcd3a8d0b2a0ea0756fece182d2",
       "size": 250,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/yacl.json5"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yacl.json5"
     },
     {
       "path": "config/zoomify.json",
       "sha1": "087d420c9714740e82cbc0b5957b77e2ef5113c1",
       "size": 713,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/config/zoomify.json"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/zoomify.json"
     },
     {
       "path": "mods/c2me-fabric-mc1.21.8-0.3.5+alpha.0.8.jar",
       "sha1": "f340861d8501a83e4dfb99ddacd3e442040245e1",
       "size": 4682142,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/c2me-fabric-mc1.21.8-0.3.5+alpha.0.8.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/c2me-fabric-mc1.21.8-0.3.5+alpha.0.8.jar"
     },
     {
       "path": "mods/cloth-config-19.0.147-fabric.jar",
       "sha1": "d3bd78860580da556990726af3bed1169e69933e",
       "size": 1149126,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/cloth-config-19.0.147-fabric.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/cloth-config-19.0.147-fabric.jar"
     },
     {
       "path": "mods/continuity-3.0.1-beta.1+1.21.6.jar",
       "sha1": "4bc922092c48b211e1981ef3403148f24313590a",
       "size": 994756,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/continuity-3.0.1-beta.1+1.21.6.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/continuity-3.0.1-beta.1+1.21.6.jar"
     },
     {
       "path": "mods/dynamic-fps-3.9.6+minecraft-1.21.6-fabric.jar",
       "sha1": "e4f593a40029b7d5cbfbc93ce6d8c4fd399ae1ff",
       "size": 192532,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/dynamic-fps-3.9.6+minecraft-1.21.6-fabric.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/dynamic-fps-3.9.6+minecraft-1.21.6-fabric.jar"
     },
     {
       "path": "mods/fabric-api-0.133.4+1.21.8.jar",
       "sha1": "84f003e075b7b7a4b3dbeffdf1796d3668db8f1c",
       "size": 2244092,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/fabric-api-0.133.4+1.21.8.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/fabric-api-0.133.4+1.21.8.jar"
     },
     {
       "path": "mods/fabric-language-kotlin-1.13.6+kotlin.2.2.20.jar",
       "sha1": "05e9cc4108da5b50735fa6d8a79a18fcd5310d82",
       "size": 7479598,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/fabric-language-kotlin-1.13.6+kotlin.2.2.20.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/fabric-language-kotlin-1.13.6+kotlin.2.2.20.jar"
     },
     {
       "path": "mods/ferritecore-8.0.0-fabric.jar",
       "sha1": "53d76354587cd1965b842fdce7cff965b5c52fe5",
       "size": 79653,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/ferritecore-8.0.0-fabric.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/ferritecore-8.0.0-fabric.jar"
     },
     {
       "path": "mods/forcecloseloadingscreen-2.3.0.jar",
       "sha1": "cc5f580c365caf4f3385d7ed63942ee75ea67721",
       "size": 117302,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/forcecloseloadingscreen-2.3.0.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/forcecloseloadingscreen-2.3.0.jar"
     },
     {
       "path": "mods/Gamma-Utils-2.3.6+mc1.21.8.jar",
       "sha1": "a4c54ab5be38e75d8fc32900baef63a61a3129e5",
       "size": 96699,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/Gamma-Utils-2.3.6+mc1.21.8.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Gamma-Utils-2.3.6+mc1.21.8.jar"
     },
     {
       "path": "mods/ImmediatelyFast-Fabric-1.12.1+1.21.8.jar",
       "sha1": "318608e466371772a4b0d2a6cd3fe86cf983e718",
       "size": 194728,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/ImmediatelyFast-Fabric-1.12.1+1.21.8.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/ImmediatelyFast-Fabric-1.12.1+1.21.8.jar"
     },
     {
       "path": "mods/iris-fabric-1.9.2+mc1.21.8.jar",
       "sha1": "4964121fd2d75eebec77dd8b723bc381952fe43a",
       "size": 2741900,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/iris-fabric-1.9.2+mc1.21.8.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/iris-fabric-1.9.2+mc1.21.8.jar"
     },
     {
       "path": "mods/Ksyxis-1.3.4.jar",
       "sha1": "143fe088170e5777d3ccf5b488d61ee3635ebffe",
       "size": 29869,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/Ksyxis-1.3.4.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Ksyxis-1.3.4.jar"
     },
     {
       "path": "mods/language-reload-1.7.4+1.21.6.jar",
       "sha1": "91eb0a3e6cbdf5bb733890a727d67c8ff2ed8f59",
       "size": 75005,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/language-reload-1.7.4+1.21.6.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/language-reload-1.7.4+1.21.6.jar"
     },
     {
       "path": "mods/lithium-fabric-0.18.1+mc1.21.8.jar",
       "sha1": "4d7e594b4f4af78c0591eaecde298e3eb046eb05",
       "size": 839866,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/lithium-fabric-0.18.1+mc1.21.8.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/lithium-fabric-0.18.1+mc1.21.8.jar"
     },
     {
       "path": "mods/midnightlib-1.7.5-fabric+1.21.6.jar",
       "sha1": "2b8fe2ee4fb9cd9ab606541d271171490a146d5b",
       "size": 63651,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/midnightlib-1.7.5-fabric+1.21.6.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/midnightlib-1.7.5-fabric+1.21.6.jar"
     },
     {
       "path": "mods/modmenu-15.0.0.jar",
       "sha1": "b22a1a02a13642ec707d01bb8b14a21188d6d6fa",
       "size": 1083202,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/modmenu-15.0.0.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/modmenu-15.0.0.jar"
     },
     {
       "path": "mods/moreculling-fabric-1.21.8-1.4.0-beta.2.jar",
       "sha1": "30123de3b8a09db46968d721c7892f5fb2b6d292",
       "size": 347182,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/moreculling-fabric-1.21.8-1.4.0-beta.2.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/moreculling-fabric-1.21.8-1.4.0-beta.2.jar"
     },
     {
       "path": "mods/optigui-2.3.0-beta.8+1.21.6.jar",
       "sha1": "22d2d9a2cd9c4a56f22c3df248916f7e7637a852",
       "size": 612235,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/optigui-2.3.0-beta.8+1.21.6.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/optigui-2.3.0-beta.8+1.21.6.jar"
     },
     {
       "path": "mods/packetfixer-3.3.0-1.20.5-1.21.X-merged.jar",
       "sha1": "ff28ce5462ba2c1dff9b559b5e0dd428b2eac804",
       "size": 47253,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/packetfixer-3.3.0-1.20.5-1.21.X-merged.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/packetfixer-3.3.0-1.20.5-1.21.X-merged.jar"
     },
     {
       "path": "mods/placeholder-api-2.7.2+1.21.8.jar",
       "sha1": "f538eec8d6ec2e1af3c9e8ee73e4a4787abcd9cc",
       "size": 263060,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/placeholder-api-2.7.2+1.21.8.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/placeholder-api-2.7.2+1.21.8.jar"
     },
     {
       "path": "mods/puzzle-fabric-2.1.1+1.21.6.jar",
       "sha1": "155c959ef113fb267a361da44de55371c37feea2",
       "size": 142987,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/puzzle-fabric-2.1.1+1.21.6.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/puzzle-fabric-2.1.1+1.21.6.jar"
     },
     {
       "path": "mods/reeses-sodium-options-fabric-1.8.4+mc1.21.6.jar",
       "sha1": "5d83119a31fd6da0c55682a113788e9b6b848142",
       "size": 81061,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/reeses-sodium-options-fabric-1.8.4+mc1.21.6.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/reeses-sodium-options-fabric-1.8.4+mc1.21.6.jar"
     },
     {
       "path": "mods/replaymod-1.21.7-2.6.23.jar",
       "sha1": "ff7a0ce622c45b2d4e9105431ec305cfd3cc31ab",
       "size": 14845750,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/replaymod-1.21.7-2.6.23.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/replaymod-1.21.7-2.6.23.jar"
     },
     {
       "path": "mods/replayvoicechat-fabric-1.21.8-1.3.11.jar",
       "sha1": "75faecc309088d3d213106f28278552440dd9029",
       "size": 74715,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/replayvoicechat-fabric-1.21.8-1.3.11.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/replayvoicechat-fabric-1.21.8-1.3.11.jar"
     },
     {
       "path": "mods/Resourcify (1.21.8-fabric)-1.7.4.jar",
       "sha1": "6152870920468b6e8db9121801ad94dead161be9",
       "size": 2531117,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/Resourcify (1.21.8-fabric)-1.7.4.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Resourcify (1.21.8-fabric)-1.7.4.jar"
     },
     {
       "path": "mods/sodium-extra-fabric-0.7.0+mc1.21.8.jar",
       "sha1": "b931b5f2f2af45e593537e6aec2ca82ba7ef24d3",
       "size": 420199,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/sodium-extra-fabric-0.7.0+mc1.21.8.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/sodium-extra-fabric-0.7.0+mc1.21.8.jar"
     },
     {
       "path": "mods/sodium-fabric-0.7.0+mc1.21.8.jar",
       "sha1": "db0cf49b53a602e913ca9b8611f43b8445476969",
       "size": 1618516,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/sodium-fabric-0.7.0+mc1.21.8.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/sodium-fabric-0.7.0+mc1.21.8.jar"
     },
     {
       "path": "mods/spark-1.10.142-fabric.jar",
       "sha1": "329cdcf566637760c679b56a3213e18aa41cad5c",
       "size": 3793974,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/spark-1.10.142-fabric.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/spark-1.10.142-fabric.jar"
     },
     {
       "path": "mods/vmp-fabric-mc1.21.8-0.2.0+beta.7.207-all.jar",
       "sha1": "25202d920f15ad85b35bb8602a2a2ca3b3c9bc9b",
       "size": 424324,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/vmp-fabric-mc1.21.8-0.2.0+beta.7.207-all.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/vmp-fabric-mc1.21.8-0.2.0+beta.7.207-all.jar"
     },
     {
       "path": "mods/voicechat-fabric-1.21.8-2.6.5.jar",
       "sha1": "359c1b35ce5b047946645e09bfe0e80151d8a9df",
       "size": 5461177,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/voicechat-fabric-1.21.8-2.6.5.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/voicechat-fabric-1.21.8-2.6.5.jar"
     },
     {
       "path": "mods/yet_another_config_lib_v3-3.7.1+1.21.6-fabric.jar",
       "sha1": "932e1011a9ddef31fb4f4d7934f16a091aa5004b",
       "size": 1122817,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/yet_another_config_lib_v3-3.7.1+1.21.6-fabric.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/yet_another_config_lib_v3-3.7.1+1.21.6-fabric.jar"
     },
     {
       "path": "mods/Zoomify-2.14.6+1.21.6.jar",
       "sha1": "924f94ba37694b279f5f20abd6fb2aa36ebc0965",
       "size": 1865830,
-      "url": "https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source/mods/Zoomify-2.14.6+1.21.6.jar"
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Zoomify-2.14.6+1.21.6.jar"
     }
   ]
 }

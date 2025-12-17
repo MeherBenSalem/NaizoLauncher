@@ -6,7 +6,7 @@ const crypto = require('crypto');
 const SOURCE_DIR = './modpack-source'; // Put your mods/config folders here
 const OUTPUT_FILE = './modpack.json';
 // CHANGE THIS to your actual raw file host URL (e.g. GitHub raw link)
-const BASE_URL = 'https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/modpack-source';
+const BASE_URL = 'https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source';
 
 /**
  * Calculate SHA1 hash of a file
