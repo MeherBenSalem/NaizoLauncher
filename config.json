@@ -1,0 +1,29 @@
+{
+  "minecraft_version": "fabric-loader-1.21.1",
+  "game_directory": "./minecraft",
+  "java_path": "java",
+  "jvm_args": {
+    "min_ram": "512M",
+    "max_ram": "8192M",
+    "custom_args": [
+      "-XX:+UnlockExperimentalVMOptions",
+      "-XX:+UseG1GC",
+      "-XX:G1NewSizePercent=20",
+      "-XX:G1ReservePercent=20",
+      "-XX:MaxGCPauseMillis=50",
+      "-XX:G1HeapRegionSize=32M"
+    ]
+  },
+  "window": {
+    "width": 854,
+    "height": 480,
+    "fullscreen": false
+  },
+  "server_ip": null,
+  "close_launcher_on_game_start": false,
+  "last_username": "_NAIZO",
+  "modpack": {
+    "enabled": true,
+    "manifest_url": "https://example.com/modpack.json"
+  }
+}

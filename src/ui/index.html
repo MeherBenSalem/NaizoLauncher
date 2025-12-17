@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naizo Launcher</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="launcher-container">
+        <!-- Header -->
+        <div class="header">
+            <h1 class="title">Naizo Launcher</h1>
+            <div class="version-badge">Minecraft 1.21.1</div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Username Input -->
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter your username" maxlength="16" autocomplete="off"
+                    autofocus />
+            </div>
+            <!-- Status Display -->
+            <div class="status-container">
+                <div class="status-text" id="status-text">Ready to Play</div>
+                <div class="progress-container" id="progress-container" style="display: none;">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progress-fill"></div>
+                    </div>
+                    <div class="progress-text" id="progress-text">0%</div>
+                </div>
+            </div>
+
+            <!-- Play Button -->
+            <button class="play-button" id="play-button">
+                <span class="button-text">PLAY</span>
+            </button>
+
+            <!-- Settings Toggle -->
+            <button class="settings-toggle" id="settings-toggle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path d="M12 1v6m0 6v6m0-18a11 11 0 1 0 0 22 11 11 0 0 0 0-22"></path>
+                    <path d="M20.2 7.8l-4.2 4.2m-4 0L7.8 16.2M3.8 7.8l4.2 4.2m4 0l4.2 4.2"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Settings Panel -->
+        <div class="settings-panel" id="settings-panel">
+            <div class="settings-header">
+                <h3>Settings</h3>
+                <button class="close-settings" id="close-settings">&times;</button>
+            </div>
+
+            <div class="settings-content">
+                <!-- RAM Allocation -->
+                <div class="setting-item">
+                    <label for="ram-slider">RAM Allocation</label>
+                    <div class="slider-container">
+                        <input type="range" id="ram-slider" min="512" max="8192" step="512" value="2048" />
+                        <span class="slider-value" id="ram-value">2 GB</span>
+                    </div>
+                </div>
+
+                <!-- Resolution -->
+                <div class="setting-item">
+                    <label for="resolution">Window Size</label>
+                    <select id="resolution">
+                        <option value="854x480">854 × 480</option>
+                        <option value="1280x720">1280 × 720</option>
+                        <option value="1920x1080" selected>1920 × 1080</option>
+                    </select>
+                </div>
+
+                <!-- Fullscreen -->
+                <div class="setting-item checkbox-item">
+                    <label for="fullscreen">Fullscreen</label>
+                    <input type="checkbox" id="fullscreen" />
+                </div>
+
+                <!-- Game Directory -->
+                <div class="setting-item">
+                    <label for="game-directory">Game Directory</label>
+                    <div class="directory-selector">
+                        <input type="text" id="game-directory" readonly placeholder="./minecraft" />
+                        <button class="browse-button" id="browse-directory">Browse</button>
+                    </div>
+                </div>
+
+                <!-- JVM Arguments -->
+                <div class="setting-item">
+                    <label for="jvm-args">JVM Arguments (Advanced)</label>
+                    <textarea id="jvm-args" rows="3" placeholder="-XX:+UseG1GC..."></textarea>
+                </div>
+
+                <!-- Save Button -->
+                <button class="save-button" id="save-settings">Save Settings</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="renderer.js"></script>
+</body>
+
+</html>
