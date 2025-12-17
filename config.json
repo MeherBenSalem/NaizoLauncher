@@ -24,6 +24,6 @@
   "last_username": "_NAIZO",
   "modpack": {
     "enabled": true,
-    "manifest_url": "https://example.com/modpack.json"
+    "manifest_url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack.json"
   }
 }
