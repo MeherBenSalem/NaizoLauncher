@@ -1,7 +1,7 @@
 {
-  "name": "naizo-launcher",
+  "name": "nightbeam-launcher",
   "version": "1.0.0",
-  "description": "Custom Minecraft Launcher for Vanilla 1.21.10 - Offline Mode",
+  "description": "NightBeam Launcher - Premium Minecraft Launcher with Fabric Mod Support",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -22,8 +22,8 @@
     "axios": "^1.6.0"
   },
   "build": {
-    "appId": "com.naizo.launcher",
-    "productName": "Naizo Launcher",
+    "appId": "com.nightbeam.launcher",
+    "productName": "NightBeam Launcher",
     "directories": {
       "output": "dist"
     },
