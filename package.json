@@ -24,12 +24,26 @@
   "build": {
     "appId": "com.nightbeam.launcher",
     "productName": "NightBeam Launcher",
+    "files": [
+      "**/*",
+      "!minecraft/**",
+      "!modpack-source/**",
+      "!dist/**",
+      "!node_modules/.cache/**",
+      "!*.md",
+      "!.git/**"
+    ],
     "directories": {
       "output": "dist"
     },
     "win": {
       "target": "nsis",
       "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "perMachine": false
     }
   }
 }
