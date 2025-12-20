@@ -1562,6 +1562,12 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/reeses_sodium_options-1.7.2+mc1.20.1-build.101.jar"
     },
     {
+      "path": "mods/replaymod-1.20.1-2.6.23.jar",
+      "sha1": "5688462d17b171c8791308b5a4963057876b6188",
+      "size": 14739015,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/replaymod-1.20.1-2.6.23.jar"
+    },
+    {
       "path": "mods/Rrls-3.2.0-1.20.1-fabric.jar",
       "sha1": "0eaf7135dd4c1ecfffc9ea849817247d6e66c569",
       "size": 138928,
