@@ -20,7 +20,7 @@ function createWindow() {
       nodeIntegration: true,
       contextIsolation: false
     },
-    icon: path.join(__dirname, 'logo.png')
+    icon: path.join(__dirname, 'assets', 'icon.png')
   });
 
   mainWindow.loadFile('src/ui/index.html');

@@ -308,12 +308,6 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/jade/sort-order.json"
     },
     {
-      "path": "config/jade/usernamecache.json",
-      "sha1": "df24c97af0d1cdc64cced08aefba851a9d7c2267",
-      "size": 54,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/jade/usernamecache.json"
-    },
-    {
       "path": "config/jei/blacklist.cfg",
       "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
       "size": 0,
@@ -608,12 +602,6 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/sodium-extra.properties"
     },
     {
-      "path": "config/sodium-fingerprint.json",
-      "sha1": "f09769af06031e669663faea41c6dc541cf39cac",
-      "size": 427,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/sodium-fingerprint.json"
-    },
-    {
       "path": "config/sodium-mixins.properties",
       "sha1": "09db7f09d6dfd063ec4c7c534102892d67655d98",
       "size": 266,
@@ -780,12 +768,6 @@
       "sha1": "383e00e7dd0d5f00daa2ffcfd24c939d255dc7e3",
       "size": 1182,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/voicechat/translations.properties"
-    },
-    {
-      "path": "config/voicechat/username-cache.json",
-      "sha1": "bf21a9e8fbc5a3846fb05b4fa0859e0917b2202f",
-      "size": 2,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/voicechat/username-cache.json"
     },
     {
       "path": "config/voicechat/voicechat-client.properties",
@@ -996,12 +978,6 @@
       "sha1": "db4377229df8bad8a7176d4639d25a54839d3535",
       "size": 38,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/config/sodium-options.json"
-    },
-    {
-      "path": "config/yosbr/options.txt",
-      "sha1": "83459c381e793e63dfeaf00b84e8fdc200b0e13b",
-      "size": 900,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/options.txt"
     },
     {
       "path": "config/zombieawareness/ClientConfig.toml",
@@ -1536,6 +1512,12 @@
       "sha1": "b99f23fb76aad5a944400717e6d71aa011c4d7f7",
       "size": 619812,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/NoChatReports-FABRIC-1.20.1-v2.2.2.jar"
+    },
+    {
+      "path": "mods/offlineskins-1.20.1-v1a-fabric.jar",
+      "sha1": "3b54c5f6b276550cae105c7696243e864299d439",
+      "size": 90906,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/offlineskins-1.20.1-v1a-fabric.jar"
     },
     {
       "path": "mods/optigui-2.1.5.jar",

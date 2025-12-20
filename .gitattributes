@@ -1,2 +1,10 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Binary files - DO NOT convert line endings (prevents SHA1 hash corruption)
+*.jar binary
+*.zip binary
+*.png binary
+*.ico binary
+*.ogg binary
+*.nbt binary

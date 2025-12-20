@@ -9,6 +9,17 @@ const OUTPUT_FILE = './modpack.json';
 const BASE_URL = 'https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source';
 
 /**
+ * Files that regenerate on each Minecraft launch with unique data.
+ * Exclude these from the manifest to prevent false "update required" detection.
+ */
+const EXCLUDE_PATTERNS = [
+    'sodium-fingerprint.json',
+    'username-cache.json',
+    'usernamecache.json',
+    'yosbr/options.txt'
+];
+
+/**
  * Calculate SHA1 hash of a file
  */
 function getFileSha1(filePath) {
@@ -32,8 +43,9 @@ function scanDirectory(dir, fileList = []) {
             // Get path relative to SOURCE_DIR
             const relativePath = path.relative(SOURCE_DIR, filePath).replace(/\\/g, '/');
 
-            // Skip hidden files or the generator script itself
-            if (!file.startsWith('.') && file !== 'generate-manifest.js') {
+            // Skip hidden files, the generator script, and volatile files
+            const isExcluded = EXCLUDE_PATTERNS.some(pattern => relativePath.includes(pattern));
+            if (!file.startsWith('.') && file !== 'generate-manifest.js' && !isExcluded) {
                 console.log(`Processing: ${relativePath}`);
 
                 fileList.push({

@@ -5,6 +5,17 @@ const crypto = require('crypto');
 const { downloadFile } = require('../file-manager/downloader');
 
 /**
+ * Files that regenerate on each Minecraft launch with unique data.
+ * These should be skipped during validation to prevent false "update required" detection.
+ */
+const VOLATILE_FILES = [
+    'config/sodium-fingerprint.json',
+    'config/voicechat/username-cache.json',
+    'config/jade/usernamecache.json',
+    'config/yosbr/options.txt'
+];
+
+/**
  * Modpack Manager
  * Handles synchronization of mods and config files with a remote manifest.
  */
@@ -52,6 +63,11 @@ class ModpackManager {
         console.log(`Validating ${filesToCheck.length} modpack files...`);
 
         for (const file of filesToCheck) {
+            // Skip volatile files that regenerate on each launch
+            if (VOLATILE_FILES.some(v => file.path === v || file.path.endsWith(v))) {
+                continue;
+            }
+
             const destPath = path.join(this.gameDir, file.path);
             const localSha1 = await this.getFileSha1(destPath);
 
@@ -122,7 +138,7 @@ class ModpackManager {
      */
     async cleanupExtraFiles(manifest) {
         const manifestPaths = new Set(manifest.files.map(f => f.path));
-        const foldersToClean = ['mods', 'config'];
+        const foldersToClean = ['mods', 'config', 'resourcepacks', 'shaderpacks'];
         let deletedCount = 0;
 
         for (const folder of foldersToClean) {
