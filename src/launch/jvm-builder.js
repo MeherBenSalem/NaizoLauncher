@@ -234,6 +234,19 @@ function checkRules(rules) {
         if (rule.features && rule.features.has_custom_resolution === true) {
             return false;
         }
+        // Skip Quick Play rules to always load the main menu
+        if (rule.features && rule.features.is_quick_play_singleplayer === true) {
+            return false;
+        }
+        if (rule.features && rule.features.is_quick_play_multiplayer === true) {
+            return false;
+        }
+        if (rule.features && rule.features.is_quick_play_realms === true) {
+            return false;
+        }
+        if (rule.features && rule.features.has_quick_plays_support === true) {
+            return false;
+        }
 
         if (rule.action === 'allow') {
             if (rule.os) {
