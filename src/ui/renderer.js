@@ -808,8 +808,8 @@ ipcRenderer.on('launcher-update-status', (event, data) => {
             break;
 
         case 'update-error':
-            if (updateInfoEl) updateInfoEl.textContent = 'Update check failed';
-            console.error('Launcher update error:', data.message);
+            if (updateInfoEl) updateInfoEl.textContent = data.message || 'Update check failed';
+            console.error('Launcher update error:', data.fullError || data.message);
             break;
     }
 });

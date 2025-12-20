@@ -1,25 +1,26 @@
 /**
  * Launcher Auto-Updater Module
  * 
- * Handles checking for launcher updates from GitHub Releases
- * and applying updates automatically or with user confirmation.
+ * Handles checking for launcher updates from GitHub Releases API.
+ * Works with manually created GitHub releases (no electron-builder publish required).
  * 
  * This is separate from modpack updates - this updates the launcher application itself.
  */
 
-const { app, dialog, BrowserWindow } = require('electron');
-const { autoUpdater } = require('electron-updater');
+const { app, dialog, BrowserWindow, shell } = require('electron');
+const https = require('https');
 const path = require('path');
 
-// Configuration
+// Configuration - Update these for your repository
+const GITHUB_OWNER = 'MeherBenSalem';
+const GITHUB_REPO = 'NaizoLauncher';
 const UPDATE_CHECK_INTERVAL = 30 * 60 * 1000; // Check every 30 minutes
 
 // State
 let updateCheckInterval = null;
 let mainWindow = null;
 let updateAvailable = false;
-let updateDownloaded = false;
-let updateInfo = null;
+let latestRelease = null;
 
 /**
  * Initialize the auto-updater
@@ -27,19 +28,6 @@ let updateInfo = null;
  */
 function initAutoUpdater(window) {
     mainWindow = window;
-
-    // Configure auto-updater
-    autoUpdater.autoDownload = true;
-    autoUpdater.autoInstallOnAppQuit = true;
-
-    // In development, don't check for updates
-    if (!app.isPackaged) {
-        console.log('[AutoUpdater] Running in development mode - skipping update check');
-        return;
-    }
-
-    // Set up event handlers
-    setupEventHandlers();
 
     // Check for updates on startup
     checkForUpdates();
@@ -51,60 +39,76 @@ function initAutoUpdater(window) {
 }
 
 /**
- * Set up auto-updater event handlers
+ * Compare version strings (semver-like)
+ * Returns: 1 if v1 > v2, -1 if v1 < v2, 0 if equal
  */
-function setupEventHandlers() {
-    autoUpdater.on('checking-for-update', () => {
-        console.log('[AutoUpdater] Checking for updates...');
-        sendStatusToWindow('update-checking');
-    });
+function compareVersions(v1, v2) {
+    // Remove 'v' prefix if present
+    v1 = v1.replace(/^v/, '');
+    v2 = v2.replace(/^v/, '');
 
-    autoUpdater.on('update-available', (info) => {
-        console.log('[AutoUpdater] Update available:', info.version);
-        updateAvailable = true;
-        updateInfo = info;
-        sendStatusToWindow('update-available', {
-            version: info.version,
-            releaseNotes: info.releaseNotes,
-            releaseDate: info.releaseDate
+    const parts1 = v1.split('.').map(Number);
+    const parts2 = v2.split('.').map(Number);
+
+    for (let i = 0; i < Math.max(parts1.length, parts2.length); i++) {
+        const num1 = parts1[i] || 0;
+        const num2 = parts2[i] || 0;
+
+        if (num1 > num2) return 1;
+        if (num1 < num2) return -1;
+    }
+
+    return 0;
+}
+
+/**
+ * Fetch latest release from GitHub API
+ */
+function fetchLatestRelease() {
+    return new Promise((resolve, reject) => {
+        const options = {
+            hostname: 'api.github.com',
+            path: `/repos/${GITHUB_OWNER}/${GITHUB_REPO}/releases/latest`,
+            method: 'GET',
+            headers: {
+                'User-Agent': 'NaizoLauncher-AutoUpdater',
+                'Accept': 'application/vnd.github.v3+json'
+            }
+        };
+
+        const req = https.request(options, (res) => {
+            let data = '';
+
+            res.on('data', (chunk) => {
+                data += chunk;
+            });
+
+            res.on('end', () => {
+                if (res.statusCode === 200) {
+                    try {
+                        const release = JSON.parse(data);
+                        resolve(release);
+                    } catch (e) {
+                        reject(new Error('Failed to parse release data'));
+                    }
+                } else if (res.statusCode === 404) {
+                    reject(new Error('No releases found'));
+                } else {
+                    reject(new Error(`GitHub API error: ${res.statusCode}`));
+                }
+            });
         });
-    });
 
-    autoUpdater.on('update-not-available', (info) => {
-        console.log('[AutoUpdater] No updates available. Current version:', app.getVersion());
-        updateAvailable = false;
-        sendStatusToWindow('update-not-available', {
-            currentVersion: app.getVersion()
-        });
-    });
-
-    autoUpdater.on('download-progress', (progress) => {
-        console.log(`[AutoUpdater] Download progress: ${progress.percent.toFixed(1)}%`);
-        sendStatusToWindow('update-download-progress', {
-            percent: progress.percent,
-            bytesPerSecond: progress.bytesPerSecond,
-            transferred: progress.transferred,
-            total: progress.total
-        });
-    });
-
-    autoUpdater.on('update-downloaded', (info) => {
-        console.log('[AutoUpdater] Update downloaded:', info.version);
-        updateDownloaded = true;
-        updateInfo = info;
-        sendStatusToWindow('update-downloaded', {
-            version: info.version
+        req.on('error', (error) => {
+            reject(new Error(`Network error: ${error.message}`));
         });
 
-        // Notify user that update is ready
-        notifyUpdateReady(info);
-    });
-
-    autoUpdater.on('error', (error) => {
-        console.error('[AutoUpdater] Error:', error.message);
-        sendStatusToWindow('update-error', {
-            message: error.message
+        req.setTimeout(10000, () => {
+            req.destroy();
+            reject(new Error('Request timed out'));
         });
+
+        req.end();
     });
 }
 
@@ -121,78 +125,141 @@ function sendStatusToWindow(status, data = {}) {
 }
 
 /**
- * Notify user that update is ready to install
+ * Check for updates using GitHub API
  */
-function notifyUpdateReady(info) {
-    if (!mainWindow || mainWindow.isDestroyed()) return;
+async function checkForUpdates() {
+    console.log('[AutoUpdater] Checking for updates...');
+    sendStatusToWindow('update-checking');
+
+    try {
+        const release = await fetchLatestRelease();
+        const currentVersion = app.getVersion();
+        const latestVersion = release.tag_name.replace(/^v/, '');
+
+        console.log(`[AutoUpdater] Current: ${currentVersion}, Latest: ${latestVersion}`);
+
+        if (compareVersions(latestVersion, currentVersion) > 0) {
+            // New version available
+            console.log('[AutoUpdater] Update available:', latestVersion);
+            updateAvailable = true;
+            latestRelease = release;
+
+            // Find the Windows installer asset
+            const windowsAsset = release.assets.find(asset =>
+                asset.name.endsWith('.exe') ||
+                asset.name.includes('Setup') ||
+                asset.name.includes('win')
+            );
+
+            sendStatusToWindow('update-available', {
+                version: latestVersion,
+                releaseNotes: release.body || 'No release notes',
+                releaseDate: release.published_at,
+                downloadUrl: windowsAsset ? windowsAsset.browser_download_url : release.html_url,
+                releaseUrl: release.html_url
+            });
+
+            return {
+                updateAvailable: true,
+                currentVersion,
+                latestVersion,
+                release
+            };
+        } else {
+            // Already up to date
+            console.log('[AutoUpdater] No updates available');
+            updateAvailable = false;
+            latestRelease = null;
+
+            sendStatusToWindow('update-not-available', {
+                currentVersion
+            });
+
+            return {
+                updateAvailable: false,
+                currentVersion,
+                latestVersion
+            };
+        }
+    } catch (error) {
+        console.error('[AutoUpdater] Error checking for updates:', error.message);
+
+        let userMessage = error.message;
+        if (error.message.includes('ENOTFOUND') || error.message.includes('Network error')) {
+            userMessage = 'No internet connection';
+        } else if (error.message.includes('No releases found')) {
+            userMessage = 'No releases published yet';
+        } else if (error.message.includes('timed out')) {
+            userMessage = 'Connection timed out';
+        }
+
+        sendStatusToWindow('update-error', {
+            message: userMessage,
+            fullError: error.message
+        });
+
+        return {
+            updateAvailable: false,
+            error: error.message
+        };
+    }
+}
+
+/**
+ * Open the download page for the latest release
+ */
+function openDownloadPage() {
+    if (latestRelease && latestRelease.html_url) {
+        shell.openExternal(latestRelease.html_url);
+    }
+}
+
+/**
+ * Download and install update (opens browser to download page)
+ * For manual releases, we direct users to GitHub to download
+ */
+function downloadUpdate() {
+    if (!updateAvailable || !latestRelease) {
+        return Promise.reject(new Error('No update available'));
+    }
+
+    // Find Windows installer asset
+    const windowsAsset = latestRelease.assets.find(asset =>
+        asset.name.endsWith('.exe') ||
+        asset.name.includes('Setup') ||
+        asset.name.includes('win')
+    );
+
+    if (windowsAsset) {
+        shell.openExternal(windowsAsset.browser_download_url);
+    } else {
+        shell.openExternal(latestRelease.html_url);
+    }
+
+    return Promise.resolve({ opened: true });
+}
+
+/**
+ * Show update dialog to user
+ */
+function showUpdateDialog() {
+    if (!latestRelease || !mainWindow || mainWindow.isDestroyed()) return;
+
+    const version = latestRelease.tag_name.replace(/^v/, '');
 
     dialog.showMessageBox(mainWindow, {
         type: 'info',
-        title: 'Launcher Update Available',
-        message: `A new version of NAIZO Launcher is ready to install.`,
-        detail: `Version ${info.version} has been downloaded and will be installed when you quit the application.\n\nWould you like to restart now to apply the update?`,
-        buttons: ['Restart Now', 'Later'],
+        title: 'Update Available',
+        message: `A new version of NAIZO Launcher is available!`,
+        detail: `Version ${version} is ready to download.\n\nWould you like to download it now?`,
+        buttons: ['Download Now', 'Later'],
         defaultId: 0,
         cancelId: 1
     }).then((result) => {
         if (result.response === 0) {
-            quitAndInstall();
+            downloadUpdate();
         }
     });
-}
-
-/**
- * Check for updates
- */
-function checkForUpdates() {
-    if (!app.isPackaged) {
-        console.log('[AutoUpdater] Skipping update check in development mode');
-        return Promise.resolve({ updateAvailable: false });
-    }
-
-    return autoUpdater.checkForUpdates()
-        .then((result) => {
-            return {
-                updateAvailable: result?.updateInfo?.version !== app.getVersion(),
-                currentVersion: app.getVersion(),
-                latestVersion: result?.updateInfo?.version
-            };
-        })
-        .catch((error) => {
-            console.error('[AutoUpdater] Check failed:', error.message);
-            return {
-                updateAvailable: false,
-                error: error.message
-            };
-        });
-}
-
-/**
- * Download update manually (if autoDownload is false)
- */
-function downloadUpdate() {
-    if (!updateAvailable) {
-        return Promise.reject(new Error('No update available'));
-    }
-    return autoUpdater.downloadUpdate();
-}
-
-/**
- * Quit application and install update
- */
-function quitAndInstall() {
-    if (!updateDownloaded) {
-        console.log('[AutoUpdater] No update downloaded yet');
-        return;
-    }
-
-    // Clear the update check interval
-    if (updateCheckInterval) {
-        clearInterval(updateCheckInterval);
-    }
-
-    // Install update and restart
-    autoUpdater.quitAndInstall(false, true);
 }
 
 /**
@@ -202,10 +269,10 @@ function getUpdateStatus() {
     return {
         currentVersion: app.getVersion(),
         updateAvailable,
-        updateDownloaded,
-        updateInfo: updateInfo ? {
-            version: updateInfo.version,
-            releaseDate: updateInfo.releaseDate
+        latestRelease: latestRelease ? {
+            version: latestRelease.tag_name,
+            releaseDate: latestRelease.published_at,
+            url: latestRelease.html_url
         } : null
     };
 }
@@ -224,7 +291,8 @@ module.exports = {
     initAutoUpdater,
     checkForUpdates,
     downloadUpdate,
-    quitAndInstall,
+    openDownloadPage,
+    showUpdateDialog,
     getUpdateStatus,
     cleanup
 };

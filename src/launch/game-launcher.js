@@ -135,8 +135,22 @@ async function launchMinecraft(username, customSettings = {}, onModpackProgress 
         // Spawn Minecraft process
         const minecraftProcess = spawn(javaPath, fullArgs, {
             cwd: gameDir,
-            stdio: 'inherit' // Pipe output to console
+            stdio: 'pipe', // Pipe output (use 'ignore' to completely suppress)
+            detached: false,
+            windowsHide: true // Hide command prompt on Windows
         });
+
+        // Optional: Log game output
+        if (minecraftProcess.stdout) {
+            minecraftProcess.stdout.on('data', (data) => {
+                console.log(`[Minecraft] ${data}`);
+            });
+        }
+        if (minecraftProcess.stderr) {
+            minecraftProcess.stderr.on('data', (data) => {
+                console.error(`[Minecraft] ${data}`);
+            });
+        }
 
         minecraftProcess.on('error', (error) => {
             console.error('Failed to start Minecraft:', error);

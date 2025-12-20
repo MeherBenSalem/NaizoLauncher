@@ -7,7 +7,7 @@ const os = require('os');
 const { checkInstallation, downloadMinecraft, getInstallationStatus } = require('./src/core/launcher-core');
 const { launchMinecraft } = require('./src/launch/game-launcher');
 const { loadConfig, saveConfig } = require('./src/core/config-manager');
-const { initAutoUpdater, checkForUpdates, quitAndInstall, getUpdateStatus, cleanup } = require('./src/core/auto-updater');
+const { initAutoUpdater, checkForUpdates, downloadUpdate, getUpdateStatus, cleanup } = require('./src/core/auto-updater');
 
 let mainWindow;
 
@@ -223,10 +223,10 @@ ipcMain.handle('check-for-launcher-updates', async () => {
   }
 });
 
-// Install launcher update (quit and install)
+// Download launcher update (opens download page for manual releases)
 ipcMain.handle('install-launcher-update', async () => {
   try {
-    quitAndInstall();
+    await downloadUpdate();
     return { success: true };
   } catch (error) {
     return { success: false, error: error.message };
