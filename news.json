@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "lastUpdated": "2025-12-20T21:00:00Z",
+    "news": [
+        {
+            "id": "1",
+            "title": "NAIZO Launcher v1.0.0 Released!",
+            "description": "The new premium launcher is now available with improved performance, modern design, and auto-update support.",
+            "date": "2025-12-20",
+            "tag": "Release",
+            "url": "https://github.com/MeherBenSalem/NaizoLauncher/releases"
+        }
+    ]
+}

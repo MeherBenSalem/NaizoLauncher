@@ -1,29 +1,57 @@
 const { ipcRenderer } = require('electron');
 
-// DOM Elements
-const usernameInput = document.getElementById('username');
+// ==================== DOM ELEMENTS ====================
+
+// Views
+const homeView = document.getElementById('home-view');
+const settingsView = document.getElementById('settings-view');
+
+// Home View Elements
 const playButton = document.getElementById('play-button');
 const buttonText = playButton.querySelector('.button-text');
 const statusText = document.getElementById('status-text');
 const progressContainer = document.getElementById('progress-container');
 const progressFill = document.getElementById('progress-fill');
 const progressText = document.getElementById('progress-text');
-const settingsToggle = document.getElementById('settings-toggle');
-const settingsPanel = document.getElementById('settings-panel');
-const closeSettings = document.getElementById('close-settings');
+const playerNameDisplay = document.getElementById('player-name');
+const newsPanel = document.getElementById('news-panel');
+const newsToggle = document.getElementById('news-toggle');
+const closeNews = document.getElementById('close-news');
+
+// Settings Navigation
+const settingsBtn = document.getElementById('settings-btn');
+const modsBtn = document.getElementById('mods-btn');
+const backToHome = document.getElementById('back-to-home');
+const settingsNavItems = document.querySelectorAll('.settings-nav-item');
+const settingsSections = document.querySelectorAll('.settings-section');
+
+// Settings Form Elements
+const usernameInput = document.getElementById('username');
 const ramSlider = document.getElementById('ram-slider');
 const ramValue = document.getElementById('ram-value');
 const resolutionSelect = document.getElementById('resolution');
 const fullscreenCheckbox = document.getElementById('fullscreen');
+const gameDirectoryInput = document.getElementById('game-directory');
+const browseDirectoryBtn = document.getElementById('browse-directory');
 const jvmArgsTextarea = document.getElementById('jvm-args');
-const saveSettingsButton = document.getElementById('save-settings');
+const closeOnLaunchCheckbox = document.getElementById('close-on-launch');
+const autoUpdateCheckbox = document.getElementById('auto-update');
+const checkUpdatesBtn = document.getElementById('check-updates');
 
 // Window Control Buttons
 const minimizeBtn = document.getElementById('minimize-btn');
 const maximizeBtn = document.getElementById('maximize-btn');
 const closeBtn = document.getElementById('close-btn');
 
-// Window Control Events
+// ==================== STATE ====================
+
+let isDownloading = false;
+let isLaunching = false;
+let config = null;
+let installationStatus = null;
+
+// ==================== WINDOW CONTROLS ====================
+
 if (minimizeBtn) {
     minimizeBtn.addEventListener('click', () => {
         ipcRenderer.send('window-minimize');
@@ -42,13 +70,178 @@ if (closeBtn) {
     });
 }
 
-// State
-let isDownloading = false;
-let isLaunching = false;
-let config = null;
-let installationStatus = null;
+// ==================== VIEW NAVIGATION ====================
 
-// Format bytes to human readable
+function switchView(viewName) {
+    document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+    document.getElementById(`${viewName}-view`).classList.add('active');
+}
+
+// Settings button - go to settings view
+if (settingsBtn) {
+    settingsBtn.addEventListener('click', () => {
+        switchView('settings');
+        switchSettingsSection('account');
+    });
+}
+
+// Mods button - go to settings mods section
+if (modsBtn) {
+    modsBtn.addEventListener('click', () => {
+        switchView('settings');
+        switchSettingsSection('mods');
+    });
+}
+
+// Back to home button
+if (backToHome) {
+    backToHome.addEventListener('click', () => {
+        saveCurrentSettings();
+        switchView('home');
+    });
+}
+
+// ==================== SETTINGS NAVIGATION ====================
+
+function switchSettingsSection(sectionName) {
+    // Update nav items
+    settingsNavItems.forEach(item => {
+        item.classList.toggle('active', item.dataset.section === sectionName);
+    });
+
+    // Update content sections
+    settingsSections.forEach(section => {
+        const isActive = section.id === `section-${sectionName}`;
+        section.classList.toggle('active', isActive);
+    });
+}
+
+// Settings navigation clicks
+settingsNavItems.forEach(item => {
+    item.addEventListener('click', () => {
+        switchSettingsSection(item.dataset.section);
+    });
+});
+
+// ==================== NEWS PANEL ====================
+
+// News URL - can be changed to a remote URL for production
+const NEWS_URL = 'https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/news.json';
+const LOCAL_NEWS_PATH = '../../news.json';
+
+if (newsToggle) {
+    newsToggle.addEventListener('click', () => {
+        newsPanel.classList.toggle('open');
+        newsToggle.classList.toggle('active');
+
+        // Load news when panel opens
+        if (newsPanel.classList.contains('open')) {
+            loadNews();
+        }
+    });
+}
+
+if (closeNews) {
+    closeNews.addEventListener('click', () => {
+        newsPanel.classList.remove('open');
+        newsToggle.classList.remove('active');
+    });
+}
+
+// Fetch and display news
+async function loadNews() {
+    const newsContent = document.getElementById('news-content');
+    if (!newsContent) return;
+
+    // Show loading state
+    newsContent.innerHTML = '<div class="news-loading">Loading news...</div>';
+
+    try {
+        let newsData = null;
+
+        // Try fetching from remote URL first
+        try {
+            const response = await fetch(NEWS_URL);
+            if (response.ok) {
+                newsData = await response.json();
+            }
+        } catch (e) {
+            console.log('Could not fetch remote news, trying local file...');
+        }
+
+        // If remote failed, try local file
+        if (!newsData) {
+            try {
+                const response = await fetch(LOCAL_NEWS_PATH);
+                if (response.ok) {
+                    newsData = await response.json();
+                }
+            } catch (e) {
+                console.log('Could not fetch local news file');
+            }
+        }
+
+        if (newsData && newsData.news && newsData.news.length > 0) {
+            renderNews(newsData.news);
+        } else {
+            newsContent.innerHTML = '<div class="news-empty">No news available</div>';
+        }
+
+    } catch (error) {
+        console.error('Error loading news:', error);
+        newsContent.innerHTML = '<div class="news-error">Could not load news</div>';
+    }
+}
+
+// Render news items
+function renderNews(newsItems) {
+    const newsContent = document.getElementById('news-content');
+    if (!newsContent) return;
+
+    newsContent.innerHTML = newsItems.map(item => {
+        const formattedDate = formatNewsDate(item.date);
+        const clickable = item.url ? `onclick="openNewsLink('${item.url}')"` : '';
+        const cursorStyle = item.url ? 'style="cursor: pointer;"' : '';
+
+        return `
+            <div class="news-card" ${cursorStyle} ${clickable}>
+                <div class="news-meta">
+                    <span class="news-date">${formattedDate}</span>
+                    <span class="news-tag">${item.tag || 'News'}</span>
+                </div>
+                <h4 class="news-title">${item.title}</h4>
+                <p class="news-description">${item.description}</p>
+            </div>
+        `;
+    }).join('');
+}
+
+// Format news date
+function formatNewsDate(dateString) {
+    try {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('en-US', {
+            month: 'short',
+            day: 'numeric',
+            year: 'numeric'
+        });
+    } catch (e) {
+        return dateString;
+    }
+}
+
+// Open news link in external browser
+function openNewsLink(url) {
+    if (url) {
+        require('electron').shell.openExternal(url);
+    }
+}
+
+// Make openNewsLink available globally for onclick handlers
+window.openNewsLink = openNewsLink;
+
+// ==================== UTILITIES ====================
+
 function formatBytes(bytes) {
     if (!bytes || bytes === 0) return '0 B';
     const k = 1024;
@@ -57,13 +250,11 @@ function formatBytes(bytes) {
     return parseFloat((bytes / Math.pow(k, i)).toFixed(1)) + ' ' + sizes[i];
 }
 
-// Format speed
 function formatSpeed(bytesPerSecond) {
     if (!bytesPerSecond || bytesPerSecond <= 0) return '';
     return formatBytes(bytesPerSecond) + '/s';
 }
 
-// Format ETA
 function formatETA(seconds) {
     if (!seconds || seconds <= 0) return '';
     if (seconds < 60) return `${Math.round(seconds)}s`;
@@ -71,7 +262,30 @@ function formatETA(seconds) {
     return `${Math.round(seconds / 3600)}h`;
 }
 
-// Initialize
+function formatRam(mb) {
+    if (mb >= 1024) {
+        return (mb / 1024).toFixed(1) + 'G';
+    }
+    return mb + 'M';
+}
+
+// ==================== STATUS & PROGRESS ====================
+
+function setStatus(text) {
+    statusText.textContent = text;
+}
+
+function showProgress(show) {
+    progressContainer.style.display = show ? 'block' : 'none';
+}
+
+function updateProgress(percentage, text = '') {
+    progressFill.style.width = `${percentage}%`;
+    progressText.textContent = text || `${percentage}%`;
+}
+
+// ==================== INITIALIZATION ====================
+
 async function init() {
     // Load configuration
     const result = await ipcRenderer.invoke('load-config');
@@ -79,19 +293,108 @@ async function init() {
         config = result.config;
         loadSettingsToUI();
 
-        // Load last username
+        // Update player name display
         if (config.last_username) {
-            usernameInput.value = config.last_username;
+            playerNameDisplay.textContent = config.last_username;
         }
+    }
+
+    // Get system info for RAM display
+    try {
+        const systemInfo = await ipcRenderer.invoke('get-system-info');
+        if (systemInfo) {
+            const totalRamEl = document.getElementById('total-ram');
+            const availableRamEl = document.getElementById('available-ram');
+            if (totalRamEl && systemInfo.totalMemory) {
+                totalRamEl.textContent = formatRam(Math.round(systemInfo.totalMemory / (1024 * 1024)));
+            }
+            if (availableRamEl && systemInfo.freeMemory) {
+                availableRamEl.textContent = formatRam(Math.round(systemInfo.freeMemory / (1024 * 1024)));
+            }
+        }
+    } catch (e) {
+        console.log('Could not get system info:', e);
     }
 
     // Check installation status and update button
     await checkAndUpdateStatus();
+
+    // Start server status monitoring
+    checkServerStatus();
+    setInterval(checkServerStatus, 60000); // Check every 60 seconds
 }
 
-// Check installation status and update UI
+// ==================== SERVER STATUS MONITORING ====================
+
+const SERVER_IP = '51.83.4.21';
+const SERVER_PORT = '25567';
+
+async function checkServerStatus() {
+    const playerCountEl = document.getElementById('player-count');
+    const serverStatusEl = document.getElementById('server-status');
+    const serverIndicatorEl = document.getElementById('server-indicator');
+
+    try {
+        // Use mcsrvstat.us API to get server status
+        const response = await fetch(`https://api.mcsrvstat.us/2/${SERVER_IP}:${SERVER_PORT}`);
+        const data = await response.json();
+
+        if (data.online) {
+            // Server is online
+            const online = data.players?.online || 0;
+            const max = data.players?.max || 100;
+
+            if (playerCountEl) {
+                playerCountEl.textContent = `${online}/${max}`;
+            }
+
+            if (serverStatusEl) {
+                serverStatusEl.classList.add('online');
+                serverStatusEl.classList.remove('offline');
+            }
+
+            if (serverIndicatorEl) {
+                serverIndicatorEl.classList.add('online');
+                serverIndicatorEl.classList.remove('offline');
+            }
+        } else {
+            // Server is offline
+            if (playerCountEl) {
+                playerCountEl.textContent = '0/0';
+            }
+
+            if (serverStatusEl) {
+                serverStatusEl.classList.remove('online');
+                serverStatusEl.classList.add('offline');
+            }
+
+            if (serverIndicatorEl) {
+                serverIndicatorEl.classList.remove('online');
+                serverIndicatorEl.classList.add('offline');
+            }
+        }
+    } catch (error) {
+        console.log('Could not fetch server status:', error);
+
+        // Show as unknown/offline on error
+        if (playerCountEl) {
+            playerCountEl.textContent = '--/--';
+        }
+
+        if (serverStatusEl) {
+            serverStatusEl.classList.remove('online');
+        }
+
+        if (serverIndicatorEl) {
+            serverIndicatorEl.classList.remove('online');
+        }
+    }
+}
+
+// ==================== INSTALLATION STATUS ====================
+
 async function checkAndUpdateStatus() {
-    setStatus('🔍 Checking installation...');
+    setStatus('Checking installation...');
 
     try {
         const status = await ipcRenderer.invoke('get-installation-status');
@@ -101,26 +404,25 @@ async function checkAndUpdateStatus() {
             updateButtonState(status);
 
             if (status.state === 'ready') {
-                setStatus('✨ Ready to Launch');
+                setStatus('Ready to Launch');
             } else if (status.state === 'needs_install') {
-                setStatus('📦 Installation required');
+                setStatus('Installation required');
             } else if (status.state === 'needs_update') {
                 const missing = status.totalMissing;
-                setStatus(`🔄 Update available (${missing} file${missing > 1 ? 's' : ''} missing)`);
+                setStatus(`Update available (${missing} file${missing > 1 ? 's' : ''})`);
             }
         } else {
-            setStatus('⚠️ Error checking installation');
+            setStatus('Error checking installation');
             console.error(status.error);
         }
     } catch (error) {
-        setStatus('⚠️ Error checking installation');
+        setStatus('Error checking installation');
         console.error('Installation check error:', error);
     }
 }
 
-// Update button state based on installation status
 function updateButtonState(status) {
-    buttonText.textContent = status.actionLabel || 'LAUNCH';
+    buttonText.textContent = status.actionLabel || 'PLAY';
 
     // Remove existing state classes
     playButton.classList.remove('install-state', 'update-state', 'ready-state');
@@ -135,68 +437,192 @@ function updateButtonState(status) {
     }
 }
 
-// Load settings into UI
+// ==================== SETTINGS MANAGEMENT ====================
+
 function loadSettingsToUI() {
     if (!config) return;
 
+    // Username
+    if (usernameInput && config.last_username) {
+        usernameInput.value = config.last_username;
+    }
+
     // RAM
-    const ramMB = parseInt(config.jvm_args.max_ram);
-    ramSlider.value = ramMB;
-    updateRamValue(ramMB);
+    if (ramSlider && config.jvm_args && config.jvm_args.max_ram) {
+        const ramMB = parseInt(config.jvm_args.max_ram);
+        ramSlider.value = ramMB;
+        updateRamDisplay(ramMB);
+    }
 
     // Resolution
-    resolutionSelect.value = `${config.window.width}x${config.window.height}`;
+    if (resolutionSelect && config.window) {
+        resolutionSelect.value = `${config.window.width}x${config.window.height}`;
+    }
 
     // Fullscreen
-    fullscreenCheckbox.checked = config.window.fullscreen;
+    if (fullscreenCheckbox && config.window) {
+        fullscreenCheckbox.checked = config.window.fullscreen;
+    }
 
     // Game Directory
-    const gameDirInput = document.getElementById('game-directory');
-    if (gameDirInput) {
-        gameDirInput.value = config.game_directory;
+    if (gameDirectoryInput && config.game_directory) {
+        gameDirectoryInput.value = config.game_directory;
     }
 
     // JVM Args
-    if (config.jvm_args.custom_args) {
+    if (jvmArgsTextarea && config.jvm_args && config.jvm_args.custom_args) {
         jvmArgsTextarea.value = config.jvm_args.custom_args.join('\n');
+    }
+
+    // Close on launch
+    if (closeOnLaunchCheckbox) {
+        closeOnLaunchCheckbox.checked = config.close_launcher_on_game_start || false;
+    }
+
+    // Auto update
+    if (autoUpdateCheckbox) {
+        autoUpdateCheckbox.checked = config.auto_update !== false;
     }
 }
 
-// Update RAM value display
-function updateRamValue(mb) {
-    const gb = (mb / 1024).toFixed(1);
-    ramValue.textContent = `${gb} GB`;
+function updateRamDisplay(mb) {
+    if (ramValue) {
+        ramValue.textContent = formatRam(mb);
+    }
 }
 
-// Set status text
-function setStatus(text) {
-    statusText.textContent = text;
+async function saveCurrentSettings() {
+    if (!config) return;
+
+    try {
+        // Username
+        if (usernameInput) {
+            const username = usernameInput.value.trim();
+            if (username) {
+                config.last_username = username;
+                playerNameDisplay.textContent = username;
+            }
+        }
+
+        // RAM
+        if (ramSlider) {
+            const ramMB = parseInt(ramSlider.value);
+            config.jvm_args.max_ram = `${ramMB}M`;
+        }
+
+        // Resolution
+        if (resolutionSelect) {
+            const [width, height] = resolutionSelect.value.split('x').map(Number);
+            config.window.width = width;
+            config.window.height = height;
+        }
+
+        // Fullscreen
+        if (fullscreenCheckbox) {
+            config.window.fullscreen = fullscreenCheckbox.checked;
+        }
+
+        // Game directory
+        if (gameDirectoryInput && gameDirectoryInput.value.trim()) {
+            config.game_directory = gameDirectoryInput.value.trim();
+        }
+
+        // JVM args
+        if (jvmArgsTextarea) {
+            const jvmArgsText = jvmArgsTextarea.value.trim();
+            if (jvmArgsText) {
+                config.jvm_args.custom_args = jvmArgsText.split('\n').filter(line => line.trim());
+            } else {
+                config.jvm_args.custom_args = [];
+            }
+        }
+
+        // Close on launch
+        if (closeOnLaunchCheckbox) {
+            config.close_launcher_on_game_start = closeOnLaunchCheckbox.checked;
+        }
+
+        // Auto update
+        if (autoUpdateCheckbox) {
+            config.auto_update = autoUpdateCheckbox.checked;
+        }
+
+        // Save to file
+        await ipcRenderer.invoke('save-config', config);
+
+    } catch (error) {
+        console.error('Error saving settings:', error);
+    }
 }
 
-// Show progress
-function showProgress(show) {
-    progressContainer.style.display = show ? 'block' : 'none';
+// ==================== EVENT LISTENERS ====================
+
+// RAM slider
+if (ramSlider) {
+    ramSlider.addEventListener('input', (e) => {
+        updateRamDisplay(parseInt(e.target.value));
+    });
 }
 
-// Update progress
-function updateProgress(percentage, text = '') {
-    progressFill.style.width = `${percentage}%`;
-    progressText.textContent = text || `${percentage}%`;
+// Browse directory button
+if (browseDirectoryBtn) {
+    browseDirectoryBtn.addEventListener('click', async () => {
+        const result = await ipcRenderer.invoke('select-directory');
+
+        if (result.success && !result.canceled) {
+            if (gameDirectoryInput) {
+                gameDirectoryInput.value = result.path;
+            }
+        }
+    });
 }
 
-// Play button click
+// Check updates button
+if (checkUpdatesBtn) {
+    checkUpdatesBtn.addEventListener('click', async () => {
+        checkUpdatesBtn.textContent = 'Checking...';
+        checkUpdatesBtn.disabled = true;
+
+        try {
+            await checkAndUpdateStatus();
+            checkUpdatesBtn.textContent = 'Check for Updates';
+        } catch (error) {
+            console.error('Error checking updates:', error);
+            checkUpdatesBtn.textContent = 'Check for Updates';
+        }
+
+        checkUpdatesBtn.disabled = false;
+    });
+}
+
+// Username input - update display on change
+if (usernameInput) {
+    usernameInput.addEventListener('input', (e) => {
+        const value = e.target.value.trim();
+        if (value) {
+            playerNameDisplay.textContent = value;
+        }
+    });
+}
+
+// ==================== PLAY BUTTON ====================
+
 playButton.addEventListener('click', async () => {
-    const username = usernameInput.value.trim();
+    // Get username from settings
+    const username = usernameInput ? usernameInput.value.trim() : config?.last_username;
 
     if (!username) {
-        alert('Please enter a username');
-        usernameInput.focus();
+        switchView('settings');
+        switchSettingsSection('account');
+        usernameInput?.focus();
         return;
     }
 
     if (username.length < 3 || username.length > 16) {
         alert('Username must be between 3 and 16 characters');
-        usernameInput.focus();
+        switchView('settings');
+        switchSettingsSection('account');
+        usernameInput?.focus();
         return;
     }
 
@@ -206,6 +632,7 @@ playButton.addEventListener('click', async () => {
     try {
         // Save username to config
         config.last_username = username;
+        playerNameDisplay.textContent = username;
         await ipcRenderer.invoke('save-config', config);
 
         // Check if we need to download
@@ -215,7 +642,7 @@ playButton.addEventListener('click', async () => {
             // Download required files
             isDownloading = true;
             buttonText.textContent = 'DOWNLOADING...';
-            setStatus('📥 Starting download...');
+            setStatus('Starting download...');
             showProgress(true);
 
             const downloadResult = await ipcRenderer.invoke('download-minecraft');
@@ -235,13 +662,13 @@ playButton.addEventListener('click', async () => {
 
         // Launch game
         isLaunching = true;
-        setStatus('🚀 Launching Minecraft...');
+        setStatus('Launching Minecraft...');
         buttonText.textContent = 'LAUNCHING...';
 
         const launchResult = await ipcRenderer.invoke('launch-game', username, {});
 
         if (launchResult.success) {
-            setStatus('🎮 Minecraft is running');
+            setStatus('Minecraft is running');
             buttonText.textContent = 'PLAYING';
 
             // Optional: Close launcher after game starts
@@ -256,7 +683,7 @@ playButton.addEventListener('click', async () => {
 
     } catch (error) {
         console.error('Launch error:', error);
-        setStatus('❌ Error: ' + error.message);
+        setStatus('Error: ' + error.message);
         alert('Failed to launch Minecraft: ' + error.message);
 
         // Refresh status after error
@@ -268,12 +695,14 @@ playButton.addEventListener('click', async () => {
     }
 });
 
-// Download progress listener with enhanced feedback
+// ==================== IPC LISTENERS ====================
+
+// Download progress listener
 ipcRenderer.on('download-progress', (event, progress) => {
     console.log('Download progress:', progress);
 
     if (progress.stage === 'complete') {
-        setStatus('✅ Download Complete!');
+        setStatus('Download Complete!');
         updateProgress(100, 'Complete');
         return;
     }
@@ -284,25 +713,25 @@ ipcRenderer.on('download-progress', (event, progress) => {
     if (progress.stage === 'client') {
         const downloaded = formatBytes(progress.downloaded);
         const total = formatBytes(progress.totalSize);
-        setStatus(`⬇️ Downloading Client ${speed ? `• ${speed}` : ''}`);
+        setStatus(`Downloading Client ${speed ? `• ${speed}` : ''}`);
         updateProgress(progress.overallProgress || progress.percentage, `${downloaded} / ${total}`);
 
     } else if (progress.stage === 'libraries') {
         const current = progress.completed || 0;
         const total = progress.total || 0;
         const fileName = progress.currentFile || 'Library';
-        setStatus(`📦 ${fileName} ${speed ? `• ${speed}` : ''}`);
+        setStatus(`${fileName} ${speed ? `• ${speed}` : ''}`);
         updateProgress(progress.overallProgress || 0, `${current}/${total} Libraries`);
 
     } else if (progress.stage === 'asset-index') {
-        setStatus('📋 Downloading Asset Index...');
+        setStatus('Downloading Asset Index...');
         updateProgress(progress.overallProgress || 50, 'Asset Index');
 
     } else if (progress.stage === 'assets') {
         const current = progress.completed || 0;
         const total = progress.total || 0;
         const etaText = eta ? ` • ~${eta} remaining` : '';
-        setStatus(`🎨 Downloading Assets ${speed ? `• ${speed}` : ''}${etaText}`);
+        setStatus(`Downloading Assets ${speed ? `• ${speed}` : ''}${etaText}`);
         updateProgress(progress.overallProgress || 0, `${current}/${total} Assets`);
 
     } else if (progress.stage === 'modpack') {
@@ -310,22 +739,21 @@ ipcRenderer.on('download-progress', (event, progress) => {
         const total = progress.total || 0;
 
         if (progress.status === 'checking') {
-            setStatus('🔍 Checking for mod updates...');
+            setStatus('Checking for mod updates...');
             showProgress(true);
             updateProgress(0, 'Checking mods...');
         } else if (progress.status === 'downloading') {
             const currentFile = progress.file || 'Mod';
-            setStatus(`🔧 Downloading: ${currentFile}`);
+            setStatus(`Downloading: ${currentFile}`);
             updateProgress(progress.percentage || 0, `${current}/${total} Mods`);
         } else if (progress.status === 'complete') {
-            setStatus('✅ Mods synced successfully');
+            setStatus('Mods synced successfully');
             updateProgress(100, 'Mods ready');
         } else if (progress.status === 'error') {
-            setStatus(`⚠️ Mod sync failed: ${progress.message || 'Unknown error'}`);
+            setStatus(`Mod sync failed: ${progress.message || 'Unknown error'}`);
         } else {
-            // Fallback for legacy format
             const currentFile = progress.file || 'Syncing';
-            setStatus(`🔧 ${currentFile}`);
+            setStatus(`${currentFile}`);
             updateProgress(Math.floor((current / total) * 100), `${current}/${total} Mods`);
         }
     }
@@ -336,7 +764,7 @@ ipcRenderer.on('game-state', (event, state) => {
     if (state.running) {
         playButton.disabled = true;
         buttonText.textContent = 'PLAYING';
-        setStatus('🎮 Minecraft is running...');
+        setStatus('Minecraft is running...');
     } else {
         playButton.disabled = false;
         // Refresh status when game closes
@@ -344,80 +772,62 @@ ipcRenderer.on('game-state', (event, state) => {
     }
 });
 
-// Settings toggle
-settingsToggle.addEventListener('click', () => {
-    settingsPanel.classList.add('open');
-});
+// ==================== LAUNCHER AUTO-UPDATE ====================
 
-closeSettings.addEventListener('click', () => {
-    settingsPanel.classList.remove('open');
-});
+// Launcher update status listener
+ipcRenderer.on('launcher-update-status', (event, data) => {
+    console.log('Launcher update status:', data);
 
-// RAM slider
-ramSlider.addEventListener('input', (e) => {
-    updateRamValue(parseInt(e.target.value));
-});
+    const updateInfoEl = document.querySelector('.update-info h4');
+    const updateVersionEl = document.getElementById('modpack-version');
+    const updateIconEl = document.querySelector('.update-icon svg');
 
-// Browse directory button
-const browseDirButton = document.getElementById('browse-directory');
-if (browseDirButton) {
-    browseDirButton.addEventListener('click', async () => {
-        const result = await ipcRenderer.invoke('select-directory');
+    switch (data.status) {
+        case 'update-checking':
+            if (updateInfoEl) updateInfoEl.textContent = 'Checking for updates...';
+            break;
 
-        if (result.success && !result.canceled) {
-            const gameDirInput = document.getElementById('game-directory');
-            if (gameDirInput) {
-                gameDirInput.value = result.path;
+        case 'update-available':
+            if (updateInfoEl) updateInfoEl.textContent = `Update Available: v${data.version}`;
+            if (updateIconEl) {
+                updateIconEl.innerHTML = '<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>';
             }
-        }
-    });
-}
+            break;
 
-// Save settings
-saveSettingsButton.addEventListener('click', async () => {
-    try {
-        // Update config
-        const ramMB = parseInt(ramSlider.value);
-        config.jvm_args.max_ram = `${ramMB}M`;
+        case 'update-not-available':
+            if (updateInfoEl) updateInfoEl.textContent = "You're up to date!";
+            break;
 
-        const [width, height] = resolutionSelect.value.split('x').map(Number);
-        config.window.width = width;
-        config.window.height = height;
+        case 'update-download-progress':
+            if (updateInfoEl) updateInfoEl.textContent = `Downloading update... ${data.percent.toFixed(1)}%`;
+            break;
 
-        config.window.fullscreen = fullscreenCheckbox.checked;
+        case 'update-downloaded':
+            if (updateInfoEl) updateInfoEl.textContent = `Update v${data.version} ready to install`;
+            // Show install button or notification
+            break;
 
-        // Game directory
-        const gameDirInput = document.getElementById('game-directory');
-        if (gameDirInput && gameDirInput.value.trim()) {
-            config.game_directory = gameDirInput.value.trim();
-        }
-
-        // Parse JVM args
-        const jvmArgsText = jvmArgsTextarea.value.trim();
-        if (jvmArgsText) {
-            config.jvm_args.custom_args = jvmArgsText.split('\n').filter(line => line.trim());
-        } else {
-            config.jvm_args.custom_args = [];
-        }
-
-        // Save to file
-        const result = await ipcRenderer.invoke('save-config', config);
-
-        if (result.success) {
-            alert('Settings saved successfully!');
-            settingsPanel.classList.remove('open');
-
-            // Refresh installation status in case game directory changed
-            await checkAndUpdateStatus();
-        } else {
-            throw new Error(result.error);
-        }
-
-    } catch (error) {
-        console.error('Error saving settings:', error);
-        alert('Failed to save settings: ' + error.message);
+        case 'update-error':
+            if (updateInfoEl) updateInfoEl.textContent = 'Update check failed';
+            console.error('Launcher update error:', data.message);
+            break;
     }
 });
 
-// Initialize on load
+// Get launcher version on init
+async function updateLauncherVersionDisplay() {
+    try {
+        const versionInfo = await ipcRenderer.invoke('get-launcher-version');
+        const versionEl = document.querySelector('.about-card .version');
+        if (versionEl) {
+            versionEl.textContent = `Version ${versionInfo.version}`;
+        }
+    } catch (e) {
+        console.log('Could not get launcher version:', e);
+    }
+}
+
+// ==================== INITIALIZE ====================
+
 init();
+updateLauncherVersionDisplay();

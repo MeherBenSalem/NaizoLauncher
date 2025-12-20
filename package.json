@@ -1,7 +1,7 @@
 {
-  "name": "nightbeam-launcher",
+  "name": "naizo-launcher",
   "version": "1.0.0",
-  "description": "NightBeam Launcher - Premium Minecraft Launcher with Fabric Mod Support",
+  "description": "NAIZO Launcher - Premium Minecraft Launcher with Fabric Mod Support",
   "main": "main.js",
   "scripts": {
     "start": "electron .",
@@ -10,7 +10,8 @@
   "keywords": [
     "minecraft",
     "launcher",
-    "electron"
+    "electron",
+    "naizo"
   ],
   "author": "Naizo",
   "license": "MIT",
@@ -19,11 +20,12 @@
     "electron-builder": "^24.9.0"
   },
   "dependencies": {
-    "axios": "^1.6.0"
+    "axios": "^1.6.0",
+    "electron-updater": "^6.1.7"
   },
   "build": {
-    "appId": "com.nightbeam.launcher",
-    "productName": "NightBeam Launcher",
+    "appId": "com.naizo.launcher",
+    "productName": "NAIZO Launcher",
     "files": [
       "**/*",
       "!minecraft/**",
@@ -35,6 +37,11 @@
     ],
     "directories": {
       "output": "dist"
+    },
+    "publish": {
+      "provider": "github",
+      "owner": "MeherBenSalem",
+      "repo": "NaizoLauncher"
     },
     "win": {
       "target": "nsis",

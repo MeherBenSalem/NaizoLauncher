@@ -4,68 +4,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NightBeam Launcher</title>
+    <title>NAIZO Launcher</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
+    <!-- Full-screen Background -->
+    <div class="background-container">
+        <img src="../../backgournd.png" class="background-image" alt="Background" />
+        <div class="background-overlay"></div>
+    </div>
+
     <!-- Custom Title Bar -->
     <div class="title-bar" id="title-bar">
         <div class="title-bar-drag">
-            <div class="title-bar-icon">
-                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-                </svg>
-            </div>
-            <span class="title-bar-text">NightBeam Launcher</span>
+            <span class="title-bar-text">NAIZO Launcher</span>
         </div>
         <div class="window-controls">
             <button class="window-btn minimize-btn" id="minimize-btn" title="Minimize">
                 <svg viewBox="0 0 12 12">
-                    <rect x="2" y="5.5" width="8" height="1" fill="currentColor"/>
+                    <rect x="2" y="5.5" width="8" height="1" fill="currentColor" />
                 </svg>
             </button>
             <button class="window-btn maximize-btn" id="maximize-btn" title="Maximize">
                 <svg viewBox="0 0 12 12">
-                    <rect x="2" y="2" width="8" height="8" fill="none" stroke="currentColor" stroke-width="1"/>
+                    <rect x="2" y="2" width="8" height="8" fill="none" stroke="currentColor" stroke-width="1" />
                 </svg>
             </button>
             <button class="window-btn close-btn" id="close-btn" title="Close">
                 <svg viewBox="0 0 12 12">
-                    <path d="M2 2L10 10M10 2L2 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <path d="M2 2L10 10M10 2L2 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
                 </svg>
             </button>
         </div>
     </div>
 
-    <!-- Floating Particles -->
-    <div class="particles" id="particles"></div>
+    <!-- Main Application Container -->
+    <div class="app-container">
 
-    <div class="launcher-container">
-        <!-- Header -->
-        <div class="header">
-            <div class="logo-container">
-                <div class="logo-icon">
-                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+        <!-- ==================== HOME VIEW ==================== -->
+        <main class="view home-view active" id="home-view">
+
+            <!-- Server Logo (Top Left) -->
+            <div class="server-logo">
+                <div class="logo-circle">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
                     </svg>
                 </div>
-                <h1 class="title">NightBeam</h1>
-            </div>
-            <div class="version-badge">Fabric 1.20.1</div>
-        </div>
-
-        <!-- Main Content -->
-        <div class="main-content">
-            <!-- Username Input -->
-            <div class="input-group">
-                <label for="username">Player Name</label>
-                <input type="text" id="username" placeholder="Enter your username" maxlength="16" autocomplete="off"
-                    autofocus />
             </div>
 
-            <!-- Status Display -->
-            <div class="status-container">
+            <!-- Player Info (Top Right) -->
+            <div class="player-info">
+                <span class="player-name" id="player-name">Player</span>
+                <div class="player-avatar" id="player-avatar">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                    </svg>
+                </div>
+            </div>
+
+            <!-- Quick Navigation (Right Side) -->
+            <nav class="quick-nav">
+                <button class="nav-icon" id="settings-btn" title="Settings">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3" />
+                        <path
+                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                    </svg>
+                </button>
+                <button class="nav-icon" id="mods-btn" title="Mods">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path
+                            d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                    </svg>
+                </button>
+                <div class="nav-divider"></div>
+                <a href="https://x.com/real_NAIZO" target="_blank" class="nav-icon social-icon" title="X (Twitter)">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                </a>
+                <a href="https://www.instagram.com/naizo_mc/" target="_blank" class="nav-icon social-icon"
+                    title="Instagram">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                    </svg>
+                </a>
+                <a href="https://www.youtube.com/@naizominecraft" target="_blank" class="nav-icon social-icon"
+                    title="YouTube">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    </svg>
+                </a>
+                <a href="https://discord.gg/YcmhZSK3pt" target="_blank" class="nav-icon social-icon" title="Discord">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z" />
+                    </svg>
+                </a>
+            </nav>
+
+            <!-- Center Play Section (True center of window) -->
+            <div class="center-play-section">
                 <div class="status-text" id="status-text">Ready to Launch</div>
                 <div class="progress-container" id="progress-container" style="display: none;">
                     <div class="progress-bar">
@@ -73,98 +121,298 @@
                     </div>
                     <div class="progress-text" id="progress-text">0%</div>
                 </div>
+                <button class="news-toggle" id="news-toggle">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="18 15 12 9 6 15" />
+                    </svg>
+                    <span>NEWS</span>
+                </button>
+                <button class="play-button" id="play-button">
+                    <span class="button-text">PLAY</span>
+                </button>
             </div>
 
-            <!-- Play Button -->
-            <button class="play-button" id="play-button">
-                <span class="button-text">LAUNCH</span>
-            </button>
-        </div>
+            <!-- Bottom Bar (Status info only) -->
+            <div class="bottom-bar">
+                <!-- Left: Server Status -->
+                <div class="status-section">
+                    <div class="status-item">
+                        <span class="status-label">PLAYERS</span>
+                        <span class="status-value" id="player-count">--/--</span>
+                    </div>
+                    <div class="status-item">
+                        <span class="status-label">SERVER STATUS</span>
+                        <span class="status-indicator" id="server-status"></span>
+                    </div>
+                </div>
 
-        <!-- Settings Toggle -->
-        <button class="settings-toggle" id="settings-toggle">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="3"></circle>
-                <path d="M12 1v6m0 6v6m0-18a11 11 0 1 0 0 22 11 11 0 0 0 0-22"></path>
-            </svg>
-        </button>
-
-        <!-- Premium Badge -->
-        <div class="premium-badge">
-            <svg viewBox="0 0 24 24">
-                <path
-                    d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-            </svg>
-            <span>PREMIUM EDITION</span>
-        </div>
-
-        <!-- Settings Panel -->
-        <div class="settings-panel" id="settings-panel">
-            <div class="settings-header">
-                <h3>Settings</h3>
-                <button class="close-settings" id="close-settings">&times;</button>
+                <!-- Right: Server Selector -->
+                <div class="server-section">
+                    <span class="server-indicator" id="server-indicator"></span>
+                    <span class="server-name" id="server-name">NAIZO Server</span>
+                </div>
             </div>
 
+            <!-- News Panel (Hidden by default) -->
+            <div class="news-panel" id="news-panel">
+                <div class="news-header">
+                    <h3>Latest Updates</h3>
+                    <button class="close-news" id="close-news">&times;</button>
+                </div>
+                <div class="news-content" id="news-content">
+                    <div class="news-card">
+                        <div class="news-meta">
+                            <span class="news-date">Dec 20, 2024</span>
+                            <span class="news-tag">Update</span>
+                        </div>
+                        <h4 class="news-title">Launcher v1.0 Released!</h4>
+                        <p class="news-description">The new premium launcher is now available with improved performance
+                            and modern design.</p>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-meta">
+                            <span class="news-date">Dec 18, 2024</span>
+                            <span class="news-tag">Feature</span>
+                        </div>
+                        <h4 class="news-title">New Mods Added</h4>
+                        <p class="news-description">Check out the latest modpack updates including new gameplay features
+                            and optimizations.</p>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-meta">
+                            <span class="news-date">Dec 15, 2024</span>
+                            <span class="news-tag">Server</span>
+                        </div>
+                        <h4 class="news-title">Server Updates</h4>
+                        <p class="news-description">Server performance improvements and new custom features have been
+                            deployed.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- ==================== SETTINGS VIEW ==================== -->
+        <section class="view settings-view" id="settings-view">
+
+            <!-- Settings Sidebar -->
+            <aside class="settings-sidebar">
+                <div class="sidebar-header">
+                    <button class="back-btn" id="back-to-home">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6" />
+                        </svg>
+                    </button>
+                    <h2>Settings</h2>
+                </div>
+                <nav class="settings-nav">
+                    <button class="settings-nav-item active" data-section="account">
+                        <span>Account</span>
+                    </button>
+                    <button class="settings-nav-item" data-section="minecraft">
+                        <span>Minecraft</span>
+                    </button>
+                    <button class="settings-nav-item" data-section="mods">
+                        <span>Mods</span>
+                    </button>
+                    <button class="settings-nav-item" data-section="java">
+                        <span>Java</span>
+                    </button>
+                    <button class="settings-nav-item" data-section="launcher">
+                        <span>Launcher</span>
+                    </button>
+                    <div class="nav-spacer"></div>
+                    <button class="settings-nav-item" data-section="about">
+                        <span>About</span>
+                    </button>
+                    <button class="settings-nav-item" data-section="updates">
+                        <span>Updates</span>
+                    </button>
+                </nav>
+            </aside>
+
+            <!-- Settings Content Panels -->
             <div class="settings-content">
-                <!-- RAM Allocation -->
-                <div class="setting-item">
-                    <label for="ram-slider">RAM Allocation</label>
-                    <div class="slider-container">
-                        <input type="range" id="ram-slider" min="512" max="8192" step="512" value="2048" />
-                        <span class="slider-value" id="ram-value">2 GB</span>
+
+                <!-- Account Section -->
+                <div class="settings-section active" id="section-account">
+                    <div class="section-header">
+                        <h3>Account Settings</h3>
+                        <p>Manage your player profile and account preferences.</p>
+                    </div>
+                    <div class="section-body">
+                        <div class="setting-group">
+                            <label for="username">Player Name</label>
+                            <input type="text" id="username" placeholder="Enter your username" maxlength="16"
+                                autocomplete="off" />
+                            <span class="setting-hint">This is the name that will be displayed in-game.</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Resolution -->
-                <div class="setting-item">
-                    <label for="resolution">Window Size</label>
-                    <select id="resolution">
-                        <option value="854x480">854 × 480</option>
-                        <option value="1280x720">1280 × 720</option>
-                        <option value="1920x1080" selected>1920 × 1080</option>
-                    </select>
-                </div>
-
-                <!-- Fullscreen -->
-                <div class="setting-item checkbox-item">
-                    <label for="fullscreen">Fullscreen</label>
-                    <input type="checkbox" id="fullscreen" />
-                </div>
-
-                <!-- Game Directory -->
-                <div class="setting-item">
-                    <label for="game-directory">Game Directory</label>
-                    <div class="directory-selector">
-                        <input type="text" id="game-directory" readonly placeholder="./minecraft" />
-                        <button class="browse-button" id="browse-directory">Browse</button>
+                <!-- Minecraft Section -->
+                <div class="settings-section" id="section-minecraft">
+                    <div class="section-header">
+                        <h3>Minecraft Settings</h3>
+                        <p>Configure game window and display options.</p>
+                    </div>
+                    <div class="section-body">
+                        <div class="setting-group">
+                            <label for="resolution">Window Size</label>
+                            <select id="resolution">
+                                <option value="854x480">854 × 480</option>
+                                <option value="1280x720">1280 × 720</option>
+                                <option value="1920x1080" selected>1920 × 1080</option>
+                            </select>
+                        </div>
+                        <div class="setting-group toggle-group">
+                            <label for="fullscreen">Fullscreen</label>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="fullscreen" />
+                                <span class="toggle-slider"></span>
+                            </div>
+                        </div>
+                        <div class="setting-group">
+                            <label for="game-directory">Game Directory</label>
+                            <div class="input-with-button">
+                                <input type="text" id="game-directory" readonly placeholder="./minecraft" />
+                                <button class="browse-btn" id="browse-directory">Browse</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <!-- JVM Arguments -->
-                <div class="setting-item">
-                    <label for="jvm-args">JVM Arguments</label>
-                    <textarea id="jvm-args" rows="3" placeholder="-XX:+UseG1GC..."></textarea>
+                <!-- Mods Section -->
+                <div class="settings-section" id="section-mods">
+                    <div class="section-header">
+                        <h3>Mod Settings</h3>
+                        <p>View and manage installed modifications.</p>
+                    </div>
+                    <div class="section-body">
+                        <div class="info-card">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" />
+                            </svg>
+                            <p>Mods are automatically managed by the modpack. Custom mod configurations coming soon.</p>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Save Button -->
-                <button class="save-button" id="save-settings">Save Settings</button>
+                <!-- Java Section -->
+                <div class="settings-section" id="section-java">
+                    <div class="section-header">
+                        <h3>Java Settings</h3>
+                        <p>Manage the Java configuration (advanced).</p>
+                    </div>
+                    <div class="section-body">
+                        <div class="setting-group">
+                            <label>Memory</label>
+                            <div class="memory-setting">
+                                <div class="memory-row">
+                                    <span class="memory-label">Maximum RAM</span>
+                                    <div class="slider-wrapper">
+                                        <input type="range" id="ram-slider" min="1024" max="16384" step="512"
+                                            value="4096" />
+                                        <span class="slider-value" id="ram-value">4.0G</span>
+                                    </div>
+                                </div>
+                                <div class="memory-info">
+                                    <div class="memory-stat">
+                                        <span class="stat-label">Total</span>
+                                        <span class="stat-value" id="total-ram">--</span>
+                                    </div>
+                                    <div class="memory-stat">
+                                        <span class="stat-label">Available</span>
+                                        <span class="stat-value" id="available-ram">--</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="setting-hint warning">The recommended minimum RAM is 3 gigabytes. Setting the
+                                minimum and maximum values to the same value may reduce lag.</span>
+                        </div>
+                        <div class="setting-group">
+                            <label for="jvm-args">JVM Arguments</label>
+                            <textarea id="jvm-args" rows="3"
+                                placeholder="-XX:+UseG1GC -XX:+ParallelRefProcEnabled..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Launcher Section -->
+                <div class="settings-section" id="section-launcher">
+                    <div class="section-header">
+                        <h3>Launcher Settings</h3>
+                        <p>Configure launcher behavior and preferences.</p>
+                    </div>
+                    <div class="section-body">
+                        <div class="setting-group toggle-group">
+                            <label for="close-on-launch">Close Launcher on Game Start</label>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="close-on-launch" />
+                                <span class="toggle-slider"></span>
+                            </div>
+                        </div>
+                        <div class="setting-group toggle-group">
+                            <label for="auto-update">Auto-Update Modpack</label>
+                            <div class="toggle-switch">
+                                <input type="checkbox" id="auto-update" checked />
+                                <span class="toggle-slider"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- About Section -->
+                <div class="settings-section" id="section-about">
+                    <div class="section-header">
+                        <h3>About</h3>
+                        <p>Launcher information and credits.</p>
+                    </div>
+                    <div class="section-body">
+                        <div class="about-card">
+                            <div class="about-logo">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                                </svg>
+                            </div>
+                            <h4>NightBeam Launcher</h4>
+                            <p class="version">Version 1.0.0</p>
+                            <p class="description">A premium Minecraft launcher for the NightBeam modpack experience.
+                            </p>
+                            <p class="credits">Fabric 1.20.1</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Updates Section -->
+                <div class="settings-section" id="section-updates">
+                    <div class="section-header">
+                        <h3>Updates</h3>
+                        <p>Check for launcher and modpack updates.</p>
+                    </div>
+                    <div class="section-body">
+                        <div class="update-status">
+                            <div class="update-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                                </svg>
+                            </div>
+                            <div class="update-info">
+                                <h4>You're up to date!</h4>
+                                <p>Modpack version: <span id="modpack-version">1.0.0</span></p>
+                            </div>
+                        </div>
+                        <button class="check-updates-btn" id="check-updates">Check for Updates</button>
+                    </div>
+                </div>
+
             </div>
-        </div>
+        </section>
+
     </div>
 
     <script src="renderer.js"></script>
-    <script>
-        // Create floating particles
-        const particlesContainer = document.getElementById('particles');
-        for (let i = 0; i < 30; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.animationDelay = Math.random() * 15 + 's';
-            particle.style.animationDuration = (15 + Math.random() * 10) + 's';
-            particlesContainer.appendChild(particle);
-        }
-    </script>
 </body>
 
 </html>

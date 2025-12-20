@@ -1,19 +1,23 @@
 const { app, BrowserWindow, ipcMain, dialog, Menu } = require('electron');
 const path = require('path');
 const fs = require('fs');
+const os = require('os');
 
 // Import launcher core modules
 const { checkInstallation, downloadMinecraft, getInstallationStatus } = require('./src/core/launcher-core');
 const { launchMinecraft } = require('./src/launch/game-launcher');
 const { loadConfig, saveConfig } = require('./src/core/config-manager');
+const { initAutoUpdater, checkForUpdates, quitAndInstall, getUpdateStatus, cleanup } = require('./src/core/auto-updater');
 
 let mainWindow;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 900,
-    height: 550,
-    resizable: false,
+    width: 1024,
+    height: 640,
+    minWidth: 900,
+    minHeight: 550,
+    resizable: true,
     frame: false,
     transparent: false,
     webPreferences: {
@@ -31,6 +35,11 @@ function createWindow() {
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
+
+  // Initialize auto-updater after window is ready
+  mainWindow.webContents.on('did-finish-load', () => {
+    initAutoUpdater(mainWindow);
+  });
 }
 
 let gameRunning = false;
@@ -46,6 +55,11 @@ app.whenReady().then(() => {
       createWindow();
     }
   });
+});
+
+// Cleanup on app quit
+app.on('before-quit', () => {
+  cleanup();
 });
 
 app.on('window-all-closed', () => {
@@ -182,3 +196,47 @@ ipcMain.handle('select-directory', async () => {
   }
 });
 
+// Get system information (RAM, etc.)
+ipcMain.handle('get-system-info', async () => {
+  return {
+    totalMemory: os.totalmem(),
+    freeMemory: os.freemem(),
+    platform: os.platform(),
+    arch: os.arch()
+  };
+});
+
+// ==================== AUTO-UPDATER IPC HANDLERS ====================
+
+// Get current launcher update status
+ipcMain.handle('get-launcher-update-status', async () => {
+  return getUpdateStatus();
+});
+
+// Check for launcher updates
+ipcMain.handle('check-for-launcher-updates', async () => {
+  try {
+    const result = await checkForUpdates();
+    return { success: true, ...result };
+  } catch (error) {
+    return { success: false, error: error.message };
+  }
+});
+
+// Install launcher update (quit and install)
+ipcMain.handle('install-launcher-update', async () => {
+  try {
+    quitAndInstall();
+    return { success: true };
+  } catch (error) {
+    return { success: false, error: error.message };
+  }
+});
+
+// Get launcher version
+ipcMain.handle('get-launcher-version', async () => {
+  return {
+    version: app.getVersion(),
+    name: app.getName()
+  };
+});
