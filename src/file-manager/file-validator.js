@@ -39,11 +39,17 @@ async function validateInstallation(gameDir, version) {
 
 /**
  * Validate specific file with SHA1 hash
+ * If expectedSha1 is null/undefined, just check if file exists (for Fabric libraries)
  */
 async function validateFile(filePath, expectedSha1) {
     try {
         if (!await fileExists(filePath)) {
             return false;
+        }
+
+        // If no hash provided, just verify file exists (Fabric libraries don't have hashes)
+        if (!expectedSha1) {
+            return true;
         }
 
         const fileBuffer = await fs.readFile(filePath);
