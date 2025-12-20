@@ -28,6 +28,105 @@ body {
     position: relative;
 }
 
+/* Custom Title Bar */
+.title-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 36px;
+    background: linear-gradient(180deg, rgba(30, 30, 30, 0.98) 0%, rgba(20, 20, 20, 0.98) 100%);
+    border-bottom: 1px solid var(--black-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    -webkit-app-region: drag;
+}
+
+.title-bar-drag {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 12px;
+    height: 100%;
+}
+
+.title-bar-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-bar-icon svg {
+    width: 16px;
+    height: 16px;
+    fill: var(--gold-primary);
+    stroke: var(--gold-primary);
+    stroke-width: 1;
+}
+
+.title-bar-text {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--white-muted);
+    letter-spacing: 0.5px;
+}
+
+.window-controls {
+    display: flex;
+    height: 100%;
+    -webkit-app-region: no-drag;
+}
+
+.window-btn {
+    width: 46px;
+    height: 100%;
+    background: transparent;
+    border: none;
+    color: var(--white-muted);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.window-btn svg {
+    width: 12px;
+    height: 12px;
+}
+
+.window-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--white-text);
+}
+
+.window-btn:active {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.minimize-btn:hover {
+    background: rgba(212, 175, 55, 0.15);
+    color: var(--gold-primary);
+}
+
+.maximize-btn:hover {
+    background: rgba(212, 175, 55, 0.15);
+    color: var(--gold-primary);
+}
+
+.close-btn:hover {
+    background: #e81123;
+    color: #ffffff;
+}
+
+.close-btn:active {
+    background: #c50f1f;
+}
+
 /* Animated Background */
 body::before {
     content: '';
@@ -106,6 +205,7 @@ body::before {
     display: flex;
     flex-direction: column;
     padding: 2.5rem;
+    padding-top: calc(36px + 1.5rem);
     position: relative;
     z-index: 2;
 }

@@ -17,6 +17,30 @@ const fullscreenCheckbox = document.getElementById('fullscreen');
 const jvmArgsTextarea = document.getElementById('jvm-args');
 const saveSettingsButton = document.getElementById('save-settings');
 
+// Window Control Buttons
+const minimizeBtn = document.getElementById('minimize-btn');
+const maximizeBtn = document.getElementById('maximize-btn');
+const closeBtn = document.getElementById('close-btn');
+
+// Window Control Events
+if (minimizeBtn) {
+    minimizeBtn.addEventListener('click', () => {
+        ipcRenderer.send('window-minimize');
+    });
+}
+
+if (maximizeBtn) {
+    maximizeBtn.addEventListener('click', () => {
+        ipcRenderer.send('window-maximize');
+    });
+}
+
+if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+        ipcRenderer.send('window-close');
+    });
+}
+
 // State
 let isDownloading = false;
 let isLaunching = false;

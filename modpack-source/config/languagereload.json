@@ -1,8 +1,7 @@
 {
-  "version": 1,
   "multilingualItemSearch": true,
   "fallbacks": [],
   "previousFallbacks": [],
-  "language": "en_us",
+  "language": "",
   "previousLanguage": ""
 }

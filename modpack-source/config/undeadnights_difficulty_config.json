@@ -1,0 +1,70 @@
+{
+  "dynamicScaling": {
+    "dynamicScalingEnabled": false,
+    "healthScalePerPlayer": 0.05,
+    "damageScalePerPlayer": 0.05,
+    "speedScalePerPlayer": 0.0,
+    "armorScalePerPlayer": 0.0,
+    "daysBetweenScaleIncreases": 10.0,
+    "daysHealthScaleIncrease": 0.05,
+    "daysDamageScaleIncrease": 0.05,
+    "daysSpeedScaleIncrease": 0.0,
+    "daysArmorScaleIncrease": 0.0,
+    "maxHealthScale": 2.0,
+    "maxDamageScale": 2.0,
+    "maxSpeedScale": 2.0,
+    "maxArmorScale": 2.0
+  },
+  "difficultyLevels": [
+    {
+      "difficultyName": "Level 1",
+      "minStartDay": 0,
+      "maxStartDay": 0,
+      "chanceForDifficultyLevelSwitch": 100,
+      "difficultySettingsHordeNights": {
+        "daysBetweenHordeNights": 5,
+        "chanceForHordeNight": 100,
+        "spawnAdditionalWaves": true,
+        "cooldownBetweenWaves": 45,
+        "chanceForAdditionalWave": 7,
+        "allDayLongHordeNights": false,
+        "maxHordesPerHordeNight": 0,
+        "numberOfPlayersToGetHordePerHordeEvent": 5
+      },
+      "difficultySettingsHordeMobs": {
+        "updateHordeMobAttributes": false,
+        "updateAttributesOfThirdPartyMobs": false,
+        "healthAttributeScaleFactor": 1.0,
+        "damageAttributeScaleFactor": 1.0,
+        "speedAttributeScaleFactor": 1.0,
+        "armorAttributeScaleFactor": 1.0,
+        "hordeMobsTrackingRange": 128.0,
+        "hordeZombiesBurnInTheSun": false,
+        "vanillaZombiesBurnInTheSun": true,
+        "hordeZombiesAreFasterOnWater": false,
+        "hordeMobsCanClimbEachOther": true,
+        "blockBreaking": false,
+        "blockBreakingTier": 1
+      },
+      "difficultySettingsHordes": {
+        "hordeSizeScaleFactor": 1.0,
+        "enableRandomHordes": false,
+        "chanceForRandomHorde": 15,
+        "hordeSelectionMode": "sequential",
+        "listOfPossibleHordes": [
+          1
+        ]
+      },
+      "difficultySettingsLureEffect": {
+        "enableLureHordeEffect": true,
+        "nonHordeZombiesCanCauseLureHordeEffect": true,
+        "chanceForLureHordeEffect": 0.07,
+        "durationForLureHordeEffect": 60,
+        "lureHordeEffectSpawnsHorde": true,
+        "chanceForLureEffectToSpawnHorde": 0.2,
+        "strongLureHordeEffectSpawnsHorde": true
+      }
+    }
+  ],
+  "internalConfigVersion": 1
+}

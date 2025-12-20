@@ -3,27 +3,105 @@
   "files": [
     {
       "path": "config/.puzzle_cache/mojangstudios.png",
-      "sha1": "dba50ab92eb72e3b1e6721ca702fb4c4c5479bdf",
-      "size": 9581,
+      "sha1": "0669207ff6b3119dbee6e8d093aeb87487f09e2c",
+      "size": 11788,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/.puzzle_cache/mojangstudios.png"
     },
     {
-      "path": "config/blur.json",
-      "sha1": "dfb982ed9f341399894106c0cce1e4f6064104de",
-      "size": 498,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/blur.json"
+      "path": "config/advancementinfo.json5",
+      "sha1": "1bbc4d83d98beefbc7ffb1094e751f45fe483819",
+      "size": 146,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/advancementinfo.json5"
     },
     {
-      "path": "config/c2me.toml",
-      "sha1": "c6847c1799a3ce39d5427f58b9db371599b1d577",
-      "size": 7803,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/c2me.toml"
+      "path": "config/animatica.properties",
+      "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+      "size": 0,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/animatica.properties"
+    },
+    {
+      "path": "config/appleskin.json5",
+      "sha1": "4994b8afdf50b6412aa302a70c31a9f04bfb73fa",
+      "size": 1327,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/appleskin.json5"
+    },
+    {
+      "path": "config/badoptimizations.txt",
+      "sha1": "aff5e1434dd35e1349ef9ebb6a40148c71e7bab2",
+      "size": 3458,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/badoptimizations.txt"
+    },
+    {
+      "path": "config/bcc.json",
+      "sha1": "8b8b9442bfb23e0562868d9ad19637718ec3afa3",
+      "size": 104,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/bcc.json"
+    },
+    {
+      "path": "config/borderlessmining.json",
+      "sha1": "70359711b0a9d6de57b8619230ddf5143b60690d",
+      "size": 70,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/borderlessmining.json"
     },
     {
       "path": "config/capes.json5",
-      "sha1": "a1be292ae19ace7ffa2267247de030bd2807b8c9",
-      "size": 240,
+      "sha1": "2bbed18a54c2d7afd58e366c56e9cbce8113484b",
+      "size": 206,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/capes.json5"
+    },
+    {
+      "path": "config/cardinal-components-api.properties",
+      "sha1": "fa888bcbf7e935bdae5567d26ffad1ac2f93b35c",
+      "size": 273,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/cardinal-components-api.properties"
+    },
+    {
+      "path": "config/cem.conf",
+      "sha1": "2d94b64691bd38441053d4d29a585a733e844ea9",
+      "size": 26,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/cem.conf"
+    },
+    {
+      "path": "config/chat_heads.json5",
+      "sha1": "3356b427c3a090b96f84496cba19abda191b3b02",
+      "size": 207,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/chat_heads.json5"
+    },
+    {
+      "path": "config/chunksending.json",
+      "sha1": "d387591eb7052aea9f328a0fe88db3197704ce72",
+      "size": 301,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/chunksending.json"
+    },
+    {
+      "path": "config/citresewn-defaults.json",
+      "sha1": "0cb297b69dea869c0a2479cc08141a2e4f8b370b",
+      "size": 49,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/citresewn-defaults.json"
+    },
+    {
+      "path": "config/citresewn.json",
+      "sha1": "e6f29a8b111697397c6b81a1f7e852055bdab757",
+      "size": 21,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/citresewn.json"
+    },
+    {
+      "path": "config/collective.json5",
+      "sha1": "dd275eba23d25c50bea5ca96f5243ec1782fc435",
+      "size": 827,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/collective.json5"
+    },
+    {
+      "path": "config/comforts-server.toml",
+      "sha1": "28ab4c7c925eff47d552dc3ef7eb404ddfc6336f",
+      "size": 1852,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/comforts-server.toml"
+    },
+    {
+      "path": "config/connectivity.json",
+      "sha1": "0ce0155e02d6fc4a98494edbc0c12f2242c1b6b5",
+      "size": 1427,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/connectivity.json"
     },
     {
       "path": "config/continuity.json",
@@ -32,56 +110,86 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/continuity.json"
     },
     {
-      "path": "config/dark-loading-screen.json",
-      "sha1": "6ebcec204fb23c4f6df76ae4d282af06e8294a19",
-      "size": 268,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/dark-loading-screen.json"
+      "path": "config/controlify.json",
+      "sha1": "25b411c1d12fee7f966e578761037d73cffb8dd2",
+      "size": 524,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/controlify.json"
+    },
+    {
+      "path": "config/CoroUtil/General.toml",
+      "sha1": "a9f705a2e6e3f8d8e21aaebca406863d872005d4",
+      "size": 129,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/CoroUtil/General.toml"
+    },
+    {
+      "path": "config/cupboard.json",
+      "sha1": "cfa60cb9fc1260b3c92e2eb08ac7e0d4d13274f5",
+      "size": 1090,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/cupboard.json"
+    },
+    {
+      "path": "config/cutthrough-client.toml",
+      "sha1": "b5abb2e7f32b9de4306befa4e1f105e5161fea24",
+      "size": 225,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/cutthrough-client.toml"
     },
     {
       "path": "config/debugify-descriptions.json",
-      "sha1": "f6f14c739c7f4d8c6b24ceeae5b71920d74fb200",
-      "size": 4959,
+      "sha1": "bf21a9e8fbc5a3846fb05b4fa0859e0917b2202f",
+      "size": 2,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/debugify-descriptions.json"
     },
     {
+      "path": "config/debugify.json",
+      "sha1": "8e5590f1ceee89f2c175387e1714bef58f098124",
+      "size": 324,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/debugify.json"
+    },
+    {
       "path": "config/dynamic_fps.json",
-      "sha1": "f2eeecb15415de5e87c886e23bfbd7761c7af658",
-      "size": 771,
+      "sha1": "278608c9b7c342a4ac4a772e6ca31fb831a1ff80",
+      "size": 420,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/dynamic_fps.json"
     },
     {
+      "path": "config/enchdesc.json",
+      "sha1": "171e9e9bf1c0eb070d19730bf2eb2a2e049bfbbb",
+      "size": 189,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/enchdesc.json"
+    },
+    {
       "path": "config/enhanced_bes.properties",
-      "sha1": "0535bb650e12335fceae06a6c98cecffc8689350",
-      "size": 531,
+      "sha1": "ea86fd6220c56222cdec475e94bf79f5b08f3fb9",
+      "size": 532,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/enhanced_bes.properties"
     },
     {
       "path": "config/entityculling.json",
-      "sha1": "14b4b91240de7b608c30c964b4a5fd5438b67ab9",
-      "size": 1032,
+      "sha1": "e63465d1e006faccb5e5f41474705486ad7b4c5c",
+      "size": 1865,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/entityculling.json"
     },
     {
       "path": "config/entity_model_features.json",
-      "sha1": "299a026d0f05747193836485bf155519bb0b7f52",
-      "size": 947,
+      "sha1": "8968d7e20bab89459dee63a2dfa3bfcea9a1b1e4",
+      "size": 253,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/entity_model_features.json"
     },
     {
       "path": "config/entity_texture_features.json",
-      "sha1": "d2a786f2e7f1eade8de633ad148f1a3dabc8d424",
-      "size": 1364,
+      "sha1": "096124fb495914470961248b87c4f60e5d757a43",
+      "size": 1424,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/entity_texture_features.json"
     },
     {
-      "path": "config/etf_warnings.json",
-      "sha1": "1573fc320a363b30a1a5e4cae1d4596ec177085d",
-      "size": 28,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/etf_warnings.json"
+      "path": "config/EssentialCommands.properties",
+      "sha1": "300197665c826ccd504a40e28e90b0b074c16668",
+      "size": 2063,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/EssentialCommands.properties"
     },
     {
       "path": "config/fabric/indigo-renderer.properties",
-      "sha1": "c84b967ff2bda8a88fe8aaf1163826e8949645cd",
+      "sha1": "c15e85ad7e26f6e4bed07c53b69373980fe92c2e",
       "size": 290,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/fabric/indigo-renderer.properties"
     },
@@ -92,34 +200,214 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/fabricskyboxes-config.json"
     },
     {
+      "path": "config/fabric_loader_dependencies.json",
+      "sha1": "7b2d12b341cfb67985a0214142908e351bb57b8c",
+      "size": 209,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/fabric_loader_dependencies.json"
+    },
+    {
+      "path": "config/fabrishot.properties",
+      "sha1": "02226f582a888524e6569c061bb27daaaeb3a80f",
+      "size": 232,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/fabrishot.properties"
+    },
+    {
+      "path": "config/fastquit.toml",
+      "sha1": "a07292666dee640354127bd0882a25a900566ea2",
+      "size": 155,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/fastquit.toml"
+    },
+    {
       "path": "config/ferritecore.mixin.properties",
-      "sha1": "89ac06ad641ce4483683630db0fe2d0eec8e1e25",
-      "size": 1523,
+      "sha1": "69e297dba67843f367101f4efc5d27bbcda27c1e",
+      "size": 1525,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/ferritecore.mixin.properties"
     },
     {
-      "path": "config/gammautils.json",
-      "sha1": "d1e6716d01422d91806e2ad93fa72f3152c5716c",
-      "size": 1837,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/gammautils.json"
+      "path": "config/forgeconfigapiport.toml",
+      "sha1": "37d9782f7c1a42a52bee3b6702eede79663518db",
+      "size": 1580,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/forgeconfigapiport.toml"
+    },
+    {
+      "path": "config/fsb-interop.json",
+      "sha1": "ad5d11709c7da21e4c74ed0b406e7bca58b9d37e",
+      "size": 145,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/fsb-interop.json"
+    },
+    {
+      "path": "config/hardcorerevival-common.toml",
+      "sha1": "837f71c6e0d1dcd62057736b4f24013ab7d8af00",
+      "size": 1754,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/hardcorerevival-common.toml"
     },
     {
       "path": "config/immediatelyfast.json",
-      "sha1": "47a4e294865a09ceb3ffc147ca97f65c9a1cf237",
-      "size": 1187,
+      "sha1": "adcb21b0ad5f7f1c124517ff64fc701a737e4ea1",
+      "size": 1060,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/immediatelyfast.json"
     },
     {
+      "path": "config/indium-renderer.properties",
+      "sha1": "0cef9576d8049b4bfe5d1680c099b9e3786df57e",
+      "size": 115,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/indium-renderer.properties"
+    },
+    {
+      "path": "config/InertiaAntiCheat/InertiaAntiCheat.toml",
+      "sha1": "7f05fcec61d44a64a50eff1e81757efe972d119e",
+      "size": 282,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/InertiaAntiCheat/InertiaAntiCheat.toml"
+    },
+    {
+      "path": "config/InertiaAntiCheat/secret.key",
+      "sha1": "af22932acd37db85a152d34a22250f313cdcf753",
+      "size": 32,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/InertiaAntiCheat/secret.key"
+    },
+    {
       "path": "config/iris.properties",
-      "sha1": "5ad4aa4564ee0ca9a7c1f23a7058b5db8e82ec66",
-      "size": 252,
+      "sha1": "1c1ddf30c9660dd73ff2f6ff7b147ab97ea79e63",
+      "size": 253,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/iris.properties"
     },
     {
+      "path": "config/isxander-main-menu-credits.json",
+      "sha1": "dbb0c70eac2f777511ea1b0c37374a073130519e",
+      "size": 155,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/isxander-main-menu-credits.json"
+    },
+    {
+      "path": "config/jade/hide-blocks.json",
+      "sha1": "8b3297cc5db5ed84dd48d2905fb21ee3063e0e25",
+      "size": 191,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/jade/hide-blocks.json"
+    },
+    {
+      "path": "config/jade/hide-entities.json",
+      "sha1": "548656ff89ad489730a4b5fdf071a6e98fcd5033",
+      "size": 325,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/jade/hide-entities.json"
+    },
+    {
+      "path": "config/jade/jade.json",
+      "sha1": "2fb491dec13b7ad7d2f47f6b4a5a177efb31031c",
+      "size": 974,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/jade/jade.json"
+    },
+    {
+      "path": "config/jade/plugins.json",
+      "sha1": "007495ebe1bed7233fe855156c0e7f0eff3c874d",
+      "size": 1714,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/jade/plugins.json"
+    },
+    {
+      "path": "config/jade/sort-order.json",
+      "sha1": "71741c09d0660e1f6429217be2335bc02279d5ae",
+      "size": 1538,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/jade/sort-order.json"
+    },
+    {
+      "path": "config/jade/usernamecache.json",
+      "sha1": "df24c97af0d1cdc64cced08aefba851a9d7c2267",
+      "size": 54,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/jade/usernamecache.json"
+    },
+    {
+      "path": "config/jei/blacklist.cfg",
+      "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+      "size": 0,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/jei/blacklist.cfg"
+    },
+    {
+      "path": "config/jei/ingredient-list-mod-sort-order.ini",
+      "sha1": "7d52576db5cb247ccc56ecd26e943ed006545a6a",
+      "size": 52,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/jei/ingredient-list-mod-sort-order.ini"
+    },
+    {
+      "path": "config/jei/ingredient-list-type-sort-order.ini",
+      "sha1": "a2d1f22ee9a3aa27f3d25bb93c4c5d5cd5580e21",
+      "size": 86,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/jei/ingredient-list-type-sort-order.ini"
+    },
+    {
+      "path": "config/jei/jei-client.ini",
+      "sha1": "984de2f677016ffe7019b4233492dbb1afd4dcb6",
+      "size": 7991,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/jei/jei-client.ini"
+    },
+    {
+      "path": "config/jei/jei-colors.ini",
+      "sha1": "a9467c371d970f3bb88284e5878460e052589fc1",
+      "size": 1338,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/jei/jei-colors.ini"
+    },
+    {
+      "path": "config/jei/jei-debug.ini",
+      "sha1": "f9bc860103810eed50e7e116dd960c2cb961f55e",
+      "size": 918,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/jei/jei-debug.ini"
+    },
+    {
+      "path": "config/jei/jei-mod-id-format.ini",
+      "sha1": "463229eb371eb1ddedf018aca6199c85267b41f2",
+      "size": 463,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/jei/jei-mod-id-format.ini"
+    },
+    {
+      "path": "config/jei/recipe-category-sort-order.ini",
+      "sha1": "4cae3cfd4b615c45a7b7dfb5b8043dc81bfb7f8f",
+      "size": 360,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/jei/recipe-category-sort-order.ini"
+    },
+    {
+      "path": "config/justzoom/config.txt",
+      "sha1": "f40073524bb4bd11c01f04d0b1cbfacf7e5e6b00",
+      "size": 474,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/justzoom/config.txt"
+    },
+    {
+      "path": "config/konkrete/locals/de_de.local",
+      "sha1": "02adaf2602f1ba03a9352db3d10a6fac3a02aea5",
+      "size": 369,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/konkrete/locals/de_de.local"
+    },
+    {
+      "path": "config/konkrete/locals/en_us.local",
+      "sha1": "42badc338e767559db38a67bd3e8020a92000e56",
+      "size": 426,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/konkrete/locals/en_us.local"
+    },
+    {
+      "path": "config/konkrete/locals/pl_pl.local",
+      "sha1": "adf2ded54b4952ca83af26a1217e2c5db8ac1429",
+      "size": 313,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/konkrete/locals/pl_pl.local"
+    },
+    {
+      "path": "config/konkrete/locals/pt_br.local",
+      "sha1": "9c324fb4d33106366e6cbb5400c8c34f11539d34",
+      "size": 322,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/konkrete/locals/pt_br.local"
+    },
+    {
+      "path": "config/lambdynlights.toml",
+      "sha1": "fa8a12b04f2a0f4187ca682171d5aba9289b873a",
+      "size": 304,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/lambdynlights.toml"
+    },
+    {
       "path": "config/languagereload.json",
-      "sha1": "e9976545502faae6041d397e8ebe9c3881c7ea20",
-      "size": 149,
+      "sha1": "d110038e6590e9bf7fa40d8fb52685611df55288",
+      "size": 128,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/languagereload.json"
+    },
+    {
+      "path": "config/letmedespawn.json",
+      "sha1": "ba4cd7604f0df79fb6d4085e63db0ef169b9bdfd",
+      "size": 72,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/letmedespawn.json"
     },
     {
       "path": "config/lithium.properties",
@@ -128,57 +416,189 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/lithium.properties"
     },
     {
+      "path": "config/lithostitched.json",
+      "sha1": "d8ab129158fc6ff5d685a9938528ec1d35c83e48",
+      "size": 284,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/lithostitched.json"
+    },
+    {
+      "path": "config/lmft.json",
+      "sha1": "cc01fc9b9cfe79c57a1e65ac2f9915834fe446fe",
+      "size": 66,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/lmft.json"
+    },
+    {
+      "path": "config/memorysettings.json",
+      "sha1": "2d0caf469335c80dd4a60da971b0df6dc5877754",
+      "size": 2445,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/memorysettings.json"
+    },
+    {
+      "path": "config/midnightcontrols.json",
+      "sha1": "e42c3a8217a2aea967704304456782af5329dcd3",
+      "size": 43,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/midnightcontrols.json"
+    },
+    {
       "path": "config/midnightlib.json",
-      "sha1": "ef717d24a45baf1406cd1c5600b176cb8b3cb2db",
-      "size": 37,
+      "sha1": "7f635f0ca44379ba78c7390728700e36e7e0c050",
+      "size": 30,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/midnightlib.json"
     },
     {
+      "path": "config/modelfix-client.json",
+      "sha1": "38fa639d9cdd588c4c594e665c8f6708078cf612",
+      "size": 207,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/modelfix-client.json"
+    },
+    {
       "path": "config/modernfix-mixins.properties",
-      "sha1": "7c0aa471826c6edfcdacdbd81168ec903d9cac2c",
-      "size": 3671,
+      "sha1": "d4f62eb7f5273c258aa0f6be233a1b22e73674a1",
+      "size": 4452,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/modernfix-mixins.properties"
     },
     {
       "path": "config/modmenu.json",
-      "sha1": "c49d5631def743ecfb8326773d7007230f282ed5",
-      "size": 839,
+      "sha1": "7171eb453cbef88fec0cea7e726492f3501b90f3",
+      "size": 808,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/modmenu.json"
     },
     {
+      "path": "config/moreculling.toml",
+      "sha1": "2514212a6caf9362f62b4a120d92b53037b5cba3",
+      "size": 492,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/moreculling.toml"
+    },
+    {
+      "path": "config/MouseTweaks.cfg",
+      "sha1": "651b3e4db2d430dc1da3566b2984b264061a6794",
+      "size": 135,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/MouseTweaks.cfg"
+    },
+    {
+      "path": "config/mutantmonsters-common.toml",
+      "sha1": "622c3676e28b5b9ad10bacba4f711bf0a923bd85",
+      "size": 955,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/mutantmonsters-common.toml"
+    },
+    {
+      "path": "config/NoChatReports/NCR-Client.json",
+      "sha1": "6ee8e2c7e9558229fab59b83909954fe6cf84271",
+      "size": 572,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/NoChatReports/NCR-Client.json"
+    },
+    {
+      "path": "config/NoChatReports/NCR-Common.json",
+      "sha1": "030b57e4e15fef997ad0097b8f94037f5f70f64a",
+      "size": 231,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/NoChatReports/NCR-Common.json"
+    },
+    {
+      "path": "config/NoChatReports/NCR-Encryption.json",
+      "sha1": "7731c43edb7afcf5bc010f133de95029d55d3a91",
+      "size": 521,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/NoChatReports/NCR-Encryption.json"
+    },
+    {
+      "path": "config/NoChatReports/NCR-ServerPreferences.json",
+      "sha1": "3c04f45c210048b5e722b294dcc0d9f073374160",
+      "size": 24,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/NoChatReports/NCR-ServerPreferences.json"
+    },
+    {
+      "path": "config/NoChatReports/README.md",
+      "sha1": "75d98286a0aa3e180708523c8f582a2d23e590b3",
+      "size": 167,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/NoChatReports/README.md"
+    },
+    {
       "path": "config/packetfixer.properties",
-      "sha1": "06b758d187fe6e9e4b629a1c313fa9421586769b",
-      "size": 360,
+      "sha1": "c122f032a0e84383b9784b56217929ff697bb57e",
+      "size": 488,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/packetfixer.properties"
     },
     {
+      "path": "config/pal.properties",
+      "sha1": "385893dc1093dad49a6399eba557c383ebc083bf",
+      "size": 215,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/pal.properties"
+    },
+    {
+      "path": "config/pingwheel.json",
+      "sha1": "9c06fd2feab1b45dbc8e1fc09d0bf9a032691512",
+      "size": 410,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/pingwheel.json"
+    },
+    {
+      "path": "config/pingwheel.server.json",
+      "sha1": "4af89204103333c0e1ea81db64821db56fe7c8d0",
+      "size": 111,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/pingwheel.server.json"
+    },
+    {
       "path": "config/puzzle.json",
-      "sha1": "fb17b271a4e7c91357d00a59a0b87eb5e3b6d139",
-      "size": 405,
+      "sha1": "d1e539c8fc4d6a1a3ffef42d391b7bea0934382c",
+      "size": 639,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/puzzle.json"
     },
     {
-      "path": "config/replaymod-screenshotsettings.json",
-      "sha1": "dfe0da2376fceafc3fe0eaca3bab6c7ddaec8d19",
-      "size": 555,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/replaymod-screenshotsettings.json"
+      "path": "config/recipeessentials.json",
+      "sha1": "83d2d369e68759ddce013506e5593d924988bb35",
+      "size": 1389,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/recipeessentials.json"
     },
     {
-      "path": "config/replaymod.json",
-      "sha1": "2167361f6b613b66ef3c00fb65e66d807f4d83e4",
-      "size": 1812,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/replaymod.json"
+      "path": "config/rrls.toml",
+      "sha1": "2abc6eb840d98ec1e2646398c6fd20f8e9ba2fb9",
+      "size": 153,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/rrls.toml"
     },
     {
-      "path": "config/resourcify.json",
-      "sha1": "35467560de576d1b6c9dd934f3d3e5a60360ca77",
-      "size": 201,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/resourcify.json"
+      "path": "config/rrp.properties",
+      "sha1": "09d351c4749f4ea9a4562e189df1af6d64d89753",
+      "size": 148,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/rrp.properties"
+    },
+    {
+      "path": "config/sereneseasons/fertility.toml",
+      "sha1": "f200236ef142693565674c774f4de3bf99a8bb2c",
+      "size": 481,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/sereneseasons/fertility.toml"
+    },
+    {
+      "path": "config/sereneseasons/seasons.toml",
+      "sha1": "c00a0da25db70c4c1bc1e6acacc631f2ececd64f",
+      "size": 6744,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/sereneseasons/seasons.toml"
+    },
+    {
+      "path": "config/servercore/config.yml",
+      "sha1": "46e007d2c730e83c6739552f1f4606180c3d8cfc",
+      "size": 10569,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/servercore/config.yml"
+    },
+    {
+      "path": "config/servercore/optimizations.yml",
+      "sha1": "d0c0d5a96f32b856fbd1a8f80dd538b2c87c65ac",
+      "size": 1204,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/servercore/optimizations.yml"
+    },
+    {
+      "path": "config/skinlayers.json",
+      "sha1": "9552e0366319f47881639dbcb36713bbfad98a58",
+      "size": 497,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/skinlayers.json"
+    },
+    {
+      "path": "config/smoothchunk.json",
+      "sha1": "c0ab21a89a4606961252780d77c1d549098f0d9e",
+      "size": 585,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/smoothchunk.json"
     },
     {
       "path": "config/sodium-extra-options.json",
-      "sha1": "a77936fb48ce67b2707710cd881e90326bae2cfd",
-      "size": 1509,
+      "sha1": "52fec37d0f85c730f747388b4b82596cf29200f5",
+      "size": 1736,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/sodium-extra-options.json"
     },
     {
@@ -189,32 +609,158 @@
     },
     {
       "path": "config/sodium-fingerprint.json",
-      "sha1": "ed0bc35ddf33abbcb71b57e9a5c091422ac75f3f",
-      "size": 456,
+      "sha1": "f09769af06031e669663faea41c6dc541cf39cac",
+      "size": 427,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/sodium-fingerprint.json"
     },
     {
       "path": "config/sodium-mixins.properties",
-      "sha1": "b1fdf3038060accec696177db699276ed074a6d2",
-      "size": 265,
+      "sha1": "09db7f09d6dfd063ec4c7c534102892d67655d98",
+      "size": 266,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/sodium-mixins.properties"
     },
     {
       "path": "config/sodium-options.json",
-      "sha1": "3cd90e37b7cbc0ddfd1ac89ce5f4ab731f57ab07",
-      "size": 661,
+      "sha1": "aca7e8d329c2d883978f631fef4dcffb68205f42",
+      "size": 629,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/sodium-options.json"
     },
     {
-      "path": "config/spark/activity.json",
-      "sha1": "e3cf0cdd53ddce5eb140ed23a662318e1b9e30f4",
-      "size": 280,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/spark/activity.json"
+      "path": "config/sodiumdynamiclights-client.toml",
+      "sha1": "783b7005b08c9b509f1aafd6140b62cd18926880",
+      "size": 655,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/sodiumdynamiclights-client.toml"
+    },
+    {
+      "path": "config/sound_physics_remastered/occlusion.properties",
+      "sha1": "63e8843f243c38bc7aa44d99ce4f562991890350",
+      "size": 4831,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/sound_physics_remastered/occlusion.properties"
+    },
+    {
+      "path": "config/sound_physics_remastered/reflectivity.properties",
+      "sha1": "95feb43eb67757038518212b08739cb39bb9763e",
+      "size": 4713,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/sound_physics_remastered/reflectivity.properties"
+    },
+    {
+      "path": "config/sound_physics_remastered/soundphysics.properties",
+      "sha1": "d28f5f62aebcbe96ce0ad333b8cb8298776d20f8",
+      "size": 5104,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/sound_physics_remastered/soundphysics.properties"
+    },
+    {
+      "path": "config/sound_physics_remastered/sound_rates.properties",
+      "sha1": "96e4f266f624a311b43d341394debb818c13502e",
+      "size": 59347,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/sound_physics_remastered/sound_rates.properties"
+    },
+    {
+      "path": "config/starterkit/descriptions/Archer.txt",
+      "sha1": "1f0d217132723ad76cdbcbe27a0181ccbf7b88ef",
+      "size": 57,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/starterkit/descriptions/Archer.txt"
+    },
+    {
+      "path": "config/starterkit/descriptions/Default.txt",
+      "sha1": "51f212508de1b146a587964cb983f30f12496bc3",
+      "size": 125,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/starterkit/descriptions/Default.txt"
+    },
+    {
+      "path": "config/starterkit/descriptions/Lumberjack.txt",
+      "sha1": "cab211893ab639a1ea498efeb62d3e8c2aaf23a7",
+      "size": 52,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/starterkit/descriptions/Lumberjack.txt"
+    },
+    {
+      "path": "config/starterkit/descriptions/Witch.txt",
+      "sha1": "77670cdf9e83923d908e2b5699237e8e5013500d",
+      "size": 52,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/starterkit/descriptions/Witch.txt"
+    },
+    {
+      "path": "config/starterkit/kits/Default.txt",
+      "sha1": "67a57605e82482d2c5bc11b2ea3e4160e35e33f5",
+      "size": 626,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/starterkit/kits/Default.txt"
+    },
+    {
+      "path": "config/starterkit/kits/inactive/Archer.txt",
+      "sha1": "3703a6499f1f7efcb8438c8107b1a05d80370888",
+      "size": 722,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/starterkit/kits/inactive/Archer.txt"
+    },
+    {
+      "path": "config/starterkit/kits/inactive/Lumberjack.txt",
+      "sha1": "08aa6a63660a91de3f4a33754246dbee08d8a7c8",
+      "size": 678,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/starterkit/kits/inactive/Lumberjack.txt"
+    },
+    {
+      "path": "config/starterkit/kits/inactive/Witch.txt",
+      "sha1": "29953138bd13bc758c5154d4ada9c00dccf7e166",
+      "size": 953,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/starterkit/kits/inactive/Witch.txt"
+    },
+    {
+      "path": "config/starterkit.json5",
+      "sha1": "b6ed8af65615da34de6c2869d9dbe8029374e773",
+      "size": 1376,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/starterkit.json5"
+    },
+    {
+      "path": "config/ToggleNametagsConfig.properties",
+      "sha1": "16fdaf6be1a68f2e3155e5781e910511015c62b1",
+      "size": 85,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/ToggleNametagsConfig.properties"
+    },
+    {
+      "path": "config/transition.json",
+      "sha1": "175ef27df07234a2e37dfbda9766f8c947122e12",
+      "size": 62,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/transition.json"
+    },
+    {
+      "path": "config/trender.json",
+      "sha1": "8b2dd1fd2ca9c7dc83354cd2c649c486864cea76",
+      "size": 44,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/trender.json"
+    },
+    {
+      "path": "config/undeadnights.json5",
+      "sha1": "034fbc3ce34a0f492f8a55fbcdcd8d84c4f4872a",
+      "size": 3443,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/undeadnights.json5"
+    },
+    {
+      "path": "config/undeadnights_difficulty_config.json",
+      "sha1": "fc1eae86659dc4b0ea5770036b3cbdce0e5a9311",
+      "size": 2265,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/undeadnights_difficulty_config.json"
+    },
+    {
+      "path": "config/undeadnights_horde_mobs_config.json",
+      "sha1": "ce68741fb3897887737808a4c3d38e33e584f726",
+      "size": 405,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/undeadnights_horde_mobs_config.json"
+    },
+    {
+      "path": "config/visualworkbench-client.toml",
+      "sha1": "60f7d3a3530d1fde1c9f2e4ab91a7e3c8f344c92",
+      "size": 313,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/visualworkbench-client.toml"
+    },
+    {
+      "path": "config/visual_workbench.json",
+      "sha1": "600882ce9bb822fe9508d87439d0f80b1336a53b",
+      "size": 11520,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/visual_workbench.json"
     },
     {
       "path": "config/vmp.properties",
-      "sha1": "06dc24f0e84a8e37d3cbea3fdecc551139f54fc7",
-      "size": 446,
+      "sha1": "4c4b82f33f98ab8728177f2841a656626db6e933",
+      "size": 543,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/vmp.properties"
     },
     {
@@ -243,267 +789,903 @@
     },
     {
       "path": "config/voicechat/voicechat-client.properties",
-      "sha1": "bd1017f8615e3d687227e28534007cec53b65121",
-      "size": 4896,
+      "sha1": "5cb387b1d12ef3e91f50ee768aed80a839001bd3",
+      "size": 4898,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/voicechat/voicechat-client.properties"
     },
     {
       "path": "config/voicechat/voicechat-server.properties",
-      "sha1": "eaaff8f2ad67d2d9021178fd127f1218dc3d171a",
+      "sha1": "bdcceba2d24b997acddf91154361de07417db66e",
       "size": 2441,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/voicechat/voicechat-server.properties"
     },
     {
-      "path": "mods/blur-fabric-5.2.2+1.21.1+1.21.1.jar",
-      "sha1": "8b58c3f8bd9fa5f337c7f35b9b7f2ed6cefece03",
-      "size": 102687,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/blur-fabric-5.2.2+1.21.1+1.21.1.jar"
+      "path": "config/watut-client.toml",
+      "sha1": "1d9aa7ab9800b29d6a62d4af0fdc6278153e7fd2",
+      "size": 3192,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/watut-client.toml"
     },
     {
-      "path": "mods/c2me-fabric-mc1.21.1-0.3.0+alpha.0.362.jar",
-      "sha1": "9beac89c94f36a342cb07cd9fcb42608bdd07771",
-      "size": 4701117,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/c2me-fabric-mc1.21.1-0.3.0+alpha.0.362.jar"
+      "path": "config/watut-common.toml",
+      "sha1": "50518c07384efed3c20f87e8a1fb6988daf1d840",
+      "size": 140,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/watut-common.toml"
     },
     {
-      "path": "mods/capes-1.5.4+1.21-fabric.jar",
-      "sha1": "11655909a800fd70e2e0ca940cddc2bdbcbe2003",
-      "size": 77572,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/capes-1.5.4+1.21-fabric.jar"
+      "path": "config/watut-item-arm-adjustments.json",
+      "sha1": "2cfa88c57c35df26af1391acb7f2f8eb8abd53ab",
+      "size": 3367,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/watut-item-arm-adjustments.json"
     },
     {
-      "path": "mods/cloth-config-15.0.140-fabric.jar",
-      "sha1": "5d82342a2df53fd6df712bfdd583a811572918a4",
-      "size": 1157166,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/cloth-config-15.0.140-fabric.jar"
+      "path": "config/watut-server.toml",
+      "sha1": "661b10c9980b3e3e4ae96c65064bf1f59896ebd9",
+      "size": 2876,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/watut-server.toml"
     },
     {
-      "path": "mods/continuity-3.0.0+1.21.jar",
-      "sha1": "c7f09b53512604c2ba6803b1247bc70e4d0f8f8c",
-      "size": 1014044,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/continuity-3.0.0+1.21.jar"
+      "path": "config/xaerominimap-common.txt",
+      "sha1": "9dfa008f15d138e34b337e8e67122ea0364b67c0",
+      "size": 145,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/xaerominimap-common.txt"
     },
     {
-      "path": "mods/dark-loading-screen-1.6.14.jar",
-      "sha1": "c6ce1e2c34fe4a412183431ea6b323e5e6eaf8f0",
-      "size": 51871,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/dark-loading-screen-1.6.14.jar"
+      "path": "config/xaerominimap.txt",
+      "sha1": "2dc5f1fbabc14fc3390e52072dd50d68aa23408c",
+      "size": 3640,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/xaerominimap.txt"
     },
     {
-      "path": "mods/Debugify-1.21.1+1.0.jar",
-      "sha1": "6fb7d4ec9c2d2dc5b58577324b47671d3e28d7a4",
-      "size": 292202,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Debugify-1.21.1+1.0.jar"
+      "path": "config/xaerominimap_entities.json",
+      "sha1": "1ecdae76584f3c99c3d4b7b6edfcd302714de29c",
+      "size": 5531,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/xaerominimap_entities.json"
     },
     {
-      "path": "mods/dynamic-fps-3.9.5+minecraft-1.21.0-fabric.jar",
-      "sha1": "b80091afaf1a7b1657a2ab18cf6caba00c240f45",
-      "size": 191151,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/dynamic-fps-3.9.5+minecraft-1.21.0-fabric.jar"
+      "path": "config/xaeropatreon.txt",
+      "sha1": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+      "size": 0,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/xaeropatreon.txt"
     },
     {
-      "path": "mods/enhancedblockentities-0.10.2+1.21.jar",
-      "sha1": "d81359d77fc7c5437f3e83e519dc2f869300f0cd",
-      "size": 201157,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/enhancedblockentities-0.10.2+1.21.jar"
+      "path": "config/xaeroworldmap-common.txt",
+      "sha1": "2654cb878cde3f8a7beaa75750a6ddd094cf8b97",
+      "size": 120,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/xaeroworldmap-common.txt"
     },
     {
-      "path": "mods/entityculling-fabric-1.9.4-mc1.21.1.jar",
-      "sha1": "5470b8ca2d5ae760febc31906fb0695122975b0f",
-      "size": 1559420,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/entityculling-fabric-1.9.4-mc1.21.1.jar"
+      "path": "config/xaeroworldmap.txt",
+      "sha1": "f9f3473c03a6dd44911db71f46a9bc8598b01e0c",
+      "size": 1218,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/xaeroworldmap.txt"
     },
     {
-      "path": "mods/entity_model_features_1.21-fabric-3.0.7.jar",
-      "sha1": "0673dbd5fdf4d24c7d277c6479e43cc3d08e6a29",
-      "size": 475401,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/entity_model_features_1.21-fabric-3.0.7.jar"
+      "path": "config/yosbr/config/borderlessmining.json",
+      "sha1": "70359711b0a9d6de57b8619230ddf5143b60690d",
+      "size": 70,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/config/borderlessmining.json"
     },
     {
-      "path": "mods/entity_texture_features_1.21-fabric-7.0.6.jar",
-      "sha1": "4ae44efc76bfc89f117c810886ac6bc492385fd0",
-      "size": 754004,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/entity_texture_features_1.21-fabric-7.0.6.jar"
+      "path": "config/yosbr/config/capes.json5",
+      "sha1": "2bbed18a54c2d7afd58e366c56e9cbce8113484b",
+      "size": 206,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/config/capes.json5"
     },
     {
-      "path": "mods/fabric-api-0.116.7+1.21.1.jar",
-      "sha1": "79e9f3e82499fbae5bd667b96a79927ae68f90eb",
-      "size": 2424884,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/fabric-api-0.116.7+1.21.1.jar"
+      "path": "config/yosbr/config/cem.conf",
+      "sha1": "2d94b64691bd38441053d4d29a585a733e844ea9",
+      "size": 26,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/config/cem.conf"
     },
     {
-      "path": "mods/fabric-language-kotlin-1.12.1+kotlin.2.0.20.jar.XBqXde",
-      "sha1": "914a0ab5bb5b24d90ddcbf9cf0b258ca4749345e",
-      "size": 4079616,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/fabric-language-kotlin-1.12.1+kotlin.2.0.20.jar.XBqXde"
+      "path": "config/yosbr/config/citresewn.json",
+      "sha1": "e6f29a8b111697397c6b81a1f7e852055bdab757",
+      "size": 21,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/config/citresewn.json"
     },
     {
-      "path": "mods/fabric-language-kotlin-1.13.8+kotlin.2.3.0.jar",
-      "sha1": "05fe02fe61232c4ddea4059e8103281424d5a2bd",
-      "size": 7618852,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/fabric-language-kotlin-1.13.8+kotlin.2.3.0.jar"
+      "path": "config/yosbr/config/controlify.json",
+      "sha1": "5c1f28455bb658725699a39f486887cca4db2f64",
+      "size": 34,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/config/controlify.json"
     },
     {
-      "path": "mods/fabricskyboxes-0.7.4+mc1.21.jar",
-      "sha1": "d7c80f23792afc6018da2477d46804114529afca",
-      "size": 206127,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/fabricskyboxes-0.7.4+mc1.21.jar"
+      "path": "config/yosbr/config/debugify.json",
+      "sha1": "2654a86afcfcf389c0f914565f7cfca2d302e001",
+      "size": 284,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/config/debugify.json"
     },
     {
-      "path": "mods/ferritecore-7.0.2-hotfix-fabric.jar",
-      "sha1": "48ee764932d0c8ec81a2223dbe333886938e512c",
-      "size": 120709,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/ferritecore-7.0.2-hotfix-fabric.jar"
+      "path": "config/yosbr/config/dynamic_fps.json",
+      "sha1": "66aa494150101e28657e00802ea9c63b172d574e",
+      "size": 416,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/config/dynamic_fps.json"
     },
     {
-      "path": "mods/forcecloseloadingscreen-2.2.3.jar",
-      "sha1": "58a3ba92c29cbe914c18cc1e9c336616b7899ded",
-      "size": 115043,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/forcecloseloadingscreen-2.2.3.jar"
+      "path": "config/yosbr/config/entity_texture_features.json",
+      "sha1": "ca79c7d61d23749884ebecf426aae5070519224d",
+      "size": 158,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/config/entity_texture_features.json"
     },
     {
-      "path": "mods/Gamma-Utils-2.1.2-mc1.21.1.jar",
-      "sha1": "116f548c1cd202c2f0f1c9561fe44083e7795e6b",
-      "size": 92109,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Gamma-Utils-2.1.2-mc1.21.1.jar"
+      "path": "config/yosbr/config/fabric_loader_dependencies.json",
+      "sha1": "b54f21a31090a1943c667b879d7d3f2c43c65806",
+      "size": 376,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/config/fabric_loader_dependencies.json"
     },
     {
-      "path": "mods/ImmediatelyFast-Fabric-1.6.8+1.21.1.jar",
-      "sha1": "403fb9ae5c292323c69e2adde1aa317644137fec",
-      "size": 228862,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/ImmediatelyFast-Fabric-1.6.8+1.21.1.jar"
+      "path": "config/yosbr/config/fastquit.toml",
+      "sha1": "e00665ee16327466c894add52e398209d98d67a7",
+      "size": 99,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/config/fastquit.toml"
     },
     {
-      "path": "mods/indium-1.0.35+mc1.21.jar",
-      "sha1": "1bf4b5db91f4e6d7a4f94fe2e96525d22df1cacb",
-      "size": 105000,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/indium-1.0.35+mc1.21.jar"
+      "path": "config/yosbr/config/iris.properties",
+      "sha1": "443d5e09dd50778bb73e6a2632bf1a0a6353a2aa",
+      "size": 73,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/config/iris.properties"
     },
     {
-      "path": "mods/iris-fabric-1.8.8+mc1.21.1.jar",
-      "sha1": "4e0df4011503b4b36ba69877ea7247c1a47fea00",
-      "size": 2690177,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/iris-fabric-1.8.8+mc1.21.1.jar"
+      "path": "config/yosbr/config/isxander-main-menu-credits.json",
+      "sha1": "8d542711a1ad1e4e229dfe50edca3103e41337bd",
+      "size": 187,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/config/isxander-main-menu-credits.json"
     },
     {
-      "path": "mods/krypton-0.2.8.jar",
-      "sha1": "73e792eb5f120787becda4b87b6ff18b26caea50",
-      "size": 161045,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/krypton-0.2.8.jar"
+      "path": "config/yosbr/config/lambdynlights.toml",
+      "sha1": "7b639d6e9bb013db50ed4e074003cacf147f4f69",
+      "size": 161,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/config/lambdynlights.toml"
     },
     {
-      "path": "mods/Ksyxis-1.3.4.jar",
-      "sha1": "143fe088170e5777d3ccf5b488d61ee3635ebffe",
-      "size": 29869,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Ksyxis-1.3.4.jar"
+      "path": "config/yosbr/config/midnightcontrols.json",
+      "sha1": "e42c3a8217a2aea967704304456782af5329dcd3",
+      "size": 43,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/config/midnightcontrols.json"
     },
     {
-      "path": "mods/language-reload-1.7.5+1.21.1.jar",
-      "sha1": "f9283248a90e766f217b99c5a5342c807fea3ba5",
-      "size": 74984,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/language-reload-1.7.5+1.21.1.jar"
+      "path": "config/yosbr/config/midnightlib.json",
+      "sha1": "7f635f0ca44379ba78c7390728700e36e7e0c050",
+      "size": 30,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/config/midnightlib.json"
     },
     {
-      "path": "mods/lithium-fabric-0.15.1+mc1.21.1.jar",
-      "sha1": "6038cf136da413753345bf9d48e5798241439894",
-      "size": 772848,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/lithium-fabric-0.15.1+mc1.21.1.jar"
+      "path": "config/yosbr/config/modernfix-mixins.properties",
+      "sha1": "aa4c364a62ee215bdaa604c6bd60257a6a47604c",
+      "size": 33,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/config/modernfix-mixins.properties"
     },
     {
-      "path": "mods/midnightlib-fabric-1.9.2+1.21.1.jar",
-      "sha1": "8f6bf284633dc95788b4756e3c63369056d257e4",
-      "size": 57958,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/midnightlib-fabric-1.9.2+1.21.1.jar"
+      "path": "config/yosbr/config/modmenu.json",
+      "sha1": "7171eb453cbef88fec0cea7e726492f3501b90f3",
+      "size": 808,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/config/modmenu.json"
     },
     {
-      "path": "mods/modernfix-fabric-5.25.1+mc1.21.1.jar",
-      "sha1": "4ab39e9c736e7204146792c545ec5b29fc0a3872",
-      "size": 471258,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/modernfix-fabric-5.25.1+mc1.21.1.jar"
+      "path": "config/yosbr/config/moreculling.toml",
+      "sha1": "2514212a6caf9362f62b4a120d92b53037b5cba3",
+      "size": 492,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/config/moreculling.toml"
     },
     {
-      "path": "mods/modmenu-11.0.3.jar",
-      "sha1": "6213120772192040a0aeb5c7cfe330c068605b1f",
-      "size": 973066,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/modmenu-11.0.3.jar"
+      "path": "config/yosbr/config/NoChatReports/NCR-Client.json",
+      "sha1": "71120f8cdebbd0c953de70cb93439cfa0ed04f59",
+      "size": 477,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/config/NoChatReports/NCR-Client.json"
     },
     {
-      "path": "mods/noisium-fabric-2.3.0+mc1.21-1.21.1.jar",
-      "sha1": "642a672cfc60ff1e1262a39d7e160b1381c5120c",
-      "size": 216183,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/noisium-fabric-2.3.0+mc1.21-1.21.1.jar"
+      "path": "config/yosbr/config/NoChatReports/NCR-Common.json",
+      "sha1": "5fe17cdf0f39e1ef3787a6d479ca7c683ccb7cf1",
+      "size": 96,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/config/NoChatReports/NCR-Common.json"
     },
     {
-      "path": "mods/optigui-2.3.0-beta.9+1.21.jar",
-      "sha1": "9f72bd80779118624138cace74da349b5cf31b6f",
-      "size": 614152,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/optigui-2.3.0-beta.9+1.21.jar"
+      "path": "config/yosbr/config/NoChatReports/NCR-Encryption.json",
+      "sha1": "617ab68a4dcb917f8b805dcd5a932b48a6e4bc39",
+      "size": 128,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/config/NoChatReports/NCR-Encryption.json"
     },
     {
-      "path": "mods/packetfixer-3.3.1-1.20.5-1.21.X-merged.jar",
-      "sha1": "a8bb6e25807682e72c23bf4065f3cd5f6373ece3",
-      "size": 46623,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/packetfixer-3.3.1-1.20.5-1.21.X-merged.jar"
+      "path": "config/yosbr/config/puzzle.json",
+      "sha1": "fce5fd44af931a281f180a6fcc22be36dea2cb56",
+      "size": 301,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/config/puzzle.json"
     },
     {
-      "path": "mods/placeholder-api-2.4.2+1.21.jar",
-      "sha1": "aa1b9a49f9f190dfe4825c502b150817dd2998c3",
-      "size": 232325,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/placeholder-api-2.4.2+1.21.jar"
+      "path": "config/yosbr/config/sodium-options.json",
+      "sha1": "db4377229df8bad8a7176d4639d25a54839d3535",
+      "size": 38,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/config/sodium-options.json"
     },
     {
-      "path": "mods/puzzle-fabric-2.2.1+1.21.1.jar",
-      "sha1": "7b7918d5cd4067cc72fd5a96f2940e9ab438ba68",
-      "size": 139218,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/puzzle-fabric-2.2.1+1.21.1.jar"
+      "path": "config/yosbr/options.txt",
+      "sha1": "83459c381e793e63dfeaf00b84e8fdc200b0e13b",
+      "size": 900,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/yosbr/options.txt"
     },
     {
-      "path": "mods/reeses-sodium-options-fabric-1.8.3+mc1.21.4.jar",
-      "sha1": "c72f07a8f139f0420cbce29bd9eb29fb24db427f",
-      "size": 81067,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/reeses-sodium-options-fabric-1.8.3+mc1.21.4.jar"
+      "path": "config/zombieawareness/ClientConfig.toml",
+      "sha1": "70096de123aeab1ac5c4fcae5c6524f1dc7b77b7",
+      "size": 107,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/zombieawareness/ClientConfig.toml"
     },
     {
-      "path": "mods/Resourcify (1.21+-fabric)-1.4.1.jar.vbsSce",
-      "sha1": "95177b6c6efeb396376b854dad608f4174fe2ef1",
-      "size": 581632,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Resourcify (1.21+-fabric)-1.4.1.jar.vbsSce"
+      "path": "config/zombieawareness/Features.toml",
+      "sha1": "0f3214f1570864f9fa7a2ff35b06d98ff521f5e5",
+      "size": 1561,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/zombieawareness/Features.toml"
     },
     {
-      "path": "mods/Resourcify (1.21.1-fabric)-1.7.5.jar",
-      "sha1": "0fe27b0e6a9de4ac148657e17242bb7b7a12508a",
-      "size": 2552952,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Resourcify (1.21.1-fabric)-1.7.5.jar"
+      "path": "config/zombieawareness/General.toml",
+      "sha1": "9a3855ea3c69794681e97961e3939793256c90cf",
+      "size": 2895,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/zombieawareness/General.toml"
     },
     {
-      "path": "mods/sodium-extra-fabric-0.6.0+mc1.21.1.jar",
-      "sha1": "66160fac4fdb9ddd854c5ed068fc329d24d09fd1",
-      "size": 373661,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/sodium-extra-fabric-0.6.0+mc1.21.1.jar"
+      "path": "config/zombieawareness/MobLists.toml",
+      "sha1": "d148999cf06a91f29b9116273eb78da15242dec6",
+      "size": 1519,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/zombieawareness/MobLists.toml"
     },
     {
-      "path": "mods/sodium-fabric-0.6.13+mc1.21.1.jar",
-      "sha1": "928a2598178c3a58b0638bab842f467d2e49251a",
-      "size": 1297761,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/sodium-fabric-0.6.13+mc1.21.1.jar"
+      "path": "config/zombieawareness/PlayerRulesAndLists.toml",
+      "sha1": "3d187d2dea0b82215b4f024dd18f61d59533fab8",
+      "size": 408,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/zombieawareness/PlayerRulesAndLists.toml"
     },
     {
-      "path": "mods/vmp-fabric-mc1.21.1-0.2.0+beta.7.172-all.jar",
-      "sha1": "267975777ba52a23d4423a60e9288f9ce288344e",
-      "size": 433667,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/vmp-fabric-mc1.21.1-0.2.0+beta.7.172-all.jar"
+      "path": "config/zoomify.json",
+      "sha1": "245abe62a4059a46116e8ea220a69b8887c3edaa",
+      "size": 1387,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/zoomify.json"
     },
     {
-      "path": "mods/voicechat-fabric-1.21.1-2.6.9.jar",
-      "sha1": "f3bdaed4bdc7cde75dd89f5a9c962bbfe765ce6a",
-      "size": 5341119,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/voicechat-fabric-1.21.1-2.6.9.jar"
+      "path": "mods/advancementinfo-1.20-fabric0.83.0-1.4.jar",
+      "sha1": "dfa603a2db09d6e303dd2991f016550ae156e3d1",
+      "size": 43895,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/advancementinfo-1.20-fabric0.83.0-1.4.jar"
     },
     {
-      "path": "mods/yet_another_config_lib_v3-3.8.1+1.21.1-fabric.jar.disabled",
-      "sha1": "b2807abb067142accce3c489e7e485fd97d4339c",
-      "size": 1131541,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/yet_another_config_lib_v3-3.8.1+1.21.1-fabric.jar.disabled"
+      "path": "mods/almanac-1.20.x-fabric-1.0.2.jar",
+      "sha1": "0f31abe886e9785592f1896c7c1ffe5992e2c6de",
+      "size": 16082,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/almanac-1.20.x-fabric-1.0.2.jar"
+    },
+    {
+      "path": "mods/animatica-0.6+1.20.jar",
+      "sha1": "3bcb19c759f313e69d3f7848b03c48f15167b88d",
+      "size": 69810,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/animatica-0.6+1.20.jar"
+    },
+    {
+      "path": "mods/appleskin-fabric-mc1.20.1-2.5.1.jar",
+      "sha1": "d0f11243f79c071416bbcee781ae93eb57a0283c",
+      "size": 1064362,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/appleskin-fabric-mc1.20.1-2.5.1.jar"
+    },
+    {
+      "path": "mods/BadOptimizations-2.4.1-1.20.1.jar",
+      "sha1": "304007dcb0fb15ed1a1bc3771736470dafc5be0f",
+      "size": 460234,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/BadOptimizations-2.4.1-1.20.1.jar"
+    },
+    {
+      "path": "mods/badpackets-fabric-0.4.3.jar",
+      "sha1": "87b7ef4e9c9bff0fd8cdcc79156e9c7ac7b26690",
+      "size": 27655,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/badpackets-fabric-0.4.3.jar"
+    },
+    {
+      "path": "mods/balm-fabric-1.20.1-7.3.37.jar",
+      "sha1": "a3a92068cd56a1768a7ab9e1ea335275f6841422",
+      "size": 608287,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/balm-fabric-1.20.1-7.3.37.jar"
+    },
+    {
+      "path": "mods/BetterCompatibilityChecker-fabric-4.0.8+mc1.20.1.jar",
+      "sha1": "8aa26b0ec2f48e65598fab5cf08cea569d87dc48",
+      "size": 26886,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/BetterCompatibilityChecker-fabric-4.0.8+mc1.20.1.jar"
+    },
+    {
+      "path": "mods/bettermounthud-1.2.2.jar",
+      "sha1": "6942fb39ca2e87208b0b0630a5efc4511c82dcf4",
+      "size": 21587,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/bettermounthud-1.2.2.jar"
+    },
+    {
+      "path": "mods/Bookshelf-Fabric-1.20.1-20.2.13.jar",
+      "sha1": "67a67945139b0c26bc8075a746b8f0ed571a9b8a",
+      "size": 322180,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Bookshelf-Fabric-1.20.1-20.2.13.jar"
+    },
+    {
+      "path": "mods/borderless-mining-1.1.8+1.20.1.jar",
+      "sha1": "dbdb8a0600679f3c76480ae5d0995e2334773ce3",
+      "size": 118295,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/borderless-mining-1.1.8+1.20.1.jar"
+    },
+    {
+      "path": "mods/capes-1.5.2+1.20-fabric.jar",
+      "sha1": "5444e301346383f6133189e66069e970d4a126fc",
+      "size": 170082,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/capes-1.5.2+1.20-fabric.jar"
+    },
+    {
+      "path": "mods/chat_heads-0.14.2-fabric-1.20.jar",
+      "sha1": "300f25ceda7b00735930f927fdc6f12377dcd138",
+      "size": 80747,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/chat_heads-0.14.2-fabric-1.20.jar"
+    },
+    {
+      "path": "mods/chunksending-fabric-1.20.1-2.8.jar",
+      "sha1": "7dcbf4ad0e571fd5b86af0262197305f2067481b",
+      "size": 11318,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/chunksending-fabric-1.20.1-2.8.jar"
+    },
+    {
+      "path": "mods/CITResewn-1.1.3+1.20.jar",
+      "sha1": "53f036ebe51d7d97afaf44d541775c92c4470dad",
+      "size": 394652,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/CITResewn-1.1.3+1.20.jar"
+    },
+    {
+      "path": "mods/clientcrafting-fabric-1.20.1-1.8.jar",
+      "sha1": "c8fb1ebedea3ffde2ad1d4e4a3fc3041056ae185",
+      "size": 6641,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/clientcrafting-fabric-1.20.1-1.8.jar"
+    },
+    {
+      "path": "mods/cloth-config-11.1.136-fabric.jar",
+      "sha1": "d5fe84a0cc9ed5c7290a76ba570e1f8716afecab",
+      "size": 1172214,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/cloth-config-11.1.136-fabric.jar"
+    },
+    {
+      "path": "mods/Clumps-fabric-1.20.1-12.0.0.4.jar",
+      "sha1": "4a845a29ddfd40bcc4695bbbc82872c237dbbac5",
+      "size": 21987,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Clumps-fabric-1.20.1-12.0.0.4.jar"
+    },
+    {
+      "path": "mods/collective-1.20.1-8.13.jar",
+      "sha1": "74b917dd99cd97b2f0480628a1b56958f5e0f5ad",
+      "size": 665169,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/collective-1.20.1-8.13.jar"
+    },
+    {
+      "path": "mods/comforts-fabric-6.4.0+1.20.1.jar",
+      "sha1": "96c1b52fa6dcff140b56e17ce980d2a5c528fad2",
+      "size": 693624,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/comforts-fabric-6.4.0+1.20.1.jar"
+    },
+    {
+      "path": "mods/connectivity-fabric-1.20.1-7.2.jar",
+      "sha1": "19de5c3b1f4a712946b56a1bbb83d99ec75ed592",
+      "size": 189955,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/connectivity-fabric-1.20.1-7.2.jar"
+    },
+    {
+      "path": "mods/continuity-3.0.0-beta.4+1.20.1.jar",
+      "sha1": "b662fd625ba1f06c6e4958eac373856047d0d2a9",
+      "size": 1050571,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/continuity-3.0.0-beta.4+1.20.1.jar"
+    },
+    {
+      "path": "mods/Controlify-1.6.0+1.20.jar",
+      "sha1": "e275c636fcdf020f906037861a62d0614d2b0f94",
+      "size": 1937626,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Controlify-1.6.0+1.20.jar"
+    },
+    {
+      "path": "mods/Controlling-fabric-1.20.1-12.0.2.jar",
+      "sha1": "8a61ca1600e33c73598530f1e208bb07081fdcd6",
+      "size": 122777,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Controlling-fabric-1.20.1-12.0.2.jar"
+    },
+    {
+      "path": "mods/coroutil-fabric-1.20.1-1.3.7.jar",
+      "sha1": "0b9a1b0db34d1271fe7bcc4ec0e451c3fb25a04c",
+      "size": 2392617,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/coroutil-fabric-1.20.1-1.3.7.jar"
+    },
+    {
+      "path": "mods/cupboard-fabric-1.20.1-2.7.jar",
+      "sha1": "33f853230169b03d896775cbc663e016975702d2",
+      "size": 25668,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/cupboard-fabric-1.20.1-2.7.jar"
+    },
+    {
+      "path": "mods/CutThrough-v8.0.2-1.20.1-Fabric.jar",
+      "sha1": "c8072e79637d94f96d26dbeb67357f9420957c6c",
+      "size": 53800,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/CutThrough-v8.0.2-1.20.1-Fabric.jar"
+    },
+    {
+      "path": "mods/Debugify-1.20.1+2.0.jar",
+      "sha1": "ca859180ad2b57856fbcc8db4995c1871a7d556c",
+      "size": 337545,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Debugify-1.20.1+2.0.jar"
+    },
+    {
+      "path": "mods/dynamic-fps-3.2.1+minecraft-1.20.0.jar",
+      "sha1": "d4edd1828b1595eca7be0d36d1cc45b189a17a6e",
+      "size": 70316,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/dynamic-fps-3.2.1+minecraft-1.20.0.jar"
+    },
+    {
+      "path": "mods/e4mc-4.0.1+1.19.4-fabric.jar",
+      "sha1": "458253f15e3c5bb0d5354f42f3eedc5b1a71472c",
+      "size": 275794,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/e4mc-4.0.1+1.19.4-fabric.jar"
+    },
+    {
+      "path": "mods/easyauth-mc1.20-3.4.1.jar",
+      "sha1": "df90b3988e2e80b42ced58ea6ee1585b3e49a561",
+      "size": 23201718,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/easyauth-mc1.20-3.4.1.jar"
+    },
+    {
+      "path": "mods/EnchantmentDescriptions-Fabric-1.20.1-17.1.20.jar",
+      "sha1": "332078f9434ebb8b0768b6152898fb7ed84daea0",
+      "size": 63572,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/EnchantmentDescriptions-Fabric-1.20.1-17.1.20.jar"
+    },
+    {
+      "path": "mods/enhancedblockentities-0.9+1.20.jar",
+      "sha1": "61cfe50f69f8ef9e3640c0269ef158870f5b0410",
+      "size": 490690,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/enhancedblockentities-0.9+1.20.jar"
+    },
+    {
+      "path": "mods/entityculling-fabric-1.9.4-mc1.20.1.jar",
+      "sha1": "6f1fd91ee5d15afa57df4b2b8af6e19f498c41b4",
+      "size": 1560625,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/entityculling-fabric-1.9.4-mc1.20.1.jar"
+    },
+    {
+      "path": "mods/entity_model_features_fabric_1.20-1.0.2.jar",
+      "sha1": "87147ac0b539ccb0f409a1eaa4914846b513db67",
+      "size": 290514,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/entity_model_features_fabric_1.20-1.0.2.jar"
+    },
+    {
+      "path": "mods/entity_texture_features_fabric_1.20-4.5.1.jar",
+      "sha1": "19d45b9054a2854ced2e50f45765d76b47a2a4ba",
+      "size": 457226,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/entity_texture_features_fabric_1.20-4.5.1.jar"
+    },
+    {
+      "path": "mods/essential_commands-0.35.3-mc1.20.1.jar",
+      "sha1": "70a46d1e7e88357a50bd6b372770fe37691bff1d",
+      "size": 1581037,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/essential_commands-0.35.3-mc1.20.1.jar"
+    },
+    {
+      "path": "mods/fabric-api-0.92.6+1.20.1.jar",
+      "sha1": "3ec0a88b64f252257df6287e9a1d47ed96331e5d",
+      "size": 2107873,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/fabric-api-0.92.6+1.20.1.jar"
+    },
+    {
+      "path": "mods/fabric-language-kotlin-1.10.10+kotlin.1.9.10.jar",
+      "sha1": "c708f3f4e94f0f66e72c6e96858368f0512c3b38",
+      "size": 6722438,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/fabric-language-kotlin-1.10.10+kotlin.1.9.10.jar"
+    },
+    {
+      "path": "mods/fabricskyboxes-0.7.3+mc1.20.1.jar",
+      "sha1": "31a13b9ca0a500b4caad993ec42e1199142d86d1",
+      "size": 207272,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/fabricskyboxes-0.7.3+mc1.20.1.jar"
+    },
+    {
+      "path": "mods/fabrishot-1.10.0.jar",
+      "sha1": "15cd04a988726aa4f45fe59813c384329f5d8b94",
+      "size": 44182,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/fabrishot-1.10.0.jar"
+    },
+    {
+      "path": "mods/fadeless-1.0.1.jar",
+      "sha1": "8a48f9abfa26e4abc06490c6e818f5cf6af1c280",
+      "size": 7876,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/fadeless-1.0.1.jar"
+    },
+    {
+      "path": "mods/fast-ip-ping-v1.0.8-mc1.20.4-fabric.jar",
+      "sha1": "847a3adacb1d69703098ca4f35c9bd67c096a2fa",
+      "size": 10378,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/fast-ip-ping-v1.0.8-mc1.20.4-fabric.jar"
+    },
+    {
+      "path": "mods/fastasyncworldsave-fabric-1.20.1-2.6.jar",
+      "sha1": "eed28a3850a5feb6bcf018a02fc48d8bd36851c0",
+      "size": 11980,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/fastasyncworldsave-fabric-1.20.1-2.6.jar"
+    },
+    {
+      "path": "mods/fastquit-3.0.0+1.20+.jar",
+      "sha1": "68f080925502a49027e231c63d3b94128ed6499b",
+      "size": 79306,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/fastquit-3.0.0+1.20+.jar"
+    },
+    {
+      "path": "mods/ferritecore-6.0.1-fabric.jar",
+      "sha1": "8fa3b84fc5860dbc30fdf8cced02af68dffcf3fa",
+      "size": 125197,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/ferritecore-6.0.1-fabric.jar"
+    },
+    {
+      "path": "mods/ForgeConfigAPIPort-v8.0.3-1.20.1-Fabric.jar",
+      "sha1": "41f146d16a37f62e84e60cab226058d1a87f9cec",
+      "size": 396628,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/ForgeConfigAPIPort-v8.0.3-1.20.1-Fabric.jar"
+    },
+    {
+      "path": "mods/fsb-interop-1.3.6+mc1.20.1-build.50.jar",
+      "sha1": "4ead20a0528788f36d4a7e38d1ebfec35218387e",
+      "size": 49495,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/fsb-interop-1.3.6+mc1.20.1-build.50.jar"
+    },
+    {
+      "path": "mods/GlitchCore-fabric-1.20.1-0.0.1.1.jar",
+      "sha1": "6900a7e19a5f65470cba6482733016e29031225b",
+      "size": 322107,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/GlitchCore-fabric-1.20.1-0.0.1.1.jar"
+    },
+    {
+      "path": "mods/gpumemleakfix-fabric-1.20.1-1.8.jar",
+      "sha1": "f3cda542199d4344c317c464256a2a499a596431",
+      "size": 6949,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/gpumemleakfix-fabric-1.20.1-1.8.jar"
+    },
+    {
+      "path": "mods/hardcorerevival-fabric-1.20.1-12.0.9.jar",
+      "sha1": "043ff73fce020c486db4f84c8cbe8c7bb80d774e",
+      "size": 230092,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/hardcorerevival-fabric-1.20.1-12.0.9.jar"
+    },
+    {
+      "path": "mods/ImmediatelyFast-Fabric-1.5.3+1.20.4.jar",
+      "sha1": "3f9697cbcc5fcc116a0a0dd0964ea75724ca3dc8",
+      "size": 242879,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/ImmediatelyFast-Fabric-1.5.3+1.20.4.jar"
+    },
+    {
+      "path": "mods/indium-1.0.36+mc1.20.1.jar",
+      "sha1": "d824614e7a173d273167969f427702f51846aca7",
+      "size": 105382,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/indium-1.0.36+mc1.20.1.jar"
+    },
+    {
+      "path": "mods/InertiaAntiCheat-0.0.7.2+1.20.1.jar",
+      "sha1": "d701a58819485e5d5439bda4f1d18247692e020c",
+      "size": 110409,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/InertiaAntiCheat-0.0.7.2+1.20.1.jar"
+    },
+    {
+      "path": "mods/iris-1.7.6+mc1.20.1.jar",
+      "sha1": "880c0b9ce38bb4997645793407c1801df83f4233",
+      "size": 2726899,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/iris-1.7.6+mc1.20.1.jar"
+    },
+    {
+      "path": "mods/Jade-1.20-Fabric-11.13.1.jar",
+      "sha1": "511ff9de2b9322089e769433f8613f3ac16bdade",
+      "size": 572882,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Jade-1.20-Fabric-11.13.1.jar"
+    },
+    {
+      "path": "mods/jei-1.20.1-fabric-15.20.0.112.jar",
+      "sha1": "10ca1f38676a958d2be1d0fb587bab44e26b4656",
+      "size": 1398098,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/jei-1.20.1-fabric-15.20.0.112.jar"
+    },
+    {
+      "path": "mods/JustEnoughResources-Fabric-1.20.1-1.4.0.247.jar",
+      "sha1": "5377fa98f9591b33092e4c7a6f6ba773365928a8",
+      "size": 278357,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/JustEnoughResources-Fabric-1.20.1-1.4.0.247.jar"
+    },
+    {
+      "path": "mods/justzoom_fabric_2.1.0_MC_1.20.1.jar",
+      "sha1": "538a90dd2eced7704a900d53b9cbc5cf5cea6b64",
+      "size": 196623,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/justzoom_fabric_2.1.0_MC_1.20.1.jar"
+    },
+    {
+      "path": "mods/konkrete_fabric_1.8.1_MC_1.20.1.jar",
+      "sha1": "38d3201d95a08bdeb12a8cd3687c6d0b8f5e7f3d",
+      "size": 892067,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/konkrete_fabric_1.8.1_MC_1.20.1.jar"
+    },
+    {
+      "path": "mods/lambdynamiclights-2.3.2+1.20.1.jar",
+      "sha1": "71b636fa74744e51ba2d248c81a38bdbfad5d43b",
+      "size": 573183,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/lambdynamiclights-2.3.2+1.20.1.jar"
+    },
+    {
+      "path": "mods/language-reload-1.5.9+1.20.1.jar",
+      "sha1": "d647d82cbae0d16132cb8e96b472640397e68dda",
+      "size": 198128,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/language-reload-1.5.9+1.20.1.jar"
+    },
+    {
+      "path": "mods/letmedespawn-1.20.x-fabric-1.5.0.jar",
+      "sha1": "49537044b774743cd37a834567204f7662a5329c",
+      "size": 14607,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/letmedespawn-1.20.x-fabric-1.5.0.jar"
+    },
+    {
+      "path": "mods/lithium-fabric-mc1.20.1-0.11.2.jar",
+      "sha1": "8f4642147e60827f728badac7a819d1a9f3b25d5",
+      "size": 645865,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/lithium-fabric-mc1.20.1-0.11.2.jar"
+    },
+    {
+      "path": "mods/lithostitched-fabric-1.20.1-1.4.11.jar",
+      "sha1": "c5e75450633aa9f79f2023e897c2726ba5f8d808",
+      "size": 487655,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/lithostitched-fabric-1.20.1-1.4.11.jar"
+    },
+    {
+      "path": "mods/lmft-1.1.1+1.21.9-fabric.jar",
+      "sha1": "9ec52b054e91c7f0a0a37edd4b2a3832699135dc",
+      "size": 78180,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/lmft-1.1.1+1.21.9-fabric.jar"
+    },
+    {
+      "path": "mods/LuckPerms-Fabric-5.4.102.jar",
+      "sha1": "891e2404c0f9790e704e29faa98241178e29fc20",
+      "size": 1551904,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/LuckPerms-Fabric-5.4.102.jar"
+    },
+    {
+      "path": "mods/main-menu-credits-1.1.2.jar",
+      "sha1": "771eb704928c6d3e9fdf0e7971ba7d97305e09dd",
+      "size": 14340,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/main-menu-credits-1.1.2.jar"
+    },
+    {
+      "path": "mods/MaxHealthFix-Fabric-1.20.1-12.0.3.jar",
+      "sha1": "49bab5975daaede504a1a99ccc5c35886dabdbaa",
+      "size": 7779,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/MaxHealthFix-Fabric-1.20.1-12.0.3.jar"
+    },
+    {
+      "path": "mods/memoryleakfix-fabric-1.17+-1.1.2.jar",
+      "sha1": "b0eecb140bd124c781469aa0f48bc888072b4ac5",
+      "size": 146263,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/memoryleakfix-fabric-1.17+-1.1.2.jar"
+    },
+    {
+      "path": "mods/memorysettings-fabric-1.20.1-5.9.jar",
+      "sha1": "38e3f890d743b71d48f749fba8bcdd618209ef47",
+      "size": 24275,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/memorysettings-fabric-1.20.1-5.9.jar"
+    },
+    {
+      "path": "mods/mixintrace-1.1.1+1.17.jar",
+      "sha1": "7fbb0130db0e427ee7180d304dfa65c46f0e3b69",
+      "size": 36039,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/mixintrace-1.1.1+1.17.jar"
+    },
+    {
+      "path": "mods/modelfix-1.15-fabric.jar",
+      "sha1": "75554b02e63a2440321a32dc5e55988897181bdf",
+      "size": 65491,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/modelfix-1.15-fabric.jar"
+    },
+    {
+      "path": "mods/modernfix-fabric-5.25.2+mc1.20.1.jar",
+      "sha1": "be03b9eb570c1e9df7593e68623f0fecbd039460",
+      "size": 545175,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/modernfix-fabric-5.25.2+mc1.20.1.jar"
+    },
+    {
+      "path": "mods/modmenu-7.2.2.jar",
+      "sha1": "099c68feeb74887cbbbd8ce9a27c6123804a2c5a",
+      "size": 721366,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/modmenu-7.2.2.jar"
+    },
+    {
+      "path": "mods/morechathistory-1.19.1-1.1.1.jar",
+      "sha1": "b23419da24f1c7ae16c6e77e992a38491cccf2c8",
+      "size": 11223,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/morechathistory-1.19.1-1.1.1.jar"
+    },
+    {
+      "path": "mods/moreculling-1.20.1-0.19.0.jar",
+      "sha1": "2b781b5ec7aa1b13f49a5fcc761a6b3f57c1e05f",
+      "size": 334034,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/moreculling-1.20.1-0.19.0.jar"
+    },
+    {
+      "path": "mods/MouseTweaks-fabric-mc1.20-2.26.jar",
+      "sha1": "6a6b977e671b1ab625e740fc70fb5300c21bb841",
+      "size": 77943,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/MouseTweaks-fabric-mc1.20-2.26.jar"
+    },
+    {
+      "path": "mods/MutantMonsters-v8.0.8-1.20.1-Fabric.jar",
+      "sha1": "c697d776ff761b98fa4da289502a173feda06cba",
+      "size": 1432015,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/MutantMonsters-v8.0.8-1.20.1-Fabric.jar"
+    },
+    {
+      "path": "mods/NoChatReports-FABRIC-1.20.1-v2.2.2.jar",
+      "sha1": "b99f23fb76aad5a944400717e6d71aa011c4d7f7",
+      "size": 619812,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/NoChatReports-FABRIC-1.20.1-v2.2.2.jar"
+    },
+    {
+      "path": "mods/optigui-2.1.5.jar",
+      "sha1": "1560d8656027c31b6bc3a60e39c51f50eb45e482",
+      "size": 778903,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/optigui-2.1.5.jar"
+    },
+    {
+      "path": "mods/packetfixer-3.3.1-1.18-1.20.4-merged.jar",
+      "sha1": "0bef29023c8cadb2934d78a8b0066b49d4460974",
+      "size": 188673,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/packetfixer-3.3.1-1.18-1.20.4-merged.jar"
+    },
+    {
+      "path": "mods/Ping-Wheel-1.12.0-fabric-1.20.1.jar",
+      "sha1": "7a653012a6aa6be2d0cdfe16e91e00b042478337",
+      "size": 153600,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Ping-Wheel-1.12.0-fabric-1.20.1.jar"
+    },
+    {
+      "path": "mods/puzzle-1.5.2+1.20.jar",
+      "sha1": "5c3937cb1b9f7e2112cdf00ec0b1afce7c526ac1",
+      "size": 133463,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/puzzle-1.5.2+1.20.jar"
+    },
+    {
+      "path": "mods/PuzzlesLib-v8.1.33-1.20.1-Fabric.jar",
+      "sha1": "13282e818c9b5d20ba9f50949e3776d678d6926d",
+      "size": 1084397,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/PuzzlesLib-v8.1.33-1.20.1-Fabric.jar"
+    },
+    {
+      "path": "mods/recipeessentials-fabric-1.20.1-4.1.jar",
+      "sha1": "e70aa0db46209c7c69bca58b2e701bed007aed99",
+      "size": 51639,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/recipeessentials-fabric-1.20.1-4.1.jar"
+    },
+    {
+      "path": "mods/reeses_sodium_options-1.7.2+mc1.20.1-build.101.jar",
+      "sha1": "206f1b01b99ac3df99ddd84ed96b466a8700412d",
+      "size": 77304,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/reeses_sodium_options-1.7.2+mc1.20.1-build.101.jar"
+    },
+    {
+      "path": "mods/Rrls-3.2.0-1.20.1-fabric.jar",
+      "sha1": "0eaf7135dd4c1ecfffc9ea849817247d6e66c569",
+      "size": 138928,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Rrls-3.2.0-1.20.1-fabric.jar"
+    },
+    {
+      "path": "mods/Searchables-fabric-1.20.1-1.0.3.jar",
+      "sha1": "3fe28bfd8de8f13adeefb4dd5c9a8f97b233a0a1",
+      "size": 80283,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Searchables-fabric-1.20.1-1.0.3.jar"
+    },
+    {
+      "path": "mods/servercore-fabric-1.5.2+1.20.1.jar",
+      "sha1": "681757921997f3ab8455a968bf77ee4f305b82ed",
+      "size": 815594,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/servercore-fabric-1.5.2+1.20.1.jar"
+    },
+    {
+      "path": "mods/skinlayers3d-fabric-1.10.1-mc1.20.1.jar",
+      "sha1": "ba624f3b84d10153ba325299edf5c51947e289fc",
+      "size": 1966174,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/skinlayers3d-fabric-1.10.1-mc1.20.1.jar"
+    },
+    {
+      "path": "mods/smoothchunk-fabric-1.20.1-4.1.jar",
+      "sha1": "1136d8d1ebc37dc7754f22ebe7ee24ac91166ce3",
+      "size": 17498,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/smoothchunk-fabric-1.20.1-4.1.jar"
+    },
+    {
+      "path": "mods/sodium-fabric-0.5.13+mc1.20.1.jar",
+      "sha1": "bcdbf37d9494e405cba210d7a80ed58e756297b5",
+      "size": 971552,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/sodium-fabric-0.5.13+mc1.20.1.jar"
+    },
+    {
+      "path": "mods/sound-physics-remastered-fabric-1.20.1-1.5.1.jar",
+      "sha1": "b06a2eb31bcfe3d98463d1323e4787ac2b378bff",
+      "size": 205569,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/sound-physics-remastered-fabric-1.20.1-1.5.1.jar"
+    },
+    {
+      "path": "mods/starterkit-1.20.1-7.4.jar",
+      "sha1": "8c6f9cb038c7b41b317f79645c8110a9f31016ca",
+      "size": 185182,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/starterkit-1.20.1-7.4.jar"
+    },
+    {
+      "path": "mods/togglenametags-2.0.3.jar",
+      "sha1": "f9da4e2abe09bd163cb7ccc9f8ae486bf87ab27d",
+      "size": 40820,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/togglenametags-2.0.3.jar"
+    },
+    {
+      "path": "mods/toofast-fabric-1.20-1.2.0.jar",
+      "sha1": "f28b24f929ffbf960e096fa0327d0d318cb851b3",
+      "size": 63940,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/toofast-fabric-1.20-1.2.0.jar"
+    },
+    {
+      "path": "mods/UndeadNights-2.0.1-Fabric-mc1.20.1.jar",
+      "sha1": "70c4b6e8e3767335bb04f28cb6715415ae2bc2bd",
+      "size": 1390210,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/UndeadNights-2.0.1-Fabric-mc1.20.1.jar"
+    },
+    {
+      "path": "mods/VisualWorkbench-v8.0.1-1.20.1-Fabric.jar",
+      "sha1": "fa802fa9736101df6cd40b29c427ae29291eb15c",
+      "size": 79613,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/VisualWorkbench-v8.0.1-1.20.1-Fabric.jar"
+    },
+    {
+      "path": "mods/vmp-fabric-mc1.20.1-0.2.0+beta.7.102-all.jar",
+      "sha1": "46e896cabf7813275413c97e6dd2f48ef534057d",
+      "size": 487043,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/vmp-fabric-mc1.20.1-0.2.0+beta.7.102-all.jar"
+    },
+    {
+      "path": "mods/voicechat-fabric-1.20.1-2.6.9.jar",
+      "sha1": "b748754d2ad2e78cf70a0b911a7a2f1157588dac",
+      "size": 5251539,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/voicechat-fabric-1.20.1-2.6.9.jar"
+    },
+    {
+      "path": "mods/watut-fabric-1.20.1-1.2.3.jar",
+      "sha1": "e3b5da7d097e95d5b8c244f8f6c7947e1f5fdf92",
+      "size": 789018,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/watut-fabric-1.20.1-1.2.3.jar"
+    },
+    {
+      "path": "mods/XaerosWorldMap_1.39.12_Fabric_1.20.jar",
+      "sha1": "0193a3a3ccebebfcdf2d874d8b37b9d766febe8f",
+      "size": 974400,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/XaerosWorldMap_1.39.12_Fabric_1.20.jar"
+    },
+    {
+      "path": "mods/Xaeros_Minimap_25.2.10_Fabric_1.20.jar",
+      "sha1": "10fb39b9daa7a78e69935b390d105eff37670f61",
+      "size": 1740608,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Xaeros_Minimap_25.2.10_Fabric_1.20.jar"
+    },
+    {
+      "path": "mods/yet-another-config-lib-fabric-3.2.1+1.20.jar",
+      "sha1": "68ed6a69b22da12916cec79043011110e93ae900",
+      "size": 977261,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/yet-another-config-lib-fabric-3.2.1+1.20.jar"
+    },
+    {
+      "path": "mods/yosbr-0.1.2.jar",
+      "sha1": "f0340e9c0bc95d67f3f3e9c1cd79b61054af11f9",
+      "size": 17373,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/yosbr-0.1.2.jar"
+    },
+    {
+      "path": "mods/zombieawareness-fabric-1.20.1-1.13.1.jar",
+      "sha1": "bc54bcda3c061aac69910c0f200bedf449be89d7",
+      "size": 661029,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/zombieawareness-fabric-1.20.1-1.13.1.jar"
+    },
+    {
+      "path": "mods/Zoomify-2.11.2.jar",
+      "sha1": "75d8785b79cd2333f4d1d326da55ba5fc6372f8d",
+      "size": 999881,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Zoomify-2.11.2.jar"
     }
   ]
 }

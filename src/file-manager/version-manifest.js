@@ -4,8 +4,8 @@ const path = require('path');
 const { installFabric, MINECRAFT_VERSION } = require('./fabric-installer');
 
 const MANIFEST_URL = 'https://launchermeta.mojang.com/mc/game/version_manifest.json';
-const TARGET_VERSION = `fabric-loader-${MINECRAFT_VERSION}`; // fabric-loader-1.21.1
-const VANILLA_VERSION = '1.21.1';
+const TARGET_VERSION = `fabric-loader-${MINECRAFT_VERSION}`; // fabric-loader-1.20.1
+const VANILLA_VERSION = '1.20.1';
 
 /**
  * Fetch the version manifest from Mojang

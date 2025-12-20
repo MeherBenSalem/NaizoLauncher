@@ -9,6 +9,35 @@
 </head>
 
 <body>
+    <!-- Custom Title Bar -->
+    <div class="title-bar" id="title-bar">
+        <div class="title-bar-drag">
+            <div class="title-bar-icon">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                </svg>
+            </div>
+            <span class="title-bar-text">NightBeam Launcher</span>
+        </div>
+        <div class="window-controls">
+            <button class="window-btn minimize-btn" id="minimize-btn" title="Minimize">
+                <svg viewBox="0 0 12 12">
+                    <rect x="2" y="5.5" width="8" height="1" fill="currentColor"/>
+                </svg>
+            </button>
+            <button class="window-btn maximize-btn" id="maximize-btn" title="Maximize">
+                <svg viewBox="0 0 12 12">
+                    <rect x="2" y="2" width="8" height="8" fill="none" stroke="currentColor" stroke-width="1"/>
+                </svg>
+            </button>
+            <button class="window-btn close-btn" id="close-btn" title="Close">
+                <svg viewBox="0 0 12 12">
+                    <path d="M2 2L10 10M10 2L2 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
     <!-- Floating Particles -->
     <div class="particles" id="particles"></div>
 
@@ -23,7 +52,7 @@
                 </div>
                 <h1 class="title">NightBeam</h1>
             </div>
-            <div class="version-badge">Fabric 1.21.1</div>
+            <div class="version-badge">Fabric 1.20.1</div>
         </div>
 
         <!-- Main Content -->

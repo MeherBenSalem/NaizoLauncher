@@ -14,7 +14,8 @@ function createWindow() {
     width: 900,
     height: 550,
     resizable: false,
-    frame: true,
+    frame: false,
+    transparent: false,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false
@@ -51,6 +52,25 @@ app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit();
   }
+});
+
+// Window Control IPC Handlers
+ipcMain.on('window-minimize', () => {
+  if (mainWindow) mainWindow.minimize();
+});
+
+ipcMain.on('window-maximize', () => {
+  if (mainWindow) {
+    if (mainWindow.isMaximized()) {
+      mainWindow.unmaximize();
+    } else {
+      mainWindow.maximize();
+    }
+  }
+});
+
+ipcMain.on('window-close', () => {
+  if (mainWindow) mainWindow.close();
 });
 
 // IPC Handlers

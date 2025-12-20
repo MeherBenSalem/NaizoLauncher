@@ -3,7 +3,8 @@ const fs = require('fs').promises;
 const path = require('path');
 
 const FABRIC_META_URL = 'https://meta.fabricmc.net/v2/versions';
-const MINECRAFT_VERSION = '1.21.1';
+const MINECRAFT_VERSION = '1.20.1';
+const FABRIC_LOADER_VERSION = '0.18.3'; // Locked to specific version
 
 /**
  * Get latest stable Fabric loader version for Minecraft 1.21.1
@@ -13,18 +14,20 @@ async function getLatestFabricLoader() {
         const response = await axios.get(`${FABRIC_META_URL}/loader/${MINECRAFT_VERSION}`);
         const loaders = response.data;
 
-        // Find latest stable loader
-        const stableLoader = loaders.find(loader => loader.loader.stable === true);
+        // Find the specific Fabric loader version 0.18.3
+        const targetLoader = loaders.find(loader => loader.loader.version === FABRIC_LOADER_VERSION);
 
-        if (!stableLoader) {
-            throw new Error('No stable Fabric loader found for Minecraft 1.21.1');
+        if (!targetLoader) {
+            throw new Error(`Fabric loader ${FABRIC_LOADER_VERSION} not found for Minecraft ${MINECRAFT_VERSION}`);
         }
 
+        console.log(`Using Fabric Loader ${FABRIC_LOADER_VERSION} for Minecraft ${MINECRAFT_VERSION}`);
+
         return {
-            version: stableLoader.loader.version,
-            maven: stableLoader.loader.maven,
-            intermediary: stableLoader.intermediary,
-            launcherMeta: stableLoader.launcherMeta
+            version: targetLoader.loader.version,
+            maven: targetLoader.loader.maven,
+            intermediary: targetLoader.intermediary,
+            launcherMeta: targetLoader.launcherMeta
         };
     } catch (error) {
         console.error('Error fetching Fabric loader:', error.message);

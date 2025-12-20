@@ -35,7 +35,7 @@ async function saveConfig(config) {
  */
 function getDefaultConfig() {
     return {
-        minecraft_version: "1.21.1",
+        minecraft_version: "fabric-loader-1.20.1",
         game_directory: "./minecraft",
         java_path: "java",
         jvm_args: {
