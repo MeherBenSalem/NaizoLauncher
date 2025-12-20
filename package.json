@@ -1,6 +1,6 @@
 {
   "name": "naizo-launcher",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "NAIZO Launcher - Premium Minecraft Launcher with Fabric Mod Support",
   "main": "main.js",
   "scripts": {
@@ -45,7 +45,8 @@
     },
     "win": {
       "target": "nsis",
-      "icon": "assets/icons/win/icon.ico"
+      "icon": "assets/icons/win/icon.ico",
+      "artifactName": "${productName}-Setup-${version}.${ext}"
     },
     "nsis": {
       "oneClick": false,
