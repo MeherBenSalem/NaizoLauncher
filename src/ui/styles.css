@@ -419,6 +419,43 @@ body::before {
     box-shadow: none;
 }
 
+/* Button Installation States */
+.play-button.install-state {
+    background: linear-gradient(135deg, #e67e22, #f39c12);
+    box-shadow: 0 4px 20px rgba(243, 156, 18, 0.4);
+}
+
+.play-button.install-state:hover {
+    box-shadow: 0 8px 40px rgba(243, 156, 18, 0.5), 0 0 60px rgba(243, 156, 18, 0.2);
+}
+
+.play-button.update-state {
+    background: linear-gradient(135deg, #8e44ad, #9b59b6);
+    box-shadow: 0 4px 20px rgba(155, 89, 182, 0.4);
+    animation: updatePulse 2s ease-in-out infinite;
+}
+
+.play-button.update-state:hover {
+    box-shadow: 0 8px 40px rgba(155, 89, 182, 0.5), 0 0 60px rgba(155, 89, 182, 0.2);
+}
+
+@keyframes updatePulse {
+
+    0%,
+    100% {
+        box-shadow: 0 4px 20px rgba(155, 89, 182, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 4px 30px rgba(155, 89, 182, 0.6), 0 0 40px rgba(155, 89, 182, 0.3);
+    }
+}
+
+.play-button.ready-state {
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold-primary));
+    box-shadow: 0 4px 20px var(--gold-glow);
+}
+
 .button-text {
     position: relative;
     z-index: 1;

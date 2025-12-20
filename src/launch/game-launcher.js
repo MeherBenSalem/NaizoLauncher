@@ -36,7 +36,7 @@ async function extractNatives(gameDir, version, libraries) {
 /**
  * Launch Minecraft
  */
-async function launchMinecraft(username, customSettings = {}) {
+async function launchMinecraft(username, customSettings = {}, onModpackProgress = null) {
     try {
         if (!username || username.trim() === '') {
             throw new Error('Username is required');
@@ -61,15 +61,46 @@ async function launchMinecraft(username, customSettings = {}) {
                 const ModpackManager = require('../modpack/modpack-manager');
                 const modpackManager = new ModpackManager(gameDir, config.modpack.manifest_url);
 
+                // Notify UI that modpack sync is starting
+                if (onModpackProgress) {
+                    onModpackProgress({
+                        stage: 'modpack',
+                        status: 'checking',
+                        message: 'Checking for mod updates...'
+                    });
+                }
+
                 await modpackManager.sync((progress) => {
-                    // Optional: Send progress to UI via IPC if needed
                     console.log(`[Modpack] Downloading ${progress.file} (${progress.current}/${progress.total})`);
+                    if (onModpackProgress) {
+                        onModpackProgress({
+                            stage: 'modpack',
+                            status: 'downloading',
+                            file: progress.file,
+                            current: progress.current,
+                            total: progress.total,
+                            percentage: Math.floor((progress.current / progress.total) * 100)
+                        });
+                    }
                 });
+
+                // Notify completion
+                if (onModpackProgress) {
+                    onModpackProgress({
+                        stage: 'modpack',
+                        status: 'complete',
+                        message: 'Mods synced successfully'
+                    });
+                }
             } catch (err) {
                 console.error('Modpack sync failed:', err);
-                // Decide if we should block launch or continue. 
-                // For now, let's log and continue, or maybe throw if strict? 
-                // User asked to "make it download my version", implies strictness.
+                if (onModpackProgress) {
+                    onModpackProgress({
+                        stage: 'modpack',
+                        status: 'error',
+                        message: err.message
+                    });
+                }
                 console.warn('Continuing launch despite modpack sync failure...');
             }
         }

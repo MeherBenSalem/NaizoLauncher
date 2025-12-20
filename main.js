@@ -3,7 +3,7 @@ const path = require('path');
 const fs = require('fs');
 
 // Import launcher core modules
-const { checkInstallation, downloadMinecraft } = require('./src/core/launcher-core');
+const { checkInstallation, downloadMinecraft, getInstallationStatus } = require('./src/core/launcher-core');
 const { launchMinecraft } = require('./src/launch/game-launcher');
 const { loadConfig, saveConfig } = require('./src/core/config-manager');
 
@@ -20,7 +20,7 @@ function createWindow() {
       nodeIntegration: true,
       contextIsolation: false
     },
-    icon: path.join(__dirname, 'assets', 'icon.png')
+    icon: path.join(__dirname, 'logo.png')
   });
 
   mainWindow.loadFile('src/ui/index.html');
@@ -85,6 +85,16 @@ ipcMain.handle('check-installation', async () => {
   }
 });
 
+// Get detailed installation status for dynamic UI
+ipcMain.handle('get-installation-status', async () => {
+  try {
+    const result = await getInstallationStatus();
+    return result;
+  } catch (error) {
+    return { success: false, error: error.message };
+  }
+});
+
 // Download Minecraft files
 ipcMain.handle('download-minecraft', async (event) => {
   try {
@@ -108,7 +118,10 @@ ipcMain.handle('launch-game', async (event, username, settings) => {
     gameRunning = true;
     mainWindow.webContents.send('game-state', { running: true });
 
-    const result = await launchMinecraft(username, settings);
+    const result = await launchMinecraft(username, settings, (modpackProgress) => {
+      // Send modpack progress updates to renderer
+      mainWindow.webContents.send('download-progress', modpackProgress);
+    });
 
     // Watch for game exit
     if (result.process) {
