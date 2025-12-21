@@ -40,6 +40,25 @@
         </div>
     </div>
 
+    <!-- Launcher Update Indicator (non-intrusive) -->
+    <div class="launcher-update-indicator" id="launcher-update-indicator" style="display: none;">
+        <div class="update-spinner"></div>
+        <span class="update-indicator-text">Updating...</span>
+    </div>
+
+    <!-- Update Ready Banner -->
+    <div class="update-ready-banner" id="update-ready-banner" style="display: none;">
+        <div class="update-banner-content">
+            <svg class="update-banner-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+            </svg>
+            <span class="update-banner-text">Update ready! Restart to apply.</span>
+        </div>
+        <button class="update-banner-btn" id="restart-for-update">Restart Now</button>
+        <button class="update-banner-close" id="close-update-banner">×</button>
+    </div>
+
     <!-- Main Application Container -->
     <div class="app-container">
 

@@ -7,7 +7,7 @@ const os = require('os');
 const { checkInstallation, downloadMinecraft, getInstallationStatus } = require('./src/core/launcher-core');
 const { launchMinecraft } = require('./src/launch/game-launcher');
 const { loadConfig, saveConfig } = require('./src/core/config-manager');
-const { initAutoUpdater, checkForUpdates, downloadUpdate, getUpdateStatus, cleanup } = require('./src/core/auto-updater');
+const { initAutoUpdater, checkForUpdates, quitAndInstall, isUpdateDownloaded, getUpdateStatus, cleanup } = require('./src/core/auto-updater');
 
 let mainWindow;
 
@@ -57,9 +57,14 @@ app.whenReady().then(() => {
   });
 });
 
-// Cleanup on app quit
-app.on('before-quit', () => {
+// Cleanup on app quit and install updates if available
+app.on('before-quit', (event) => {
   cleanup();
+  // Auto-install update if one was downloaded
+  if (isUpdateDownloaded()) {
+    event.preventDefault();
+    quitAndInstall();
+  }
 });
 
 app.on('window-all-closed', () => {
@@ -223,11 +228,14 @@ ipcMain.handle('check-for-launcher-updates', async () => {
   }
 });
 
-// Download launcher update (opens download page for manual releases)
+// Restart and install launcher update
 ipcMain.handle('install-launcher-update', async () => {
   try {
-    await downloadUpdate();
-    return { success: true };
+    if (isUpdateDownloaded()) {
+      quitAndInstall();
+      return { success: true };
+    }
+    return { success: false, error: 'No update downloaded' };
   } catch (error) {
     return { success: false, error: error.message };
   }

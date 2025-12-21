@@ -1,6 +1,6 @@
 {
   "name": "naizo-launcher",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "NAIZO Launcher - Premium Minecraft Launcher with Fabric Mod Support",
   "main": "main.js",
   "scripts": {

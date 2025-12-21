@@ -125,9 +125,11 @@ settingsNavItems.forEach(item => {
 
 // ==================== NEWS PANEL ====================
 
-// News URL - can be changed to a remote URL for production
+// News URL - strict single source (no fallbacks)
 const NEWS_URL = 'https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/news.json';
-const LOCAL_NEWS_PATH = '../../news.json';
+const NEWS_CACHE_TTL = 5 * 60 * 1000; // 5 minutes cache
+let newsCache = null;
+let newsCacheTimestamp = 0;
 
 if (newsToggle) {
     newsToggle.addEventListener('click', () => {
@@ -148,48 +150,40 @@ if (closeNews) {
     });
 }
 
-// Fetch and display news
+// Fetch and display news (single source, with caching)
 async function loadNews() {
     const newsContent = document.getElementById('news-content');
     if (!newsContent) return;
+
+    // Check cache first
+    const now = Date.now();
+    if (newsCache && (now - newsCacheTimestamp) < NEWS_CACHE_TTL) {
+        renderNews(newsCache);
+        return;
+    }
 
     // Show loading state
     newsContent.innerHTML = '<div class="news-loading">Loading news...</div>';
 
     try {
-        let newsData = null;
-
-        // Try fetching from remote URL first
-        try {
-            const response = await fetch(NEWS_URL);
-            if (response.ok) {
-                newsData = await response.json();
-            }
-        } catch (e) {
-            console.log('Could not fetch remote news, trying local file...');
+        const response = await fetch(NEWS_URL);
+        if (!response.ok) {
+            throw new Error('Failed to fetch news');
         }
 
-        // If remote failed, try local file
-        if (!newsData) {
-            try {
-                const response = await fetch(LOCAL_NEWS_PATH);
-                if (response.ok) {
-                    newsData = await response.json();
-                }
-            } catch (e) {
-                console.log('Could not fetch local news file');
-            }
-        }
+        const newsData = await response.json();
 
         if (newsData && newsData.news && newsData.news.length > 0) {
+            // Cache the news
+            newsCache = newsData.news;
+            newsCacheTimestamp = now;
             renderNews(newsData.news);
         } else {
-            newsContent.innerHTML = '<div class="news-empty">No news available</div>';
+            newsContent.innerHTML = '<div class="news-empty">News unavailable</div>';
         }
-
     } catch (error) {
         console.error('Error loading news:', error);
-        newsContent.innerHTML = '<div class="news-error">Could not load news</div>';
+        newsContent.innerHTML = '<div class="news-error">News unavailable</div>';
     }
 }
 
@@ -774,13 +768,54 @@ ipcRenderer.on('game-state', (event, state) => {
 
 // ==================== LAUNCHER AUTO-UPDATE ====================
 
+// Launcher update elements
+const launcherUpdateIndicator = document.getElementById('launcher-update-indicator');
+const updateIndicatorText = document.querySelector('.update-indicator-text');
+const updateReadyBanner = document.getElementById('update-ready-banner');
+const restartForUpdateBtn = document.getElementById('restart-for-update');
+const closeUpdateBannerBtn = document.getElementById('close-update-banner');
+
+// Show/hide update indicator
+function showUpdateIndicator(show, text = 'Updating...') {
+    if (launcherUpdateIndicator) {
+        launcherUpdateIndicator.style.display = show ? 'flex' : 'none';
+        if (updateIndicatorText) updateIndicatorText.textContent = text;
+    }
+}
+
+// Show/hide update ready banner
+function showUpdateReadyBanner(show) {
+    if (updateReadyBanner) {
+        updateReadyBanner.style.display = show ? 'flex' : 'none';
+    }
+    // Hide indicator when showing banner
+    if (show) showUpdateIndicator(false);
+}
+
+// Restart button handler
+if (restartForUpdateBtn) {
+    restartForUpdateBtn.addEventListener('click', async () => {
+        try {
+            await ipcRenderer.invoke('install-launcher-update');
+        } catch (error) {
+            console.error('Failed to restart for update:', error);
+        }
+    });
+}
+
+// Close banner button handler
+if (closeUpdateBannerBtn) {
+    closeUpdateBannerBtn.addEventListener('click', () => {
+        showUpdateReadyBanner(false);
+    });
+}
+
 // Launcher update status listener
 ipcRenderer.on('launcher-update-status', (event, data) => {
     console.log('Launcher update status:', data);
 
     const updateInfoEl = document.querySelector('.update-info h4');
     const updateVersionEl = document.getElementById('modpack-version');
-    const updateIconEl = document.querySelector('.update-icon svg');
 
     switch (data.status) {
         case 'update-checking':
@@ -789,26 +824,29 @@ ipcRenderer.on('launcher-update-status', (event, data) => {
 
         case 'update-available':
             if (updateInfoEl) updateInfoEl.textContent = `Update Available: v${data.version}`;
-            if (updateIconEl) {
-                updateIconEl.innerHTML = '<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>';
-            }
+            showUpdateIndicator(true, 'Downloading update...');
             break;
 
         case 'update-not-available':
             if (updateInfoEl) updateInfoEl.textContent = "You're up to date!";
+            showUpdateIndicator(false);
             break;
 
         case 'update-download-progress':
-            if (updateInfoEl) updateInfoEl.textContent = `Downloading update... ${data.percent.toFixed(1)}%`;
+            const percent = Math.round(data.percent);
+            if (updateInfoEl) updateInfoEl.textContent = `Downloading update... ${percent}%`;
+            showUpdateIndicator(true, `Downloading... ${percent}%`);
             break;
 
         case 'update-downloaded':
             if (updateInfoEl) updateInfoEl.textContent = `Update v${data.version} ready to install`;
-            // Show install button or notification
+            showUpdateIndicator(false);
+            showUpdateReadyBanner(true);
             break;
 
         case 'update-error':
             if (updateInfoEl) updateInfoEl.textContent = data.message || 'Update check failed';
+            showUpdateIndicator(false);
             console.error('Launcher update error:', data.fullError || data.message);
             break;
     }
