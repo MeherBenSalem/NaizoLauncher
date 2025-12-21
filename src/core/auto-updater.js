@@ -104,12 +104,25 @@ function setupAutoUpdaterEvents() {
         console.error('[AutoUpdater] Error:', error.message);
 
         let userMessage = 'Update check failed';
-        if (error.message.includes('net::')) {
+        const errorLower = error.message.toLowerCase();
+
+        if (errorLower.includes('net::err_internet_disconnected') ||
+            errorLower.includes('net::err_network_changed') ||
+            errorLower.includes('net::err_name_not_resolved')) {
             userMessage = 'No internet connection';
-        } else if (error.message.includes('404')) {
-            userMessage = 'No releases available';
-        } else if (error.message.includes('timeout')) {
+        } else if (errorLower.includes('timeout') || errorLower.includes('etimedout')) {
             userMessage = 'Connection timed out';
+        } else if (errorLower.includes('latest.yml') && errorLower.includes('404')) {
+            // Only show "no releases" if the latest.yml file itself is missing
+            userMessage = 'No releases found on GitHub';
+        } else if (errorLower.includes('404')) {
+            // 404 during download means the specific file wasn't found (asset naming mismatch)
+            userMessage = 'Update download failed - file not found';
+            console.error('[AutoUpdater] 404 error - this usually means the release asset name does not match expected pattern');
+        } else if (errorLower.includes('sha512 checksum mismatch')) {
+            userMessage = 'Update verification failed';
+        } else if (errorLower.includes('cannot find latest.yml')) {
+            userMessage = 'No releases found on GitHub';
         }
 
         sendStatusToWindow('update-error', {
@@ -149,7 +162,14 @@ async function checkForUpdates() {
 function quitAndInstall() {
     if (updateDownloaded) {
         console.log('[AutoUpdater] Installing update and restarting...');
-        autoUpdater.quitAndInstall(false, true);
+        // Set autoUpdater to not run the installer immediately
+        // This allows the app to properly quit first
+        setImmediate(() => {
+            // Use isSilent=true so the NSIS installer waits for the app to close
+            // rather than trying to forcefully terminate it
+            // forceRunAfter=true ensures the app restarts after update
+            autoUpdater.quitAndInstall(true, true);
+        });
     }
 }
 

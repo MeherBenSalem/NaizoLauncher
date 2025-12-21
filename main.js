@@ -57,12 +57,18 @@ app.whenReady().then(() => {
   });
 });
 
+// Track if we're in the process of installing an update
+let isInstallingUpdate = false;
+
 // Cleanup on app quit and install updates if available
 app.on('before-quit', (event) => {
   cleanup();
-  // Auto-install update if one was downloaded
-  if (isUpdateDownloaded()) {
-    event.preventDefault();
+  // Only trigger auto-install if we haven't already started installing
+  // and an update was downloaded while the app was running
+  if (isUpdateDownloaded() && !isInstallingUpdate) {
+    isInstallingUpdate = true;
+    // Don't prevent default - let the app quit naturally
+    // The quitAndInstall will launch the installer after app closes
     quitAndInstall();
   }
 });
