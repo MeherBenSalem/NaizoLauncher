@@ -1,10 +1,31 @@
-const { spawn } = require('child_process');
+const { spawn, exec } = require('child_process');
 const path = require('path');
 const fs = require('fs').promises;
 const { loadConfig } = require('../core/config-manager');
 const { createOfflineProfile } = require('./offline-auth');
 const { buildJVMArguments, buildGameArguments } = require('./jvm-builder');
 const { getAllRequiredFiles } = require('../file-manager/version-manifest');
+
+/**
+ * Check if Java is available and accessible
+ */
+async function checkJavaAvailable(javaPath) {
+    return new Promise((resolve) => {
+        const command = javaPath === 'java' ? 'java -version' : `"${javaPath}" -version`;
+        exec(command, (error, stdout, stderr) => {
+            if (error) {
+                console.error('[DEBUG] Java detection failed:', error.message);
+                console.error('[DEBUG] Java path used:', javaPath);
+                resolve({ available: false, error: error.message });
+            } else {
+                // Java outputs version info to stderr
+                const versionInfo = stderr || stdout;
+                console.log('[DEBUG] Java detected:', versionInfo.split('\n')[0]);
+                resolve({ available: true, version: versionInfo.split('\n')[0] });
+            }
+        });
+    });
+}
 
 /**
  * Extract natives for the current platform
@@ -49,6 +70,25 @@ async function launchMinecraft(username, customSettings = {}, onModpackProgress 
 
         // Merge custom settings
         const settings = { ...config, ...customSettings };
+
+        // Get Java path from settings
+        const javaPath = settings.java_path || 'java';
+
+        // Check if Java is available
+        console.log('[DEBUG] Checking Java availability...');
+        const javaCheck = await checkJavaAvailable(javaPath);
+        if (!javaCheck.available) {
+            console.error('[DEBUG] Java is not available!');
+            console.error('[DEBUG] Please download Java from: https://adoptium.net/ or https://www.java.com/');
+            throw new Error(
+                'Java is not installed or not found!\n\n' +
+                'Please download and install Java to play Minecraft.\n\n' +
+                'Recommended: Download Java 17 or 21 from:\n' +
+                '• https://adoptium.net/\n' +
+                '• https://www.oracle.com/java/technologies/downloads/\n\n' +
+                'After installing, restart the launcher.'
+            );
+        }
 
         // Create player profile
         const playerProfile = createOfflineProfile(username);
@@ -121,8 +161,7 @@ async function launchMinecraft(username, customSettings = {}, onModpackProgress 
         const metadata = await require('../file-manager/version-manifest').getFullVersionMetadata(version);
         const mainClass = metadata.mainClass;
 
-        // Construct full command
-        const javaPath = settings.java_path || 'java';
+        // Construct full command (javaPath already defined earlier in this function)
         const fullArgs = [
             ...jvmArgs,
             mainClass,

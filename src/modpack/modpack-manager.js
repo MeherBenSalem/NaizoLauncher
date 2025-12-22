@@ -53,8 +53,19 @@ class ModpackManager {
     }
 
     /**
+     * Check if a file path is a config file
+     */
+    isConfigFile(filePath) {
+        return filePath.startsWith('config/') || filePath.startsWith('config\\');
+    }
+
+    /**
      * Validate local files against the manifest
      * Returns a list of files that need to be downloaded or updated
+     * 
+     * All files in the manifest (mods, configs, resourcepacks, shaderpacks) are strictly validated.
+     * The difference is in cleanup: config files that aren't in the manifest are preserved,
+     * while extra mods/resourcepacks/shaderpacks are deleted.
      */
     async validateLocalFiles(manifest) {
         const filesToDownload = [];
@@ -71,13 +82,15 @@ class ModpackManager {
             const destPath = path.join(this.gameDir, file.path);
             const localSha1 = await this.getFileSha1(destPath);
 
+            // Strict SHA1 validation for ALL files in the manifest (mods, configs, etc.)
             if (localSha1 !== file.sha1) {
                 console.log(`Update required for: ${file.path}`);
                 filesToDownload.push({
                     url: file.url,
                     path: destPath,
                     sha1: file.sha1,
-                    size: file.size
+                    size: file.size,
+                    isConfig: this.isConfigFile(file.path)
                 });
             }
         }
@@ -135,10 +148,12 @@ class ModpackManager {
 
     /**
      * Delete files that exist locally but not in the manifest
+     * Only cleans mods, resourcepacks, and shaderpacks - config files are preserved
      */
     async cleanupExtraFiles(manifest) {
         const manifestPaths = new Set(manifest.files.map(f => f.path));
-        const foldersToClean = ['mods', 'config', 'resourcepacks', 'shaderpacks'];
+        // Only clean mods, resourcepacks, and shaderpacks - preserve player config changes
+        const foldersToClean = ['mods', 'resourcepacks', 'shaderpacks'];
         let deletedCount = 0;
 
         for (const folder of foldersToClean) {
