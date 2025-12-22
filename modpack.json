@@ -560,12 +560,6 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/NoChatReports-FABRIC-1.20.1-v2.2.2.jar"
     },
     {
-      "path": "mods/offlineskins-1.20.1-v1a-fabric.jar",
-      "sha1": "3b54c5f6b276550cae105c7696243e864299d439",
-      "size": 90906,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/offlineskins-1.20.1-v1a-fabric.jar"
-    },
-    {
       "path": "mods/optigui-2.1.5.jar",
       "sha1": "1560d8656027c31b6bc3a60e39c51f50eb45e482",
       "size": 778903,
@@ -642,6 +636,12 @@
       "sha1": "ba624f3b84d10153ba325299edf5c51947e289fc",
       "size": 1966174,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/skinlayers3d-fabric-1.10.1-mc1.20.1.jar"
+    },
+    {
+      "path": "mods/skinrestorer-2.4.3+1.20-fabric.jar",
+      "sha1": "a3c29898279c2f1eb9a9edf3a6712559618e8f22",
+      "size": 190082,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/skinrestorer-2.4.3+1.20-fabric.jar"
     },
     {
       "path": "mods/smoothchunk-fabric-1.20.1-4.1.jar",
