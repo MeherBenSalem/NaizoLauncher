@@ -596,10 +596,10 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/reeses_sodium_options-1.7.2+mc1.20.1-build.101.jar"
     },
     {
-      "path": "mods/replaymod-1.20.1-2.6.23.jar",
-      "sha1": "5688462d17b171c8791308b5a4963057876b6188",
-      "size": 14739015,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/replaymod-1.20.1-2.6.23.jar"
+      "path": "mods/replaymod-1.20.1-2.6.15.jar",
+      "sha1": "43585ef8dc0c50ebc79dfff9082bc10d94dff6e2",
+      "size": 12906744,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/replaymod-1.20.1-2.6.15.jar"
     },
     {
       "path": "mods/replayvoicechat-1.20.1-1.3.3.jar",
@@ -698,10 +698,10 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/vmp-fabric-mc1.20.1-0.2.0+beta.7.102-all.jar"
     },
     {
-      "path": "mods/voicechat-fabric-1.20.1-2.6.9.jar",
-      "sha1": "963a2c2d5087e06f2f1ea8510c7017313b59946f",
-      "size": 5251539,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/voicechat-fabric-1.20.1-2.6.9.jar"
+      "path": "mods/voicechat-fabric-1.20.1-2.4.16.jar",
+      "sha1": "655fe4516dc73126046bd258b7c69a5010e69287",
+      "size": 7952183,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/voicechat-fabric-1.20.1-2.4.16.jar"
     },
     {
       "path": "mods/watut-fabric-1.20.1-1.2.3.jar",
