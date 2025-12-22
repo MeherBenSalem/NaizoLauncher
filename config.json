@@ -19,7 +19,7 @@
     "height": 480,
     "fullscreen": false
   },
-  "server_ip": null,
+  "server_ip": "51.83.4.21:25567",
   "close_launcher_on_game_start": false,
   "last_username": "_NAIZO",
   "modpack": {

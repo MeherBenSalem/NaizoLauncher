@@ -194,6 +194,12 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Debugify-1.20.1+2.0.jar"
     },
     {
+      "path": "mods/defaultoptions-fabric-1.20.1-18.0.4.jar",
+      "sha1": "df4c94330d69547282902677c03b0a21456eb5dd",
+      "size": 92486,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/defaultoptions-fabric-1.20.1-18.0.4.jar"
+    },
+    {
       "path": "mods/dynamic-fps-3.2.1+minecraft-1.20.0.jar",
       "sha1": "d4edd1828b1595eca7be0d36d1cc45b189a17a6e",
       "size": 70316,
@@ -576,6 +582,12 @@
       "sha1": "206f1b01b99ac3df99ddd84ed96b466a8700412d",
       "size": 77304,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/reeses_sodium_options-1.7.2+mc1.20.1-build.101.jar"
+    },
+    {
+      "path": "mods/replaymod-1.20.1-2.6.23.jar",
+      "sha1": "5688462d17b171c8791308b5a4963057876b6188",
+      "size": 14739015,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/replaymod-1.20.1-2.6.23.jar"
     },
     {
       "path": "mods/Rrls-3.2.0-1.20.1-fabric.jar",

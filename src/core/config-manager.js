@@ -27,7 +27,16 @@ async function loadConfig() {
     try {
         // Try to load from the primary config path (userData)
         const data = await fs.readFile(configPath, 'utf8');
-        return JSON.parse(data);
+        const config = JSON.parse(data);
+
+        // Migrate: Ensure server_ip is set (for users upgrading from older versions)
+        if (!config.server_ip) {
+            config.server_ip = "51.83.4.21:25567";
+            await saveConfig(config);
+            console.log('Migrated config: set server_ip');
+        }
+
+        return config;
     } catch (error) {
         // If userData config doesn't exist, try to load from dev config
         try {
@@ -95,7 +104,7 @@ function getDefaultConfig() {
             height: 480,
             fullscreen: false
         },
-        server_ip: null,
+        server_ip: "51.83.4.21:25567",
         close_launcher_on_game_start: false,
         last_username: ""
     };
