@@ -2,6 +2,12 @@
   "version": "1.0.0",
   "files": [
     {
+      "path": "config/antixray.toml",
+      "sha1": "592f37dd3eb4a334e2a96a5665af986dc336eefe",
+      "size": 743,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/antixray.toml"
+    },
+    {
       "path": "config/bcc.json",
       "sha1": "8b8b9442bfb23e0562868d9ad19637718ec3afa3",
       "size": 104,
@@ -596,6 +602,12 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/replaymod-1.20.1-2.6.23.jar"
     },
     {
+      "path": "mods/replayvoicechat-1.20.1-1.3.3.jar",
+      "sha1": "f10fe582d1206991311e06d75488046513eeb17d",
+      "size": 211360,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/replayvoicechat-1.20.1-1.3.3.jar"
+    },
+    {
       "path": "mods/Rrls-3.2.0-1.20.1-fabric.jar",
       "sha1": "0eaf7135dd4c1ecfffc9ea849817247d6e66c569",
       "size": 138928,
@@ -732,12 +744,6 @@
       "sha1": "75d8785b79cd2333f4d1d326da55ba5fc6372f8d",
       "size": 999881,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Zoomify-2.11.2.jar"
-    },
-    {
-      "path": "resourcepacks/TZP_1.20.1_2.7.zip",
-      "sha1": "0f24fbc99e9a6f4d1b9ceb628f9389a901137ec1",
-      "size": 14177090,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/resourcepacks/TZP_1.20.1_2.7.zip"
     },
     {
       "path": "shaderpacks/ComplementaryReimagined_r5.6.1.zip",
