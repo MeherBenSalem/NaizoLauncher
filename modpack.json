@@ -26,6 +26,12 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/animatica-0.6+1.20.jar"
     },
     {
+      "path": "mods/antixray-fabric-1.4.6+1.20.1.jar",
+      "sha1": "57a48f285530096e10185756e10c62804a8def92",
+      "size": 121516,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/antixray-fabric-1.4.6+1.20.1.jar"
+    },
+    {
       "path": "mods/appleskin-fabric-mc1.20.1-2.5.1.jar",
       "sha1": "d0f11243f79c071416bbcee781ae93eb57a0283c",
       "size": 1064362,
