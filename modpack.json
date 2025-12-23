@@ -14,12 +14,6 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/bcc.json"
     },
     {
-      "path": "config/bodyhealthsystem.json",
-      "sha1": "11a3c9696cfb36e465047980a78e6ac555098fd6",
-      "size": 665,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/bodyhealthsystem.json"
-    },
-    {
       "path": "config/defaultoptions/servers.dat",
       "sha1": "49bb3d0c93acda75b5b0e413747dca5a1d8d4c2f",
       "size": 14912,
@@ -90,12 +84,6 @@
       "sha1": "6942fb39ca2e87208b0b0630a5efc4511c82dcf4",
       "size": 21587,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/bettermounthud-1.2.2.jar"
-    },
-    {
-      "path": "mods/bodyhealthsystem-0.3.6.jar",
-      "sha1": "266586332da7fedc20bf57c6a4f2b7147c9225c0",
-      "size": 104491,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/bodyhealthsystem-0.3.6.jar"
     },
     {
       "path": "mods/Bookshelf-Fabric-1.20.1-20.2.13.jar",
