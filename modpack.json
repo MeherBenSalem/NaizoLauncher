@@ -56,6 +56,12 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/architectury-9.2.14-fabric.jar"
     },
     {
+      "path": "mods/ashens-zombie-apocalypse-1.0.1.jar",
+      "sha1": "398f47e99683d882c53778ff87cb9f9c6e98de10",
+      "size": 139322,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/ashens-zombie-apocalypse-1.0.1.jar"
+    },
+    {
       "path": "mods/BadOptimizations-2.4.1-1.20.1.jar",
       "sha1": "304007dcb0fb15ed1a1bc3771736470dafc5be0f",
       "size": 460234,
@@ -168,6 +174,12 @@
       "sha1": "19de5c3b1f4a712946b56a1bbb83d99ec75ed592",
       "size": 189955,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/connectivity-fabric-1.20.1-7.2.jar"
+    },
+    {
+      "path": "mods/Contagion-1.5.8-Fabric-mc1.20.jar",
+      "sha1": "190ca8648660879eafca8f1e57589a332d74468d",
+      "size": 1093388,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Contagion-1.5.8-Fabric-mc1.20.jar"
     },
     {
       "path": "mods/continuity-3.0.0-beta.4+1.20.1.jar",
@@ -294,6 +306,12 @@
       "sha1": "70a46d1e7e88357a50bd6b372770fe37691bff1d",
       "size": 1581037,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/essential_commands-0.35.3-mc1.20.1.jar"
+    },
+    {
+      "path": "mods/eventZ-0.1.0.jar",
+      "sha1": "3a720c9603df2d66949238bad9e649c8bee8eacd",
+      "size": 47602,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/eventZ-0.1.0.jar"
     },
     {
       "path": "mods/fabric-api-0.92.6+1.20.1.jar",
@@ -662,6 +680,12 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/servercore-fabric-1.5.2+1.20.1.jar"
     },
     {
+      "path": "mods/simple-day-display-15.jar",
+      "sha1": "0036355989dcfabac7ae4244665658fdbd97952b",
+      "size": 39797,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/simple-day-display-15.jar"
+    },
+    {
       "path": "mods/skinlayers3d-fabric-1.10.1-mc1.20.1.jar",
       "sha1": "ba624f3b84d10153ba325299edf5c51947e289fc",
       "size": 1966174,
@@ -708,6 +732,12 @@
       "sha1": "8c6f9cb038c7b41b317f79645c8110a9f31016ca",
       "size": 185182,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/starterkit-1.20.1-7.4.jar"
+    },
+    {
+      "path": "mods/TACZ-Refabricated-1.20.1-0.2.0-forge1.1.7.jar",
+      "sha1": "f72f55134b1bff98e70491f464be9ef350945707",
+      "size": 52728746,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/TACZ-Refabricated-1.20.1-0.2.0-forge1.1.7.jar"
     },
     {
       "path": "mods/togglenametags-2.0.3.jar",
@@ -780,12 +810,6 @@
       "sha1": "bc54bcda3c061aac69910c0f200bedf449be89d7",
       "size": 661029,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/zombieawareness-fabric-1.20.1-1.13.1.jar"
-    },
-    {
-      "path": "mods/Zoomify-2.11.2.jar",
-      "sha1": "75d8785b79cd2333f4d1d326da55ba5fc6372f8d",
-      "size": 999881,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Zoomify-2.11.2.jar"
     },
     {
       "path": "shaderpacks/ComplementaryReimagined_r5.6.1.zip",
