@@ -3,18 +3,10 @@
     "lastUpdated": "2025-12-22T12:12:30Z",
     "news": [
         {
-            "id": "2",
-            "title": "Config Sync & Java Detection Improvements",
-            "description": "We've refined the syncing logic! Modpack configurations are now strictly enforced while preserving your personal config files. We've also added built-in Java detection to guide you if Java is missing.",
-            "date": "2025-12-22",
-            "tag": "Update",
-            "url": "https://github.com/MeherBenSalem/NaizoLauncher/releases/tag/v1.0.9"
-        },
-        {
             "id": "1",
-            "title": "NAIZO Launcher v1.0.8 Released!",
+            "title": "NAIZO Launcher v1.0.11 Released!",
             "description": "The new launcher is now available with improved performance, modern design, and auto-update support.",
-            "date": "2025-12-21",
+            "date": "2025-12-24",
             "tag": "Release",
             "url": "https://github.com/MeherBenSalem/NaizoLauncher/releases/tag/v1.0.8"
         }
