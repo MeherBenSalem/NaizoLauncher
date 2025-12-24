@@ -49,6 +49,29 @@ let isDownloading = false;
 let isLaunching = false;
 let config = null;
 let installationStatus = null;
+let usernameNeedsConfiguration = false; // Track if username needs to be configured
+
+// ==================== RANDOM NAME GENERATOR ====================
+
+// Minecraft-style random name parts
+const NAME_ADJECTIVES = [
+    'Swift', 'Dark', 'Brave', 'Wild', 'Storm', 'Fire', 'Ice', 'Shadow', 'Iron',
+    'Gold', 'Silver', 'Crystal', 'Thunder', 'Lucky', 'Mystic', 'Epic', 'Cosmic',
+    'Blazing', 'Frozen', 'Silent', 'Mighty', 'Noble', 'Ancient', 'Crimson', 'Azure'
+];
+
+const NAME_NOUNS = [
+    'Wolf', 'Dragon', 'Phoenix', 'Knight', 'Mage', 'Hunter', 'Warrior', 'Ninja',
+    'Archer', 'Wizard', 'Titan', 'Hawk', 'Bear', 'Lion', 'Tiger', 'Raven',
+    'Viper', 'Falcon', 'Panther', 'Shark', 'Eagle', 'Fox', 'Lynx', 'Cobra', 'Owl'
+];
+
+function generateRandomName() {
+    const adjective = NAME_ADJECTIVES[Math.floor(Math.random() * NAME_ADJECTIVES.length)];
+    const noun = NAME_NOUNS[Math.floor(Math.random() * NAME_NOUNS.length)];
+    const number = Math.floor(Math.random() * 1000);
+    return `${adjective}${noun}${number}`;
+}
 
 // ==================== WINDOW CONTROLS ====================
 
@@ -285,12 +308,27 @@ async function init() {
     const result = await ipcRenderer.invoke('load-config');
     if (result.success) {
         config = result.config;
-        loadSettingsToUI();
 
-        // Update player name display
-        if (config.last_username) {
+        // Check if username needs configuration
+        // A username is "configured" if it exists, is not empty, and is_username_configured flag is true
+        if (!config.last_username || config.last_username.trim() === '' || config.is_username_configured !== true) {
+            // Generate a random name if no username is set
+            if (!config.last_username || config.last_username.trim() === '') {
+                config.last_username = generateRandomName();
+                await ipcRenderer.invoke('save-config', config);
+            }
+            usernameNeedsConfiguration = true;
             playerNameDisplay.textContent = config.last_username;
+            playerNameDisplay.classList.add('needs-config');
+            playerNameDisplay.title = 'Click to configure your username';
+        } else {
+            usernameNeedsConfiguration = false;
+            playerNameDisplay.textContent = config.last_username;
+            playerNameDisplay.classList.remove('needs-config');
+            playerNameDisplay.title = '';
         }
+
+        loadSettingsToUI();
     }
 
     // Get system info for RAM display
@@ -316,6 +354,17 @@ async function init() {
     // Start server status monitoring
     checkServerStatus();
     setInterval(checkServerStatus, 60000); // Check every 60 seconds
+}
+
+// Player name click handler - navigate to settings if username needs configuration
+if (playerNameDisplay) {
+    playerNameDisplay.addEventListener('click', () => {
+        if (usernameNeedsConfiguration) {
+            switchView('settings');
+            switchSettingsSection('account');
+            usernameInput?.focus();
+        }
+    });
 }
 
 // ==================== SERVER STATUS MONITORING ====================
@@ -492,9 +541,13 @@ async function saveCurrentSettings() {
         // Username
         if (usernameInput) {
             const username = usernameInput.value.trim();
-            if (username) {
+            if (username && username.length >= 3 && username.length <= 16) {
                 config.last_username = username;
+                config.is_username_configured = true; // Mark as configured
+                usernameNeedsConfiguration = false;
                 playerNameDisplay.textContent = username;
+                playerNameDisplay.classList.remove('needs-config');
+                playerNameDisplay.title = '';
             }
         }
 
@@ -605,7 +658,9 @@ playButton.addEventListener('click', async () => {
     // Get username from settings
     const username = usernameInput ? usernameInput.value.trim() : config?.last_username;
 
-    if (!username) {
+    // Check if username needs configuration
+    if (!username || usernameNeedsConfiguration) {
+        alert('Please configure your username before launching the game!');
         switchView('settings');
         switchSettingsSection('account');
         usernameInput?.focus();

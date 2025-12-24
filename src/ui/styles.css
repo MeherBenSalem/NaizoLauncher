@@ -225,6 +225,27 @@ body {
     font-weight: 500;
     color: var(--text-primary);
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    transition: var(--transition-smooth);
+}
+
+.player-name.needs-config {
+    color: #f59e0b;
+    cursor: pointer;
+    animation: pulse-warning 2s ease-in-out infinite;
+}
+
+.player-name.needs-config::after {
+    content: ' ⚠';
+    font-size: 12px;
+}
+
+@keyframes pulse-warning {
+    0%, 100% {
+        text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+        text-shadow: 0 2px 16px rgba(245, 158, 11, 0.6);
+    }
 }
 
 .player-avatar {
