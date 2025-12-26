@@ -9,7 +9,7 @@
     },
     {
       "path": "config/bcc.json",
-      "sha1": "526644a4923a481acf839c67dc4ce6d9bd835de6",
+      "sha1": "73f7e006cbbc70a7cc006aee24b6a5db388b6848",
       "size": 104,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/bcc.json"
     },
@@ -315,8 +315,8 @@
     },
     {
       "path": "mods/eventZ-0.1.0.jar",
-      "sha1": "3a720c9603df2d66949238bad9e649c8bee8eacd",
-      "size": 47602,
+      "sha1": "023501ad4a32fdc05d8892d4d04044e3054ea58d",
+      "size": 72124,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/eventZ-0.1.0.jar"
     },
     {
@@ -632,6 +632,12 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/nomobfarm-fabric-1.6.6.jar"
     },
     {
+      "path": "mods/notenoughanimations-fabric-1.11.1-mc1.20.1.jar",
+      "sha1": "4746ba9f3902104131d8a68db61f8f1281f2021c",
+      "size": 1924462,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/notenoughanimations-fabric-1.11.1-mc1.20.1.jar"
+    },
+    {
       "path": "mods/optigui-2.1.5.jar",
       "sha1": "1560d8656027c31b6bc3a60e39c51f50eb45e482",
       "size": 778903,
@@ -648,6 +654,12 @@
       "sha1": "7a653012a6aa6be2d0cdfe16e91e00b042478337",
       "size": 153600,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Ping-Wheel-1.12.0-fabric-1.20.1.jar"
+    },
+    {
+      "path": "mods/player-animation-lib-fabric-1.0.2-rc1+1.20.jar",
+      "sha1": "9182c38bcf614d0ed7091b15f7e099a7f2fb3617",
+      "size": 181008,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/player-animation-lib-fabric-1.0.2-rc1+1.20.jar"
     },
     {
       "path": "mods/puzzle-1.5.2+1.20.jar",
@@ -816,6 +828,12 @@
       "sha1": "e3b5da7d097e95d5b8c244f8f6c7947e1f5fdf92",
       "size": 789018,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/watut-fabric-1.20.1-1.2.3.jar"
+    },
+    {
+      "path": "mods/weaponmaster_ydm-fabric-1.20.1-4.2.6.jar",
+      "sha1": "a73cc2f57cf48ffb711580dba64078050a9d094f",
+      "size": 316932,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/weaponmaster_ydm-fabric-1.20.1-4.2.6.jar"
     },
     {
       "path": "mods/XaerosWorldMap_1.39.12_Fabric_1.20.jar",
