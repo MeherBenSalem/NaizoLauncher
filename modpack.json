@@ -272,6 +272,18 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/easyauth-mc1.20-3.4.1.jar"
     },
     {
+      "path": "mods/easy_npc-fabric-1.20.1-6.4.1.jar",
+      "sha1": "f895458b89c1dd8e9583e78ab2dcafabacee98a6",
+      "size": 1572006,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/easy_npc-fabric-1.20.1-6.4.1.jar"
+    },
+    {
+      "path": "mods/easy_npc_config_ui-fabric-1.20.1-6.4.1.jar",
+      "sha1": "6818e2f47c3c66ab9326b0f30e3590d340ec6796",
+      "size": 678493,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/easy_npc_config_ui-fabric-1.20.1-6.4.1.jar"
+    },
+    {
       "path": "mods/EnchantmentDescriptions-Fabric-1.20.1-17.1.20.jar",
       "sha1": "332078f9434ebb8b0768b6152898fb7ed84daea0",
       "size": 63572,
@@ -444,6 +456,12 @@
       "sha1": "d701a58819485e5d5439bda4f1d18247692e020c",
       "size": 110409,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/InertiaAntiCheat-0.0.7.2+1.20.1.jar"
+    },
+    {
+      "path": "mods/InvView-1.4.12-1.20+.jar",
+      "sha1": "f6775526021843c16dc7847bbf0b8dbcca434454",
+      "size": 159796,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/InvView-1.4.12-1.20+.jar"
     },
     {
       "path": "mods/iris-1.7.6+mc1.20.1.jar",
