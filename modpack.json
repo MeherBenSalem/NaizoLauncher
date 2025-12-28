@@ -9,7 +9,7 @@
     },
     {
       "path": "config/bcc.json",
-      "sha1": "73f7e006cbbc70a7cc006aee24b6a5db388b6848",
+      "sha1": "e8d902d71ce842e7ed8068abc87ae035c0203475",
       "size": 104,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/bcc.json"
     },
@@ -327,8 +327,8 @@
     },
     {
       "path": "mods/eventZ-0.1.0.jar",
-      "sha1": "023501ad4a32fdc05d8892d4d04044e3054ea58d",
-      "size": 72124,
+      "sha1": "5096841431ee40ac27b7249e38cbb69d50a79260",
+      "size": 72856,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/eventZ-0.1.0.jar"
     },
     {
@@ -786,12 +786,6 @@
       "sha1": "b06a2eb31bcfe3d98463d1323e4787ac2b378bff",
       "size": 205569,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/sound-physics-remastered-fabric-1.20.1-1.5.1.jar"
-    },
-    {
-      "path": "mods/starlight-1.1.2+fabric.dbc156f.jar",
-      "sha1": "a03102cab439cbab5a1d7d72cd7c2b4976ddd421",
-      "size": 127368,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/starlight-1.1.2+fabric.dbc156f.jar"
     },
     {
       "path": "mods/starterkit-1.20.1-7.4.jar",
