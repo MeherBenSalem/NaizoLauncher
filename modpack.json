@@ -20,12 +20,6 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/defaultoptions/servers.dat"
     },
     {
-      "path": "mods/accessories-fabric-1.0.0-beta.48+1.20.1.jar",
-      "sha1": "38e3d368d97914966bdda5c6719f77c7f1f9a58d",
-      "size": 769376,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/accessories-fabric-1.0.0-beta.48+1.20.1.jar"
-    },
-    {
       "path": "mods/advancementinfo-1.20-fabric0.83.0-1.4.jar",
       "sha1": "dfa603a2db09d6e303dd2991f016550ae156e3d1",
       "size": 43895,
@@ -846,6 +840,12 @@
       "sha1": "f28b24f929ffbf960e096fa0327d0d318cb851b3",
       "size": 63940,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/toofast-fabric-1.20-1.2.0.jar"
+    },
+    {
+      "path": "mods/trinkets-3.7.2.jar",
+      "sha1": "d58cc8759587f03f320f188972ca66baa788d008",
+      "size": 238532,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/trinkets-3.7.2.jar"
     },
     {
       "path": "mods/UndeadNights-2.0.1-Fabric-mc1.20.1.jar",
