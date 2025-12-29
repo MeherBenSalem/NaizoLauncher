@@ -542,6 +542,12 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/letmedespawn-1.20.x-fabric-1.5.0.jar"
     },
     {
+      "path": "mods/libIPN-fabric-1.20-4.0.2.jar",
+      "sha1": "c8c4d93037efb226b6bd3264e33df4c010cb111b",
+      "size": 702814,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/libIPN-fabric-1.20-4.0.2.jar"
+    },
+    {
       "path": "mods/lithium-fabric-mc1.20.1-0.11.4.jar",
       "sha1": "048227ed60a3005cf9fa55880dfe0cf20b0ba680",
       "size": 691483,
