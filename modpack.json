@@ -9,7 +9,7 @@
     },
     {
       "path": "config/bcc.json",
-      "sha1": "e8d902d71ce842e7ed8068abc87ae035c0203475",
+      "sha1": "1170d1eaa9059b57c846143e2f96c670bf2585f2",
       "size": 104,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/bcc.json"
     },
@@ -18,6 +18,12 @@
       "sha1": "49bb3d0c93acda75b5b0e413747dca5a1d8d4c2f",
       "size": 14912,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/defaultoptions/servers.dat"
+    },
+    {
+      "path": "mods/accessories-fabric-1.0.0-beta.48+1.20.1.jar",
+      "sha1": "38e3d368d97914966bdda5c6719f77c7f1f9a58d",
+      "size": 769376,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/accessories-fabric-1.0.0-beta.48+1.20.1.jar"
     },
     {
       "path": "mods/advancementinfo-1.20-fabric0.83.0-1.4.jar",
@@ -56,10 +62,16 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/architectury-9.2.14-fabric.jar"
     },
     {
-      "path": "mods/ashens-zombie-apocalypse-1.0.1.jar",
-      "sha1": "398f47e99683d882c53778ff87cb9f9c6e98de10",
-      "size": 139322,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/ashens-zombie-apocalypse-1.0.1.jar"
+      "path": "mods/artifacts-fabric-9.5.15.jar",
+      "sha1": "420561e2963aedf267ea617f059a69bba7b142c0",
+      "size": 960085,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/artifacts-fabric-9.5.15.jar"
+    },
+    {
+      "path": "mods/artifactscrafting-1.0.2.jar",
+      "sha1": "79c84a91e067d9c96fa486fda6e98f054c8bd7a3",
+      "size": 141614,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/artifactscrafting-1.0.2.jar"
     },
     {
       "path": "mods/BadOptimizations-2.4.1-1.20.1.jar",
@@ -464,6 +476,12 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/InertiaAntiCheat-0.0.7.2+1.20.1.jar"
     },
     {
+      "path": "mods/InventoryProfilesNext-fabric-1.20-1.10.19.jar",
+      "sha1": "4dfdb930663c60eb9fa4329ea5a3b02e99818e68",
+      "size": 1454646,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/InventoryProfilesNext-fabric-1.20-1.10.19.jar"
+    },
+    {
       "path": "mods/InvView-1.4.12-1.20+.jar",
       "sha1": "f6775526021843c16dc7847bbf0b8dbcca434454",
       "size": 159796,
@@ -528,12 +546,6 @@
       "sha1": "49537044b774743cd37a834567204f7662a5329c",
       "size": 14607,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/letmedespawn-1.20.x-fabric-1.5.0.jar"
-    },
-    {
-      "path": "mods/lithium-fabric-mc1.20.1-0.11.2.jar",
-      "sha1": "8f4642147e60827f728badac7a819d1a9f3b25d5",
-      "size": 645865,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/lithium-fabric-mc1.20.1-0.11.2.jar"
     },
     {
       "path": "mods/lithium-fabric-mc1.20.1-0.11.4.jar",
@@ -662,6 +674,12 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/notenoughanimations-fabric-1.11.1-mc1.20.1.jar"
     },
     {
+      "path": "mods/openblockselevator-0.0.3-1.20.1.jar",
+      "sha1": "7a6a9f8c95d8d444d5d3ec7cd61fa5bba502eb71",
+      "size": 36876,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/openblockselevator-0.0.3-1.20.1.jar"
+    },
+    {
       "path": "mods/optigui-2.1.5.jar",
       "sha1": "1560d8656027c31b6bc3a60e39c51f50eb45e482",
       "size": 778903,
@@ -734,6 +752,12 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Rrls-3.2.0-1.20.1-fabric.jar"
     },
     {
+      "path": "mods/rrls-4.0.6.1+mc1.20.1-fabric.jar",
+      "sha1": "fdd6e230c712ee9c4b637d73bccd21bc8ed3a7c3",
+      "size": 160946,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/rrls-4.0.6.1+mc1.20.1-fabric.jar"
+    },
+    {
       "path": "mods/Searchables-fabric-1.20.1-1.0.3.jar",
       "sha1": "3fe28bfd8de8f13adeefb4dd5c9a8f97b233a0a1",
       "size": 80283,
@@ -800,6 +824,12 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/starterkit-1.20.1-7.4.jar"
     },
     {
+      "path": "mods/stringduperfix-1.6.jar",
+      "sha1": "554dfd213c30e9a56f5436621362a29f0b42f758",
+      "size": 16640,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/stringduperfix-1.6.jar"
+    },
+    {
       "path": "mods/TACZ-Refabricated-1.20.1-0.2.0-forge1.1.7.jar",
       "sha1": "f72f55134b1bff98e70491f464be9ef350945707",
       "size": 52728746,
@@ -810,6 +840,12 @@
       "sha1": "f9da4e2abe09bd163cb7ccc9f8ae486bf87ab27d",
       "size": 40820,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/togglenametags-2.0.3.jar"
+    },
+    {
+      "path": "mods/toms_storage_fabric-1.21-2.2.3.jar",
+      "sha1": "3b51d05ab3ac3ea38c8014108b2d7c3fb641a239",
+      "size": 1955635,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/toms_storage_fabric-1.21-2.2.3.jar"
     },
     {
       "path": "mods/toofast-fabric-1.20-1.2.0.jar",
