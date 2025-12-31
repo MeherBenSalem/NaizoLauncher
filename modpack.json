@@ -728,6 +728,12 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/packetfixer-3.3.1-1.18-1.20.4-merged.jar"
     },
     {
+      "path": "mods/Patchouli-1.20.1-84.1-FABRIC.jar",
+      "sha1": "ac0b6b19b150fcb97dc037df26a298ab93f2cd90",
+      "size": 857105,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Patchouli-1.20.1-84.1-FABRIC.jar"
+    },
+    {
       "path": "mods/Ping-Wheel-1.12.0-fabric-1.20.1.jar",
       "sha1": "7a653012a6aa6be2d0cdfe16e91e00b042478337",
       "size": 153600,
