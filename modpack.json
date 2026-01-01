@@ -74,6 +74,12 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/artifactscrafting-1.0.2.jar"
     },
     {
+      "path": "mods/AttributeFix-Fabric-1.20.1-21.0.4.jar",
+      "sha1": "9688bf005eb31d7cc9576f535acf819376d47068",
+      "size": 17975,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/AttributeFix-Fabric-1.20.1-21.0.4.jar"
+    },
+    {
       "path": "mods/BadOptimizations-2.4.1-1.20.1.jar",
       "sha1": "304007dcb0fb15ed1a1bc3771736470dafc5be0f",
       "size": 460234,
@@ -264,6 +270,12 @@
       "sha1": "33f853230169b03d896775cbc663e016975702d2",
       "size": 25668,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/cupboard-fabric-1.20.1-2.7.jar"
+    },
+    {
+      "path": "mods/CustomEntityAttributes-FABRIC-1.20.X-1.0.0.jar",
+      "sha1": "75a2dc687022b0417f6b00642723c67bc16104c5",
+      "size": 216751,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/CustomEntityAttributes-FABRIC-1.20.X-1.0.0.jar"
     },
     {
       "path": "mods/CutThrough-v8.0.2-1.20.1-Fabric.jar",
@@ -644,6 +656,12 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/mobsunscreen-fabric-1.20.1-3.1.1.jar"
     },
     {
+      "path": "mods/mobtimizations-fabric-1.20.1-1.0.0.jar",
+      "sha1": "3fc5279c915292e7ffbfa5c89848592403ee17fe",
+      "size": 505747,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/mobtimizations-fabric-1.20.1-1.0.0.jar"
+    },
+    {
       "path": "mods/modelfix-1.15-fabric.jar",
       "sha1": "75554b02e63a2440321a32dc5e55988897181bdf",
       "size": 65491,
@@ -690,6 +708,12 @@
       "sha1": "a0af4b6785d1cf2de9da3a8ad3be3f4da4905a15",
       "size": 1451225,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/MutantsZombies-1.3.1-Fabric-mc1.20.1.jar"
+    },
+    {
+      "path": "mods/Necronomicon-Fabric-1.6.0+1.21.jar",
+      "sha1": "b6ac70d9ecac570f56e75db81d8281976fea1357",
+      "size": 37055,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/Necronomicon-Fabric-1.6.0+1.21.jar"
     },
     {
       "path": "mods/NoChatReports-FABRIC-1.20.1-v2.2.2.jar",
@@ -852,6 +876,12 @@
       "sha1": "3d32bdf672b33b90ac38dc9572f9af6a6afae82e",
       "size": 2858683,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/sophisticatedcore-1.20.1-1.2.7.15.166.jar"
+    },
+    {
+      "path": "mods/soulslike-weaponry-1.3.1-1.20.1-fabric.jar",
+      "sha1": "d243144eda63a0f5bf1b416db2280f89d08ea4f5",
+      "size": 54049830,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/soulslike-weaponry-1.3.1-1.20.1-fabric.jar"
     },
     {
       "path": "mods/sound-physics-remastered-fabric-1.20.1-1.5.1.jar",
