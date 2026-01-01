@@ -9,7 +9,7 @@
     },
     {
       "path": "config/bcc.json",
-      "sha1": "d2bab327773da79de6fc775b7356d5ff59a22f80",
+      "sha1": "44e534354e2f2b1f67a21fc8a723d729492c4fb1",
       "size": 104,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/config/bcc.json"
     },
@@ -780,6 +780,12 @@
       "sha1": "13282e818c9b5d20ba9f50949e3776d678d6926d",
       "size": 1084397,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/PuzzlesLib-v8.1.33-1.20.1-Fabric.jar"
+    },
+    {
+      "path": "mods/ranged_weapon_api-1.1.4+1.20.1.jar",
+      "sha1": "0766a20408c19c5abed47784220f9d33fbac22dd",
+      "size": 114936,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/ranged_weapon_api-1.1.4+1.20.1.jar"
     },
     {
       "path": "mods/recipeessentials-fabric-1.20.1-4.1.jar",
