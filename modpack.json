@@ -56,6 +56,12 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/appleskin-fabric-mc1.20.1-2.5.1.jar"
     },
     {
+      "path": "mods/archers_helicopter-0.2.1-0315.1024+hotfix02-BETA.jar",
+      "sha1": "a1c26c99272e2e7b8ac31bde5559d74eaee05a79",
+      "size": 7080435,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/archers_helicopter-0.2.1-0315.1024+hotfix02-BETA.jar"
+    },
+    {
       "path": "mods/architectury-9.2.14-fabric.jar",
       "sha1": "4fa65e32dbf63a871a30fe8ec6fbff9a4b8d007d",
       "size": 585207,
