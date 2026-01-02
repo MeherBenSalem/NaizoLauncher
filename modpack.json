@@ -56,12 +56,6 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/appleskin-fabric-mc1.20.1-2.5.1.jar"
     },
     {
-      "path": "mods/archers_helicopter-0.2.1-0315.1024+hotfix02-BETA.jar",
-      "sha1": "a1c26c99272e2e7b8ac31bde5559d74eaee05a79",
-      "size": 7080435,
-      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/archers_helicopter-0.2.1-0315.1024+hotfix02-BETA.jar"
-    },
-    {
       "path": "mods/architectury-9.2.14-fabric.jar",
       "sha1": "4fa65e32dbf63a871a30fe8ec6fbff9a4b8d007d",
       "size": 585207,
@@ -270,6 +264,12 @@
       "sha1": "f750d019bc1230c8c7a8a4ccf549d1db192d7a69",
       "size": 32189889,
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/create-fabric-6.0.8.1+build.1744-mc1.20.1.jar"
+    },
+    {
+      "path": "mods/create_nuke-1.0.0.jar",
+      "sha1": "7ac471f7f2984b6e74e260007415b22f8cad1032",
+      "size": 37783,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/create_nuke-1.0.0.jar"
     },
     {
       "path": "mods/cupboard-fabric-1.20.1-2.7.jar",
