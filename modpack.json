@@ -80,6 +80,12 @@
       "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/AttributeFix-Fabric-1.20.1-21.0.4.jar"
     },
     {
+      "path": "mods/aviator-dreams-reloaded-fabric-1.2.1+1.20.1.jar",
+      "sha1": "832ef62f436f2b65a5250ae0083a05d60cea7892",
+      "size": 9727567,
+      "url": "https://raw.githubusercontent.com/MeherBenSalem/NaizoLauncher/main/modpack-source/mods/aviator-dreams-reloaded-fabric-1.2.1+1.20.1.jar"
+    },
+    {
       "path": "mods/BadOptimizations-2.4.1-1.20.1.jar",
       "sha1": "304007dcb0fb15ed1a1bc3771736470dafc5be0f",
       "size": 460234,
